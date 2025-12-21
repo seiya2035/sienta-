@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* ===============================================
+    Modern CSS Reset
+   =============================================== */
+/* 1. すべての要素でbox-sizingをborder-boxにする（パディングを含めた幅計算にする） */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. デフォルトのマージンを削除 */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* 3. リストのデフォルトスタイルを削除（必要に応じてコメントアウト） */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. bodyの基本設定 */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* 5. 画像をレスポンシブ対応しやすくする */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* 6. input, button, textarea, selectのフォントを親要素から継承する */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. コンテンツがアンカーリンクで隠れないようにスクロール位置を調整 */
+html {
+  scroll-behavior: smooth;
+}/*# sourceMappingURL=index.css.map */
