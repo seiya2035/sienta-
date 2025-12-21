@@ -61,4 +61,14 @@ html {
 html {
   background-image: url(/common/img/background-grass.png);
   background-size: cover;
+}
+
+.logo {
+  background-color: #FDFFFB;
+  width: 172px;
+  height: 132px;
+}
+.logo .img {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=index.css.map */

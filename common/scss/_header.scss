@@ -1,2 +1,12 @@
 @use 'variables' as *;
 @use 'mixin';
+
+.logo{
+    background-color: $white;
+    width: 172px;
+    height: 132px;
+    .img{
+        display: flex;
+        justify-content: center;
+    }
+}
