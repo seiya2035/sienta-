@@ -7,6 +7,8 @@
 @use '../common/scss/reset';
 // 3. 共通部分
 @use '../common/scss/base';
+@use '../common/scss/header';
+@use '../common/scss/footer';
 
 // 5. コンポーネント/パーツ
 @use 'parts';

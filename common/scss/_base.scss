@@ -1,2 +1,7 @@
 @use 'variables' as *;
 @use 'mixin';
+
+html{
+    background-image: url(/common/img/background-grass.png);
+    background-size: cover;
+}

@@ -56,4 +56,9 @@ select {
 /* 7. コンテンツがアンカーリンクで隠れないようにスクロール位置を調整 */
 html {
   scroll-behavior: smooth;
+}
+
+html {
+  background-image: url(/common/img/background-grass.png);
+  background-size: cover;
 }/*# sourceMappingURL=index.css.map */
