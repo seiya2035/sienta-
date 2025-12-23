@@ -21,8 +21,11 @@
 //ファーストビュー
 
 .hero-title {
+    width: 100%;
+    height: 100vh;
     @include flex-center;
     position: relative;
+    z-index: 2;
 
     &__sub {
         position: absolute;
@@ -31,16 +34,13 @@
     }
 }
 
-.hero-img {
+.hero-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-between; 
-    align-items: center; 
-    z-index: 1;
-
+    z-index: 1; 
 }
-// .hero-img{
-//     img{
-//         position: relative;
-//         @include img-shadow;
-//     }
-// }
