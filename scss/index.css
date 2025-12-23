@@ -63,12 +63,23 @@ html {
   background-size: cover;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999999;
+}
+
 .logo {
   background-color: #FDFFFB;
   width: 172px;
   height: 132px;
-}
-.logo .img {
+  border-bottom-right-radius: 20px;
   display: flex;
   justify-content: center;
+}
+.logo img {
+  width: 100px;
+  height: auto;
 }/*# sourceMappingURL=index.css.map */

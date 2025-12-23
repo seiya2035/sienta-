@@ -1,12 +1,22 @@
 @use 'variables' as *;
 @use 'mixin';
 
+header {
+    position: absolute; 
+    top: 0;             
+    left: 0;            
+    width: 100%;            
+    z-index: 9999999;       
+}
 .logo{
     background-color: $white;
     width: 172px;
     height: 132px;
-    .img{
-        display: flex;
-        justify-content: center;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 100px;
+        height: auto;
     }
 }
