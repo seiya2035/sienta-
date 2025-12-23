@@ -1,5 +1,5 @@
 @use 'variables' as *;
-@use 'mixin';
+@use 'mixin' as *;
 
 html{
     background-image: url(/common/img/background-grass.png);

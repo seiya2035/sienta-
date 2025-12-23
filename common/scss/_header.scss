@@ -1,5 +1,5 @@
 @use 'variables' as *;
-@use 'mixin';
+@use 'mixin' as *;
 
 header {
     position: absolute; 
@@ -13,8 +13,7 @@ header {
     width: 172px;
     height: 132px;
     border-bottom-right-radius: 20px;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     img{
         width: 100px;
         height: auto;
