@@ -31,3 +31,9 @@
         margin-right: 25rem;
     }
 }
+
+.hero-img{
+    img{
+        @include img-shadow;
+    }
+}
