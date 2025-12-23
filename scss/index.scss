@@ -1,7 +1,7 @@
 // scss/index.scss
 
 @use '../common/scss/variables' as *; // ←variablesを最初に読み込み、名前空間なしで使えるようにする
-@use '../common/scss/mixin';
+@use '../common/scss/mixin' as *;
 
 // 2. リセット
 @use '../common/scss/reset';
@@ -20,17 +20,17 @@
 //================================================================//
 //ファーストビュー
 
-.fv-title {
+.hero-title {
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     position: relative;
     &__main {
 
     }
     &__sub {
         position: absolute;
+        margin-bottom: 13rem;
+        margin-right: 25rem;
     }
 }

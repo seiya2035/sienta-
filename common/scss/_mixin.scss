@@ -1,4 +1,4 @@
-// ブレイクポイントを指定
+// ブレイクポイントを指定====================
 $pc: 1024px;
 $tab: 1023px;
 $sp: 599px;
@@ -19,4 +19,14 @@ $sp: 599px;
     @media screen and (max-width: ($sp)) {
         @content;
     }
+}
+
+// =======================================>
+
+
+// 中央寄せ
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
