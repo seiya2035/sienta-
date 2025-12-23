@@ -25,9 +25,6 @@
     height: 100vh;
     @include flex-center;
     position: relative;
-    &__main {
-
-    }
     &__sub {
         position: absolute;
         margin-bottom: 13rem;
