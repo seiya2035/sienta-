@@ -1,7 +1,18 @@
 @use 'variables' as *;
 @use 'mixin' as *;
 
-html{
+html {
     background-image: url(/common/img/background-grass.png);
     background-size: cover;
 }
+
+.road{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding-top: 48rem;
+    padding-right: 7rem;
+    @include flex-center;
+}
+
+
