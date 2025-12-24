@@ -175,15 +175,35 @@
 //================================================================//
 // アバウト
 .about {
-    min-width: 62.5rem;
+    @include pc{
+        min-width: 62.5rem;
+    }
+    @include tb{
+        min-width: 37.25rem;
+    }
     display: flex;
     justify-content: center;
-    &__title {
-        display: flex;
-        justify-content: center;
-    }
-    p {
-        @include main-text-bk;
+    &-text {
+        flex-direction: column;
+        &__title {
+            display: flex;
+            justify-content: center;
+            @include tb {
+                width: 32rem;
+            }
+        }
+        &__main {
+            p {
+                text-align: center;
+                @include pc-main-text-bk;
+                @include pc {
+                    padding-top: 3.5rem;
+                    line-height: 2.75rem;
+                    font-size: 1.25rem;
+                    letter-spacing: 0.3rem;
+                }
+            }
+        }
     }
 }
 // アバウト///

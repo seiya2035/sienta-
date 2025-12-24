@@ -328,19 +328,46 @@ header {
 }
 
 .about {
-  min-width: 62.5rem;
   display: flex;
   justify-content: center;
 }
-.about__title {
+@media screen and (min-width: 1024px) {
+  .about {
+    min-width: 62.5rem;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .about {
+    min-width: 37.25rem;
+  }
+}
+.about-text {
+  flex-direction: column;
+}
+.about-text__title {
   display: flex;
   justify-content: center;
 }
-.about p {
+@media screen and (max-width: 1023px) {
+  .about-text__title {
+    width: 32rem;
+  }
+}
+.about-text__main p {
+  text-align: center;
   color: #23211C;
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-style: normal;
   font-weight: 700;
-  line-height: 180%; /* 1.8rem */
+  line-height: 1.8rem;
   letter-spacing: 0.15rem;
+  font-size: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .about-text__main p {
+    padding-top: 3.5rem;
+    line-height: 2.75rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.3rem;
+  }
 }/*# sourceMappingURL=index.css.map */

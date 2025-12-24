@@ -65,11 +65,42 @@ $sp: 599px;
 }
 
 //テキスト
-@mixin main-text-bk {
+@mixin pc-main-text-bk {
     color: $black;
     font-family: "Zen Kaku Gothic Antique", sans-serif;
     font-style: normal;
     font-weight: 700;
-    line-height: 180%; /* 1.8rem */
+    line-height: 2.05rem; 
+    letter-spacing: 0.16875rem;
+    font-size: 1.125rem;
+}
+
+@mixin pc-main-text-wt {
+    color: $white;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.05rem; 
+    letter-spacing:0.16875rem;
+    font-size: 1.125rem;
+}
+
+@mixin pc-main-text-bk {
+    color: $black;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.8rem; 
     letter-spacing: 0.15rem;
+    font-size: 1rem;
+}
+
+@mixin pc-main-text-wt {
+    color: $white;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.8rem; 
+    letter-spacing: 0.15rem;
+    font-size: 1rem;
 }
