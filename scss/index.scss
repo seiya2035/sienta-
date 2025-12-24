@@ -20,11 +20,16 @@
 //================================================================//
 //ファーストビュー
 
+.hero{
+    position: relative;
+}
+
+
 .hero-title {
     width: 100%;
     height: 100vh;
     @include flex-center;
-    position: relative;
+    position: absolute;
     z-index: 2;
 
     &__sub {
@@ -34,13 +39,20 @@
     }
 }
 
-.hero-img{
+.hero-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: space-between; 
-    z-index: 1; 
+    justify-content: space-between;
+    z-index: 1;
+    &__car {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        @include flex-center;
+        z-index: 5;
+    }
 }

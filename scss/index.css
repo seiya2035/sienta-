@@ -86,13 +86,17 @@ header {
   height: auto;
 }
 
+.hero {
+  position: relative;
+}
+
 .hero-title {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   z-index: 2;
 }
 .hero-title__sub {
@@ -110,4 +114,13 @@ header {
   display: flex;
   justify-content: space-between;
   z-index: 1;
+}
+.hero-img__car {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
 }/*# sourceMappingURL=index.css.map */
