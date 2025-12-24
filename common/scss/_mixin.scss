@@ -1,9 +1,22 @@
-
 @use 'variables' as *;
 // ブレイクポイントを指定====================
+$pc1840: 1840px;
+$pc1440: 1440px;
 $pc: 1024px;
-$tab: 1023px;
+$tb: 1023px;
 $sp: 599px;
+
+@mixin pc1840 {
+    @media screen and (max-width: ($pc1840)) {
+        @content;
+    }
+}
+
+@mixin pc1440 {
+    @media screen and (max-width: ($pc1440)) {
+        @content;
+    }
+}
 
 @mixin pc {
     @media screen and (min-width: ($pc)) {
@@ -11,8 +24,8 @@ $sp: 599px;
     }
 }
 
-@mixin tab {
-    @media screen and (max-width: ($tab)) {
+@mixin tb {
+    @media screen and (max-width: ($tb)) {
         @content;
     }
 }

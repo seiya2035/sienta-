@@ -46,6 +46,47 @@
         display: flex;
         justify-content: space-between;
         z-index: 1;
+        &__left {
+            &__pc3 {
+                display: none;
+                @include pc1440 {
+                    display: block;
+                }
+                @include tb {
+                    display: none;
+                }
+            }
+            &__pc2 {
+                display: none;
+                @include pc1840 {
+                    display: block;
+                }
+                @include pc1440 {
+                    display: none;
+                }
+            }
+            &__pc {
+                @include pc1840 {
+                    display: none;
+                }
+            }
+        }
+        &__right {
+            &__pc {
+                @include pc1440 {
+                    display: none;
+                }
+            }
+            &__pc3 {
+                display: none;
+                @include pc1440 {
+                    display: block;
+                }
+                @include tb {
+                    display: none;
+                }
+            }
+        }
     }
 
     &-car {

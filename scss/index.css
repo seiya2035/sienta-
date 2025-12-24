@@ -124,6 +124,55 @@ header {
   justify-content: space-between;
   z-index: 1;
 }
+.hero-img__left__pc3 {
+  display: none;
+}
+@media screen and (max-width: 1440px) {
+  .hero-img__left__pc3 {
+    display: block;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .hero-img__left__pc3 {
+    display: none;
+  }
+}
+.hero-img__left__pc2 {
+  display: none;
+}
+@media screen and (max-width: 1840px) {
+  .hero-img__left__pc2 {
+    display: block;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .hero-img__left__pc2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1840px) {
+  .hero-img__left__pc {
+    display: none;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .hero-img__right__pc {
+    display: none;
+  }
+}
+.hero-img__right__pc3 {
+  display: none;
+}
+@media screen and (max-width: 1440px) {
+  .hero-img__right__pc3 {
+    display: block;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .hero-img__right__pc3 {
+    display: none;
+  }
+}
 .hero-car {
   position: absolute;
   width: 100%;
