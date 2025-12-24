@@ -63,3 +63,13 @@ $sp: 599px;
     border: 8px solid $white;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
+//テキスト
+@mixin main-text-bk {
+    color: $black;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%; /* 1.8rem */
+    letter-spacing: 0.15rem;
+}

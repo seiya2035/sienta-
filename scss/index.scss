@@ -22,6 +22,7 @@
 
 .hero {
     position: relative;
+    height: 100vh;
 
     &-title {
         //シエンタでやってみない？
@@ -39,11 +40,11 @@
 
         &__sub {
             position: absolute;
-            @include tb-min{
+            @include tb-min {
                 margin-bottom: 13rem;
                 margin-right: 25rem;
             }
-            @include sp{
+            @include sp {
                 margin-bottom: 10rem;
                 margin-right: 15rem;
             }
@@ -143,7 +144,6 @@
             display: none;
             @include sp {
                 display: block;
-
             }
         }
     }
@@ -170,4 +170,21 @@
 }
 
 //ファーストビュー///
+//================================================================//
+
+//================================================================//
+// アバウト
+.about {
+    min-width: 62.5rem;
+    display: flex;
+    justify-content: center;
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+    p {
+        @include main-text-bk;
+    }
+}
+// アバウト///
 //================================================================//

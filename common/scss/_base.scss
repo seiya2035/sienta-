@@ -5,11 +5,13 @@ html {
     background-image: url(/common/img/background-grass.png);
     background-size: cover;
 }
+//フォント
 
 .road {
+     //白い道路
 
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     width: 100%;
     @include flex-center;
     &__pc {
