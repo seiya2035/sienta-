@@ -6,13 +6,39 @@ html {
     background-size: cover;
 }
 
-.road{
+.road {
+
     position: absolute;
     z-index: 1;
     width: 100%;
-    padding-top: 48rem;
-    padding-right: 7rem;
     @include flex-center;
+    &__pc {
+        @include pc {
+            padding-top: 48rem;
+            padding-right: 7rem;
+        }
+
+        @include tb {
+            display: block;
+            display: none;
+        }
+    }
+    &__tb {
+        display: none;
+        @include tb {
+            padding-top: 58rem;
+            padding-right: 0.7rem;
+            display: block;
+        }
+        @include sp {
+            display: none;
+        }
+    }
+    &__sp {
+        display: none;
+        @include sp {
+            padding-top: 43rem;
+            display: block;
+        }
+    }
 }
-
-

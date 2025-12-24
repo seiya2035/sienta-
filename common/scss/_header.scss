@@ -11,12 +11,24 @@ header {
 }
 .logo{
     background-color: $white;
-    width: 172px;
-    height: 132px;
     border-bottom-right-radius: 20px;
     @include flex-center;
     img{
-        width: 100px;
         height: auto;
+    }
+    @include tb-min {
+        width: 10.25rem;
+        height: 8.25rem;
+        img{
+            width: 6rem;
+        }
+    }
+
+    @include sp {
+        width: 7.4rem;
+        height: 5.7rem;
+        img{
+            width: 4.8rem;
+        }
     }
 }

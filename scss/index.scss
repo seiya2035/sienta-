@@ -24,20 +24,34 @@
     position: relative;
 
     &-title {
+        //シエンタでやってみない？
         width: 100%;
         height: 100vh;
         @include flex-center; //中央揃え
         position: absolute;
         z-index: 2;
+        @include tb {
+            padding-bottom: 10rem;
+        }
+        @include sp {
+            padding-bottom: 6rem;
+        }
 
         &__sub {
             position: absolute;
-            margin-bottom: 13rem;
-            margin-right: 25rem;
+            @include tb-min{
+                margin-bottom: 13rem;
+                margin-right: 25rem;
+            }
+            @include sp{
+                margin-bottom: 10rem;
+                margin-right: 15rem;
+            }
         }
     }
 
     &-img {
+        //ヒーローエリアの写真
         position: absolute;
         top: 0;
         left: 0;
@@ -47,12 +61,22 @@
         justify-content: space-between;
         z-index: 1;
         &__left {
+            //ヒーローエリアの写真 左
+            &__pc4 {
+                display: none;
+                @include pc1140 {
+                    display: block;
+                }
+                @include tb {
+                    display: none;
+                }
+            }
             &__pc3 {
                 display: none;
                 @include pc1440 {
                     display: block;
                 }
-                @include tb {
+                @include pc1140 {
                     display: none;
                 }
             }
@@ -70,8 +94,18 @@
                     display: none;
                 }
             }
+            &__tb {
+                display: none;
+                @include tb {
+                    display: block;
+                }
+                @include sp {
+                    display: none;
+                }
+            }
         }
         &__right {
+            //ヒーローエリアの写真 右
             &__pc {
                 @include pc1440 {
                     display: none;
@@ -82,20 +116,56 @@
                 @include pc1440 {
                     display: block;
                 }
+                @include pc1140 {
+                    display: none;
+                }
+            }
+            &__pc4 {
+                display: none;
+                @include pc1140 {
+                    display: block;
+                }
                 @include tb {
                     display: none;
                 }
+            }
+            &__tb {
+                display: none;
+                @include tb {
+                    display: block;
+                }
+                @include sp {
+                    display: none;
+                }
+            }
+        }
+        &__sp {
+            display: none;
+            @include sp {
+                display: block;
+
             }
         }
     }
 
     &-car {
+        //ヒーローエリアの車
         position: absolute;
         width: 100%;
         height: 100vh;
         @include flex-center; //中央揃え
         z-index: 5;
         margin-top: 16rem;
+        @include tb {
+            margin-top: 18rem;
+        }
+        @include sp {
+            img {
+                width: 21.5rem;
+            }
+
+            margin-top: 14rem;
+        }
     }
 }
 

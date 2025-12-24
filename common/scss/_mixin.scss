@@ -2,7 +2,9 @@
 // ブレイクポイントを指定====================
 $pc1840: 1840px;
 $pc1440: 1440px;
+$pc1140: 1140px;
 $pc: 1024px;
+
 $tb: 1023px;
 $sp: 599px;
 
@@ -17,6 +19,11 @@ $sp: 599px;
         @content;
     }
 }
+@mixin pc1140 {
+    @media screen and (max-width: ($pc1140)) {
+        @content;
+    }
+}
 
 @mixin pc {
     @media screen and (min-width: ($pc)) {
@@ -26,6 +33,12 @@ $sp: 599px;
 
 @mixin tb {
     @media screen and (max-width: ($tb)) {
+        @content;
+    }
+}
+
+@mixin tb-min {
+    @media screen and (min-width: ($sp)) {
         @content;
     }
 }
