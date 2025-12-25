@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head prefix="og: https://ogp.me/ns#">
-        <title>シエンタでキャンンプ！</title>
+        <title>シエンタでキャンプ！</title>
         <!-- meta情報 -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -24,7 +24,7 @@
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -88,15 +88,19 @@
 
         <!-- 道路の装飾 -->
         <div class="gray-road">
-            <div class="gray-road__1"><img src="common/img/road-gray-1.png" alt="グレーの装飾1"></div>
+            <div class="gray-road__1"><img src="common/img/road-gray-1.png" alt="グレーの装飾1" /></div>
         </div>
-
 
         <!-- ====================アバウト======================== -->
         <div class="about">
             <div class="about-tetx">
                 <div class="about-text__title">
-                    <img src="img/about-title-pc.png" alt="シエンタでキャンプに出発！" />
+                    <div class="about-text__title__pc">
+                        <img src="img/about-title-pc.png" alt="シエンタでキャンプに出発！" />
+                    </div>
+                    <div class="about-text__title__sp">
+                        <img src="img/about-title-sp.png" alt="シエンタでキャンプに出発！" />
+                    </div>
                 </div>
                 <div class="about-text__main">
                     <p>
@@ -111,8 +115,44 @@
         </div>
         <!-- ====================アバウト///////======================== -->
 
+        <!-- 道路の装飾 -->
+        <div class="gray-road">
+            <div class="gray-road__2">
+                <img src="common/img/road-gray-2.png" alt="グレーの装飾2" />
+                <img src="common/img/road-gray-3.png" alt="グレーの装飾3" />
+            </div>
+        </div>
+
         <!-- ====================積載性・収納======================== -->
-        <div class="storage"></div>
+        <div class="storage">
+            <div class="storage-back"><img src="img/storage-back.png" alt="白背景" /></div>
+            <div class="storage-container">
+                <div class="storage-containerleft">
+                    <div class="storage-container-left__title">
+                        <img src="img/storage-title.png" alt="荷物を詰め込んで" />
+                    </div>
+                    <div class="storage-container-left__main">
+                        <p>
+                            キャンプ行くならまずは荷物！<br />
+                            たくさんの荷物もシエンタのおかげで<br />
+                            大量収納、荷物を積んだり下ろしたりも楽に！<br />
+                            テントもBQQコンロも余裕で入っちゃう！<br />
+                            たくさんの楽しみを積んでキャンプに出発だ！
+                        </p>
+                    </div>
+                    <div class="storage-container-left__button">
+                        <p>
+                            積載性・収納を<br />
+                            もっとくわしく！
+                        </p>
+                        <img src="common/img/yajirusi.svg" alt="矢印" />
+                    </div>
+                </div>
+                <div class="storage-container-right">
+                    <img src="img/storage-right.png" alt="storageの右" />
+                </div>
+            </div>
+        </div>
         <!-- ====================積載性・収納///////======================== -->
     </body>
 

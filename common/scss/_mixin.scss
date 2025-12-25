@@ -67,7 +67,7 @@ $sp: 599px;
 //テキスト
 @mixin pc-main-text {
     color: $black;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: YakuHanJP,'Zen Kaku Gothic Antique', sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 2.05rem;
@@ -77,7 +77,7 @@ $sp: 599px;
 
 @mixin tb-main-text {
     color: $black;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: YakuHanJP,'Zen Kaku Gothic Antique', sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 1.8rem;
@@ -87,10 +87,30 @@ $sp: 599px;
 
 @mixin sp-main-text {
     color: $black;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: YakuHanJP,'Zen Kaku Gothic Antique', sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 1.35rem;
     letter-spacing: 0.1125rem;
     font-size: 0.75rem;
+}
+
+//ボタン
+@mixin button-bk {
+    display: flex;
+    width: 21.625rem;
+    height: 4.6875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.625rem;
+    border: 3px solid $black;
+    background: $black;
+    p{
+        font-size: 1rem;
+        font-weight: 900;
+        line-height: 1.2rem;
+        letter-spacing: 0.25rem;
+        color: $white;
+    }
 }

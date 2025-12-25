@@ -175,25 +175,29 @@
 //================================================================//
 // アバウト
 .about {
-    @include pc {//pcのコンテンツ幅
+    @include pc {
+        //pcのコンテンツ幅
         max-width: 62.5rem;
         width: 100%;
-        margin: 0 auto ;
+        margin: 0 auto;
     }
-    @include tb {//tbのコンテンツ幅
+    @include tb {
+        //tbのコンテンツ幅
         max-width: 37.25rem;
         width: 100%;
-        margin: 0 auto ;
+        margin: 0 auto;
     }
 
-    @include sp {//spのコンテンツ幅
+    @include sp {
+        //spのコンテンツ幅
         max-width: 21.6rem;
         width: 100%;
-        margin: 0 auto ;
+        margin: 0 auto;
     }
     display: flex;
     justify-content: center;
-    &-text {//タイトルと本文
+    &-text {
+        //タイトルと本文
         flex-direction: column;
         &__title {
             //タイトル
@@ -204,6 +208,18 @@
             }
             @include sp {
                 width: 100%;
+            }
+            &__sp {
+                display: none;
+                @include sp {
+                    display: block;
+                }
+            }
+            &__pc {
+                display: block;
+                @include sp {
+                    display: none;
+                }
             }
         }
         &__main {
@@ -221,7 +237,7 @@
                     line-height: 2.2rem;
                     letter-spacing: 0.25rem;
                 }
-                @include sp{
+                @include sp {
                     padding-top: 3rem;
                     line-height: 1.875rem;
                     letter-spacing: 0.0375rem;
@@ -235,6 +251,47 @@
 
 //================================================================//
 // 積載性・収納
+.storage {
+    display: flex;
+    justify-content: center;
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        @include pc {
+            //pcのコンテンツ幅
+            max-width: 72.1rem;
+            width: 100%;
+            margin: 0 auto;
+        }
+        @include tb {
+            //tbのコンテンツ幅
+            max-width: 38.92rem;
+            width: 100%;
+            margin: 0 auto;
+        }
+        @include sp {
+            //spのコンテンツ幅
+            min-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+        &-left {
+            &__title{
+                margin-right: 3rem;
+            }
+            &__button {
+                @include button-bk;
+            }
+        }
+    }
+}
 
+.storage-back {
+    //背景
+    position: absolute;
+    z-index: -1;
+}
 // 積載性・収納///
 //================================================================//

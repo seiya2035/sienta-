@@ -66,7 +66,7 @@ html {
 @media screen and (min-width: 1024px) {
   p {
     color: #23211C;
-    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-family: YakuHanJP, "Zen Kaku Gothic Antique", sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 2.05rem;
@@ -88,7 +88,7 @@ html {
 @media screen and (max-width: 599px) {
   p {
     color: #23211C;
-    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-family: YakuHanJP, "Zen Kaku Gothic Antique", sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: 1.35rem;
@@ -146,8 +146,10 @@ html {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+}
+.gray-road img {
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
 }
 @media screen and (min-width: 599px) {
   .gray-road__1 {
@@ -161,6 +163,11 @@ html {
     margin-top: -7rem;
     padding-bottom: 2.5rem;
   }
+}
+.gray-road__2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
 }
 
 header {
@@ -424,6 +431,22 @@ header {
     width: 100%;
   }
 }
+.about-text__title__sp {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .about-text__title__sp {
+    display: block;
+  }
+}
+.about-text__title__pc {
+  display: block;
+}
+@media screen and (max-width: 599px) {
+  .about-text__title__pc {
+    display: none;
+  }
+}
 .about-text__main p {
   text-align: center;
 }
@@ -448,4 +471,57 @@ header {
     line-height: 1.875rem;
     letter-spacing: 0.0375rem;
   }
+}
+
+.storage {
+  display: flex;
+  justify-content: center;
+}
+.storage-container {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  .storage-container {
+    max-width: 72.1rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .storage-container {
+    max-width: 38.92rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .storage-container {
+    min-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.storage-container-left__button {
+  display: flex;
+  width: 21.625rem;
+  height: 4.6875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 0.625rem;
+  border: 3px solid #23211C;
+  background: #23211C;
+}
+.storage-container-left__button p {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.2rem;
+  letter-spacing: 0.25rem;
+  color: #FDFFFB;
+}
+
+.storage-back {
+  position: absolute;
+  z-index: -1;
 }/*# sourceMappingURL=index.css.map */

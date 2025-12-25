@@ -64,10 +64,13 @@ p {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    img{
+        padding-top: 2.6rem;
+        padding-bottom: 2.6rem;
+    }
+
     &__1 {
-        @include tb-min{
+        @include tb-min {
             margin-top: -5rem;
             padding-bottom: 5rem;
         }
@@ -76,6 +79,12 @@ p {
             margin-top: -7rem;
             padding-bottom: 2.5rem;
         }
+    }
+
+    &__2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
     }
 }
 
