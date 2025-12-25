@@ -262,12 +262,6 @@
             justify-content: space-between;
             align-items: flex-end;
         }
-        @include tb {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-        }
 
         padding-top: 2.5rem;
         padding-bottom: 4rem;
@@ -292,30 +286,61 @@
         }
         &-left {
             &__title {
+                @include pc {
+                    margin-right: 3rem;
+                }
                 @include tb {
                     display: flex;
-                    flex-direction: column;
                     justify-content: center;
-                    height: 100%;
-                    width: 100%;
+                    margin-right: -8rem;
                 }
-                margin-right: 3rem;
+
+                @include sp {
+                    @include title-sp;
+                    margin-left: 4.4rem;
+                }
             }
             &__sub {
                 position: absolute;
                 z-index: 1;
-                margin-left: -5rem;
+                @include pc {
+                    margin-left: -5rem;
+                }
+
+                @include sp {
+                    width: 28vw;
+                    transform: rotate(13.63deg);
+                    margin-left: 0.7rem;
+                }
             }
             &__main {
                 margin-top: 2.5rem;
+                @include tb {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
             }
             &__button {
-                @include button-bk;
+                @include tb-min {
+                    @include button-bk;
+                }
+                @include tb {
+                    margin-left: 22%;
+                    display: flex;
+                    justify-content: center;
+                }
+                @include sp {
+                    @include button-bk-sp;
+                }
             }
         }
-        &-right{
+        &-right {
             @include pc {
                 margin-right: -5rem;
+            }
+            @include tb {
+                margin-top: 2.5rem;
             }
         }
     }

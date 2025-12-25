@@ -64,7 +64,7 @@ p {
     width: 100%;
     display: flex;
     justify-content: center;
-    img{
+    img {
         padding-top: 2.6rem;
         padding-bottom: 2.6rem;
     }
@@ -81,10 +81,39 @@ p {
         }
     }
 
-    &__2{
+    &__2 {
         display: flex;
         flex-direction: column;
         margin-top: 5rem;
+
+        @include pc {
+            padding-bottom: 10rem;
+        }
+        @include tb {
+            padding-bottom: 8rem;
+            width: 4rem;
+        }
+        @include sp {
+            width: 2.25rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__3 {
+        @include pc {
+            padding-top: 10rem;
+            padding-right: 35rem;
+        }
+        @include tb {
+            padding-right: 8rem;
+            padding-top: 8rem;
+        }
+
+        @include sp {
+            width: 5.8rem;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+        }
     }
 }
 

@@ -116,3 +116,28 @@ $sp: 599px;
         color: $white;
     }
 }
+
+@mixin button-bk-sp {
+    display: flex;
+    width: 14.5rem;
+    height: 3.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.625rem;
+    border: 3px solid $black;
+    background: $black;
+    margin-top: 3.5rem;
+    p{
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 0.9rem;
+        letter-spacing: 0.1875rem;
+        color: $white;
+    }
+}
+
+//タイトルの大きさ
+@mixin title-sp {
+    width: 78vw;
+}
