@@ -337,7 +337,6 @@
         }
         &-right {
             @include pc {
-                margin-right: -5rem;
             }
             @include tb {
                 margin-top: 2.5rem;
@@ -451,7 +450,7 @@
         align-items: flex-end;
     }
     &-left {
-        &__title{
+        &__title {
             display: block;
             @include sp {
                 display: none;
@@ -459,8 +458,8 @@
         }
         &__title-sp {
             display: none;
-            img{
-                padding-top:  1rem;
+            img {
+                padding-top: 1rem;
             }
             @include sp {
                 display: block;
@@ -469,8 +468,6 @@
         &__main {
             margin-top: 3.5rem;
             p {
-                display: flex;
-                justify-content: center;
                 color: $white;
             }
         }
@@ -481,7 +478,6 @@
             @include sp {
                 @include button-bk-sp;
                 margin-left: 6vw;
-                
             }
         }
     }
@@ -493,4 +489,78 @@
 }
 
 // 室内空間///
+//================================================================//
+
+//================================================================//
+// みんなの思い出
+.gallery {
+    @include pc {
+        //pcのコンテンツ幅
+        max-width: 60rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &-title {
+        padding-top: 16rem;
+        display: flex;
+        justify-content: center;
+        &__line {
+            position: absolute;
+            margin-left: 32rem;
+            margin-top: -7.5rem;
+        }
+    }
+    &-img {
+        width: 100%;
+        &__pc {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            display: block;
+
+            @include tb {
+                display: none;
+            }
+        }
+        &__tb {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            display: none;
+            @include tb {
+                display: block;
+            }
+            @include sp {
+                display: none;
+            }
+        }
+        &__sp {
+            display: none;
+            @include sp {
+                display: block;
+            }
+        }
+    }
+    &-button {
+        @include pc {
+            @include button-bk;
+            //pcのコンテンツ幅
+            max-width: 60rem;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @include tb {
+            @include button-bk;
+            //tbのコンテンツ幅
+            max-width: 34.6rem;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @include sp {
+            @include button-bk-sp;
+            margin-left: 6vw;
+        }
+    }
+}
+// みんなの思い出///
 //================================================================//
