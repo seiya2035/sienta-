@@ -6,12 +6,26 @@ html {
     background-size: cover;
 }
 //フォント
+p {
+    @include pc {
+        @include pc-main-text;
+    }
+    @include tb {
+        @include tb-main-text;
+    }
+    @include sp {
+        @include sp-main-text;
+    }
+}
 
-.road {
-     //白い道路
+//================================================================//
+// 道路
+
+.white-road {
+    //白い道路
 
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     width: 100%;
     @include flex-center;
     &__pc {
@@ -39,8 +53,31 @@ html {
     &__sp {
         display: none;
         @include sp {
-            padding-top: 43rem;
+            padding-top: 42rem;
             display: block;
         }
     }
 }
+
+.gray-road {
+    //道路の装飾
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    &__1 {
+        @include tb-min{
+            margin-top: -5rem;
+            padding-bottom: 5rem;
+        }
+        @include sp {
+            width: 2.25rem;
+            margin-top: -7rem;
+            padding-bottom: 2.5rem;
+        }
+    }
+}
+
+// 道路///
+//================================================================//

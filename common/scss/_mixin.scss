@@ -3,8 +3,8 @@
 $pc1840: 1840px;
 $pc1440: 1440px;
 $pc1140: 1140px;
-$pc: 1024px;
 
+$pc: 1024px;
 $tb: 1023px;
 $sp: 599px;
 
@@ -65,42 +65,32 @@ $sp: 599px;
 }
 
 //テキスト
-@mixin pc-main-text-bk {
+@mixin pc-main-text {
     color: $black;
-    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-style: normal;
     font-weight: 700;
-    line-height: 2.05rem; 
+    line-height: 2.05rem;
     letter-spacing: 0.16875rem;
     font-size: 1.125rem;
 }
 
-@mixin pc-main-text-wt {
-    color: $white;
-    font-family: "Zen Kaku Gothic Antique", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 2.05rem; 
-    letter-spacing:0.16875rem;
-    font-size: 1.125rem;
-}
-
-@mixin pc-main-text-bk {
+@mixin tb-main-text {
     color: $black;
-    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.8rem; 
+    line-height: 1.8rem;
     letter-spacing: 0.15rem;
     font-size: 1rem;
 }
 
-@mixin pc-main-text-wt {
-    color: $white;
-    font-family: "Zen Kaku Gothic Antique", sans-serif;
+@mixin sp-main-text {
+    color: $black;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.8rem; 
-    letter-spacing: 0.15rem;
-    font-size: 1rem;
+    line-height: 1.35rem;
+    letter-spacing: 0.1125rem;
+    font-size: 0.75rem;
 }

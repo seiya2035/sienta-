@@ -63,48 +63,103 @@ html {
   background-size: cover;
 }
 
-.road {
+@media screen and (min-width: 1024px) {
+  p {
+    color: #23211C;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.05rem;
+    letter-spacing: 0.16875rem;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 1023px) {
+  p {
+    color: #23211C;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.8rem;
+    letter-spacing: 0.15rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  p {
+    color: #23211C;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.35rem;
+    letter-spacing: 0.1125rem;
+    font-size: 0.75rem;
+  }
+}
+
+.white-road {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media screen and (min-width: 1024px) {
-  .road__pc {
+  .white-road__pc {
     padding-top: 48rem;
     padding-right: 7rem;
   }
 }
 @media screen and (max-width: 1023px) {
-  .road__pc {
+  .white-road__pc {
     display: block;
     display: none;
   }
 }
-.road__tb {
+.white-road__tb {
   display: none;
 }
 @media screen and (max-width: 1023px) {
-  .road__tb {
+  .white-road__tb {
     padding-top: 58rem;
     padding-right: 0.7rem;
     display: block;
   }
 }
 @media screen and (max-width: 599px) {
-  .road__tb {
+  .white-road__tb {
     display: none;
   }
 }
-.road__sp {
+.white-road__sp {
   display: none;
 }
 @media screen and (max-width: 599px) {
-  .road__sp {
-    padding-top: 43rem;
+  .white-road__sp {
+    padding-top: 42rem;
     display: block;
+  }
+}
+
+.gray-road {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media screen and (min-width: 599px) {
+  .gray-road__1 {
+    margin-top: -5rem;
+    padding-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .gray-road__1 {
+    width: 2.25rem;
+    margin-top: -7rem;
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -166,7 +221,7 @@ header {
 }
 @media screen and (max-width: 599px) {
   .hero-title {
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
   }
 }
 .hero-title__sub {
@@ -320,7 +375,7 @@ header {
 }
 @media screen and (max-width: 599px) {
   .hero-car {
-    margin-top: 14rem;
+    margin-top: 13rem;
   }
   .hero-car img {
     width: 21.5rem;
@@ -333,12 +388,23 @@ header {
 }
 @media screen and (min-width: 1024px) {
   .about {
-    min-width: 62.5rem;
+    max-width: 62.5rem;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 1023px) {
   .about {
-    min-width: 37.25rem;
+    max-width: 37.25rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .about {
+    max-width: 21.6rem;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 .about-text {
@@ -353,15 +419,13 @@ header {
     width: 32rem;
   }
 }
+@media screen and (max-width: 599px) {
+  .about-text__title {
+    width: 100%;
+  }
+}
 .about-text__main p {
   text-align: center;
-  color: #23211C;
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.8rem;
-  letter-spacing: 0.15rem;
-  font-size: 1rem;
 }
 @media screen and (min-width: 1024px) {
   .about-text__main p {
@@ -369,5 +433,19 @@ header {
     line-height: 2.75rem;
     font-size: 1.25rem;
     letter-spacing: 0.3rem;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .about-text__main p {
+    padding-top: 1.25rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.25rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .about-text__main p {
+    padding-top: 3rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.0375rem;
   }
 }/*# sourceMappingURL=index.css.map */
