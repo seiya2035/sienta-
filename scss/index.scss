@@ -254,14 +254,27 @@
 .storage {
     display: flex;
     justify-content: center;
+    align-items: center;
     &-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
+
+        @include pc {
+            height: 32rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        @include tb{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        padding-top: 2.5rem;
+        padding-bottom: 4rem;
+
         @include pc {
             //pcのコンテンツ幅
-            max-width: 72.1rem;
+            max-width: 60rem;
             width: 100%;
             margin: 0 auto;
         }
@@ -278,8 +291,16 @@
             margin: 0 auto;
         }
         &-left {
-            &__title{
+            &__title {
                 margin-right: 3rem;
+            }
+            &__sub {
+                position: absolute;
+                z-index: 1;
+                margin-left: -5rem;
+            }
+            &__main {
+                margin-top: 2.5rem;
             }
             &__button {
                 @include button-bk;
@@ -292,6 +313,30 @@
     //背景
     position: absolute;
     z-index: -1;
+
+    &__pc {
+        display: none;
+        @include pc {
+            display: block;
+        }
+    }
+
+    &__tb {
+        display: none;
+        @include tb {
+            display: block;
+        }
+        @include sp {
+            display: none;
+        }
+    }
+
+    &__sp {
+        display: none;
+        @include sp {
+            display: block;
+        }
+    }
 }
 // 積載性・収納///
 //================================================================//
