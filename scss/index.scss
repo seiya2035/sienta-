@@ -445,18 +445,32 @@
 // 室内空間
 .indoor {
     @include contents;
-    
+
     @include pc {
         display: flex;
         align-items: flex-end;
     }
     &-left {
-        // &__title{
-
-        // }
+        &__title{
+            display: block;
+            @include sp {
+                display: none;
+            }
+        }
+        &__title-sp {
+            display: none;
+            img{
+                padding-top:  1rem;
+            }
+            @include sp {
+                display: block;
+            }
+        }
         &__main {
             margin-top: 3.5rem;
             p {
+                display: flex;
+                justify-content: center;
                 color: $white;
             }
         }
@@ -466,12 +480,14 @@
             }
             @include sp {
                 @include button-bk-sp;
+                margin-left: 6vw;
+                
             }
         }
     }
     &-right {
-        @include pc {
-            
+        @include tb {
+            margin-top: 3.5rem;
         }
     }
 }
