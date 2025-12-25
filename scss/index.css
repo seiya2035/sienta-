@@ -495,6 +495,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -520,6 +521,15 @@ header {
 }
 .storage-container-left__title {
   margin-right: 3rem;
+}
+@media screen and (max-width: 1023px) {
+  .storage-container-left__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
 }
 .storage-container-left__sub {
   position: absolute;
@@ -547,6 +557,11 @@ header {
   line-height: 1.2rem;
   letter-spacing: 0.25rem;
   color: #FDFFFB;
+}
+@media screen and (min-width: 1024px) {
+  .storage-container-right {
+    margin-right: -5rem;
+  }
 }
 
 .storage-back {
