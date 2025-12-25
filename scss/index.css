@@ -223,7 +223,49 @@ html {
   .gray-road__4__tb {
     display: block;
     padding-right: -2rem;
-    padding-top: 8rem;
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .gray-road__4__tb {
+    width: 4rem;
+  }
+}
+
+.under-section__img {
+  position: absolute;
+  z-index: -1;
+}
+.under-section__img img {
+  width: 100vw;
+}
+.under-section__img__pc {
+  display: block;
+}
+@media screen and (max-width: 1023px) {
+  .under-section__img__pc {
+    display: none;
+  }
+}
+.under-section__img__tb {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  .under-section__img__tb {
+    display: block;
+  }
+}
+@media screen and (max-width: 599px) {
+  .under-section__img__tb {
+    display: none;
+  }
+}
+.under-section__img__sp {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .under-section__img__sp {
+    display: block;
   }
 }
 
@@ -802,5 +844,81 @@ header {
 @media screen and (max-width: 599px) {
   .run-right {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .indoor {
+    max-width: 60rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .indoor {
+    max-width: 34.6rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .indoor {
+    max-width: 21.56rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .indoor {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.indoor-left__main {
+  margin-top: 3.5rem;
+}
+.indoor-left__main p {
+  color: #FDFFFB;
+}
+@media screen and (min-width: 599px) {
+  .indoor-left__button {
+    display: flex;
+    width: 21.625rem;
+    height: 4.6875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.625rem;
+    border: 3px solid #23211C;
+    background: #23211C;
+    margin-top: 3.5rem;
+  }
+  .indoor-left__button p {
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.2rem;
+    letter-spacing: 0.25rem;
+    color: #FDFFFB;
+  }
+}
+@media screen and (max-width: 599px) {
+  .indoor-left__button {
+    display: flex;
+    width: 14.5rem;
+    height: 3.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.625rem;
+    border: 3px solid #23211C;
+    background: #23211C;
+    margin-top: 3.5rem;
+  }
+  .indoor-left__button p {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 0.9rem;
+    letter-spacing: 0.1875rem;
+    color: #FDFFFB;
   }
 }/*# sourceMappingURL=index.css.map */

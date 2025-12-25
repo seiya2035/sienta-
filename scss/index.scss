@@ -434,10 +434,47 @@
             margin-top: 5rem;
         }
         @include sp {
-            width: 100%
+            width: 100%;
+        }
+    }
+}
+// 走行性能///
+//================================================================//
+
+//================================================================//
+// 室内空間
+.indoor {
+    @include contents;
+    
+    @include pc {
+        display: flex;
+        align-items: flex-end;
+    }
+    &-left {
+        // &__title{
+
+        // }
+        &__main {
+            margin-top: 3.5rem;
+            p {
+                color: $white;
+            }
+        }
+        &__button {
+            @include tb-min {
+                @include button-bk;
+            }
+            @include sp {
+                @include button-bk-sp;
+            }
+        }
+    }
+    &-right {
+        @include pc {
+            
         }
     }
 }
 
-// 走行性能///
+// 室内空間///
 //================================================================//

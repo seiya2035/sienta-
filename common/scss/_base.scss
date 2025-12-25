@@ -135,11 +135,50 @@ p {
             @include tb {
                 display: block;
                 padding-right: -2rem;
-                padding-top: 8rem;
+                padding-top: 5rem;
+            }
+            @include sp {
+                width: 4rem;
             }
         }
     }
 }
 
 // 道路///
+//================================================================//
+
+//================================================================//
+// 下3セクションの背景(オレンジと青)
+.under-section {
+    &__img {
+        position: absolute;
+        z-index: -1;
+        img {
+            width: 100vw;
+        }
+        &__pc {
+            display: block;
+            @include tb {
+                display: none;
+            }
+        }
+        &__tb {
+            display: none;
+            @include tb {
+                display: block;
+            }
+            @include sp {
+                display: none;
+            }
+        }
+        &__sp {
+            display: none;
+            @include sp {
+                display: block;
+            }
+        }
+    }
+}
+
+// 下3セクションの背景(オレンジと青)///
 //================================================================//
