@@ -5,6 +5,10 @@ html {
     background-image: url(/common/img/background-grass.png);
     background-size: cover;
 }
+
+// *{
+//     outline: 2px red solid;
+// }
 //フォント
 p {
     @include pc {
@@ -30,7 +34,7 @@ p {
     @include flex-center;
     &__pc {
         @include pc {
-            padding-top: 48rem;
+            padding-top: 54rem;
             padding-right: 7rem;
         }
 
@@ -113,6 +117,26 @@ p {
             width: 5.8rem;
             padding-right: 2rem;
             padding-top: 1.5rem;
+        }
+    }
+
+    &__4 {
+        &__pc {
+            @include pc {
+                margin-top: 10rem;
+                padding-right: 5rem;
+            }
+            @include tb {
+                display: none;
+            }
+        }
+        &__tb {
+            display: none;
+            @include tb {
+                display: block;
+                padding-right: -2rem;
+                padding-top: 8rem;
+            }
         }
     }
 }

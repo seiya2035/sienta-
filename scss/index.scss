@@ -292,7 +292,7 @@
                 @include tb {
                     display: flex;
                     justify-content: center;
-                    margin-right: -8rem;
+                    margin-right: -4.5rem;
                 }
 
                 @include sp {
@@ -376,4 +376,68 @@
     }
 }
 // 積載性・収納///
+//================================================================//
+
+//================================================================//
+// 走行性能
+.run {
+    @include pc {
+        //pcのコンテンツ幅
+        max-width: 60rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+    @include tb {
+        //tbのコンテンツ幅
+        max-width: 34.6rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+    @include pc {
+        display: flex;
+    }
+    @include tb {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    &-left {
+        @include sp {
+            //spのコンテンツ幅
+            max-width: 21.56rem;
+            width: 100%;
+            margin: 0 auto;
+        }
+        &__title {
+            @include sp {
+                width: 15.2rem;
+            }
+        }
+        &__main {
+            margin-top: 2.5rem;
+        }
+        &__button {
+            @include tb-min {
+                @include button-bk;
+            }
+            @include sp {
+                @include button-bk-sp;
+            }
+        }
+    }
+
+    &-right {
+        @include pc {
+            position: absolute;
+            left: 47%;
+        }
+        @include tb {
+            margin-top: 5rem;
+        }
+        @include sp {
+            width: 100%
+        }
+    }
+}
+
+// 走行性能///
 //================================================================//
