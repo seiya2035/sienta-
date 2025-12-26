@@ -149,6 +149,7 @@ p {
 
 //================================================================//
 // 下3セクションの背景(オレンジと青)
+// オレンジ
 .under-section {
     &__img {
         position: absolute;
@@ -156,29 +157,28 @@ p {
         img {
             width: 100vw;
         }
-        &__pc {
-            display: block;
-            @include tb {
-                display: none;
-            }
-        }
-        &__tb {
-            display: none;
-            @include tb {
-                display: block;
-            }
-            @include sp {
-                display: none;
-            }
-        }
-        &__sp {
-            display: none;
-            @include sp {
-                display: block;
-            }
-        }
+        @include display;
     }
 }
 
+//青背景
+.back-blue {
+    z-index: -1;
+    background-color: #DE8436;
+    position: absolute;
+    @include display;
+    padding-top: 10rem;
+    &__pc {
+        display: block;
+        @include tb {
+            display: none;
+        }
+    }
+    img {
+        width: 100vw;
+    }
+}
 // 下3セクションの背景(オレンジと青)///
 //================================================================//
+
+

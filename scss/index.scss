@@ -262,10 +262,8 @@
             justify-content: space-between;
             align-items: flex-end;
         }
-
         padding-top: 2.5rem;
         padding-bottom: 4rem;
-
         @include pc {
             //pcのコンテンツ幅
             max-width: 60rem;
@@ -292,7 +290,7 @@
                 @include tb {
                     display: flex;
                     justify-content: center;
-                    margin-right: -4.5rem;
+                    // margin-right: -4.5rem;
                 }
 
                 @include sp {
@@ -477,7 +475,6 @@
             }
             @include sp {
                 @include button-bk-sp;
-                margin-left: 6vw;
             }
         }
     }
@@ -505,12 +502,39 @@
         display: flex;
         justify-content: center;
         &__line {
+            &__pc {
+                @include tb-min {
+                    display: block;
+                    margin-left: 32rem;
+                    margin-top: -7.5rem;
+                }
+                @include sp {
+                    display: none;
+                }
+            }
+            &__sp {
+                display: none;
+                @include sp {
+                    display: block;
+                    width: 4.7rem;
+                    margin-right: 19rem;
+                    margin-top: -3.5rem;
+                }
+            }
             position: absolute;
-            margin-left: 32rem;
-            margin-top: -7.5rem;
+        }
+        @include sp {
+            //spのコンテンツ幅
+            max-width: 21.56rem;
+            width: 100%;
+            margin: 0 auto;
+            img {
+                width: 17.8135rem;
+            }
         }
     }
     &-img {
+        z-index: 4;
         width: 100%;
         &__pc {
             padding-top: 5rem;
@@ -535,11 +559,14 @@
         &__sp {
             display: none;
             @include sp {
+                margin-top: $margin-pc;
                 display: block;
             }
         }
     }
     &-button {
+        // position: relative;
+        z-index: 5;
         @include pc {
             @include button-bk;
             //pcのコンテンツ幅
@@ -557,10 +584,40 @@
         }
 
         @include sp {
+            //spのコンテンツ幅
             @include button-bk-sp;
-            margin-left: 6vw;
+            max-width: 21.56rem;
+            width: 100%;
         }
     }
 }
+.gallery-back {
+    background-color: #de8436;
+}
 // みんなの思い出///
+//================================================================//
+
+//================================================================//
+//  帰りは静かに
+.safe {
+    
+    &-top {
+        @include contents;
+    }
+    &-under {
+        &__pc-car {
+            @include contents;
+        }
+        &__button {
+            @include contents;
+            @include tb-min {
+                @include button-bk;
+            }
+            @include sp {
+                @include button-bk-sp;
+            }
+        }
+    }
+}
+//  帰りは静かに///
 //================================================================//

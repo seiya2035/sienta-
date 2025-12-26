@@ -110,7 +110,7 @@ $sp: 599px;
     margin-top: 3.5rem;
     p {
         font-size: 1rem;
-        font-weight: 900;
+        font-weight: 700;
         line-height: 1.2rem;
         letter-spacing: 0.25rem;
         color: $white;
@@ -161,5 +161,31 @@ $sp: 599px;
         max-width: 21.56rem;
         width: 100%;
         margin: 0 auto;
+    }
+}
+
+// それぞれの画面幅による表示非表示
+@mixin display {
+
+    &__pc {
+        display: block;
+        @include tb {
+            display: none;
+        }
+    }
+    &__tb {
+        display: none;
+        @include tb {
+            display: block;
+        }
+        @include sp {
+            display: none;
+        }
+    }
+    &__sp {
+        display: none;
+        @include sp {
+            display: block;
+        }
     }
 }
