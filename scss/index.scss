@@ -599,22 +599,49 @@
 
 //================================================================//
 //  帰りは静かに
+
 .safe {
-    
+    @include pc {
+        margin-top: 10rem;
+        padding-top: 25rem;
+        background-image: url(../img/under-back-blue.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     &-top {
         @include contents;
+        @include pc {
+            display: flex;
+            justify-content: space-between;
+            p {
+                color: $white;
+                font-weight: 500;
+            }
+        }
     }
     &-under {
-        &__pc-car {
-            @include contents;
-        }
-        &__button {
-            @include contents;
-            @include tb-min {
-                @include button-bk;
+        &__img {
+            margin-top: 8rem;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
             }
-            @include sp {
-                @include button-bk-sp;
+            display: flex;
+            justify-content: center;
+        }
+        &__pb {
+            display: flex;
+            @include contents;
+            align-items: flex-end;
+            justify-content: space-between;
+            &__button {
+                @include tb-min {
+                    @include button-bk;
+                }
+                @include sp {
+                    @include button-bk-sp;
+                }
             }
         }
     }

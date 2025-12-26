@@ -1,3 +1,10 @@
 @use 'variables' as *;
 @use 'mixin';
 
+footer{
+    background-color: $white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}

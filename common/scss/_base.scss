@@ -2,7 +2,7 @@
 @use 'mixin' as *;
 
 html {
-    background-image: url(/common/img/background-grass.png);
+    background-image: url(../common/img/background-grass.png);
     background-size: cover;
 }
 
@@ -162,22 +162,22 @@ p {
 }
 
 //青背景
-.back-blue {
-    z-index: -1;
-    background-color: #DE8436;
-    position: absolute;
-    @include display;
-    padding-top: 10rem;
-    &__pc {
-        display: block;
-        @include tb {
-            display: none;
-        }
-    }
-    img {
-        width: 100vw;
-    }
-}
+// .back-blue {
+//     z-index: -1;
+//     background-color: #DE8436;
+//     position: absolute;
+//     @include display;
+//     padding-top: 10rem;
+//     &__pc {
+//         display: block;
+//         @include tb {
+//             display: none;
+//         }
+//     }
+//     img {
+//         width: 100vw;
+//     }
+// }
 // 下3セクションの背景(オレンジと青)///
 //================================================================//
 
