@@ -29,7 +29,7 @@ p {
     //白い道路
 
     position: absolute;
-    z-index: -2;
+    z-index: -3;
     width: 100%;
     @include flex-center;
     &__pc {
