@@ -191,7 +191,7 @@
 // 道路の車
 // #carPath {
 //     fill: none;
-//     //  stroke: #333; 
+//     //  stroke: #333;
 //     stroke: transparent; /* ← 透明（または opacity: 0;）にします */
 //     stroke-width: 5;
 // }
@@ -199,7 +199,7 @@
 // .road-car {
 //     z-index: -3;
 //     &__path{
-        
+
 //             svg{
 //                 position: fixed; /* 画面に固定 */
 //                 top: 50%;
@@ -211,7 +211,7 @@
 //                 overflow: visible;
 //                 z-index: 1; /* 四角より後ろに */
 //             }
-        
+
 //     }
 // }
 // 道路の車///
@@ -649,6 +649,7 @@
     @include pc {
         margin-top: 10rem;
         padding-top: 25rem;
+        padding-bottom: 7rem;
         background-image: url(../img/under-back-blue.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -666,25 +667,38 @@
     }
     &-under {
         &__img {
-            z-index: -1;
+            position: relative;
+            z-index: 1;
             margin-top: 8rem;
-            img {
-                width: 100%;
-                height: auto;
-                display: block;
-            }
             display: flex;
             justify-content: center;
+            width: 100%;
+            img {
+                display: block;
+                width: 100%;
+                aspect-ratio: 120 / 21.875;
+                object-fit: cover; 
+                -webkit-mask-image: url(../img/safe-img-mask.png);
+                mask-image: url(../img/safe-img-mask.png);
+                -webkit-mask-size: 100% 100%;
+                mask-size: 100% 100%;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+            }
         }
         &__pb {
-            z-index: 1;
+            position: relative;
+            z-index: 2;
             display: flex;
             @include contents;
+            margin-top: -10rem;
             align-items: flex-end;
             justify-content: space-between;
             &__button {
+                margin-bottom: 2rem;
                 @include tb-min {
                     @include button-bk;
+                    background: #de8436;
                 }
                 @include sp {
                     @include button-bk-sp;

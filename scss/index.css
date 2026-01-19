@@ -99,7 +99,7 @@ html {
 
 .white-road {
   position: absolute;
-  z-index: -2;
+  z-index: -3;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -870,21 +870,24 @@ footer {
   .indoor {
     max-width: 60rem;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 1023px) {
   .indoor {
     max-width: 34.6rem;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 599px) {
   .indoor {
     max-width: 21.56rem;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1135,6 +1138,7 @@ footer {
   .safe {
     margin-top: 10rem;
     padding-top: 25rem;
+    padding-bottom: 7rem;
     background-image: url(../img/under-back-blue.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1144,21 +1148,24 @@ footer {
   .safe-top {
     max-width: 60rem;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 1023px) {
   .safe-top {
     max-width: 34.6rem;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 599px) {
   .safe-top {
     max-width: 21.56rem;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1172,17 +1179,31 @@ footer {
   }
 }
 .safe-under__img {
+  position: relative;
+  z-index: 1;
   margin-top: 8rem;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .safe-under__img img {
-  width: 100%;
-  height: auto;
   display: block;
+  width: 100%;
+  aspect-ratio: 120/21.875;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-mask-image: url(../img/safe-img-mask.png);
+  mask-image: url(../img/safe-img-mask.png);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 .safe-under__pb {
+  position: relative;
+  z-index: 2;
   display: flex;
+  margin-top: -10rem;
   align-items: flex-end;
   justify-content: space-between;
 }
@@ -1190,22 +1211,28 @@ footer {
   .safe-under__pb {
     max-width: 60rem;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 1023px) {
   .safe-under__pb {
     max-width: 34.6rem;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 599px) {
   .safe-under__pb {
     max-width: 21.56rem;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
+}
+.safe-under__pb__button {
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 599px) {
   .safe-under__pb__button {
@@ -1219,6 +1246,7 @@ footer {
     border: 3px solid #23211C;
     background: #23211C;
     margin-top: 3.5rem;
+    background: #de8436;
   }
   .safe-under__pb__button p {
     font-size: 1rem;

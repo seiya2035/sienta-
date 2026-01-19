@@ -148,19 +148,22 @@ $sp: 599px;
         //pcのコンテンツ幅
         max-width: 60rem;
         width: 100%;
-        margin: 0 auto;
+        margin-left: auto;       
+        margin-right: auto;      
     }
     @include tb {
         //tbのコンテンツ幅
         max-width: 34.6rem;
         width: 100%;
-        margin: 0 auto;
+        margin-left: auto;       
+        margin-right: auto;      
     }
     @include sp {
         //spのコンテンツ幅
         max-width: 21.56rem;
         width: 100%;
-        margin: 0 auto;
+        margin-left: auto;       
+        margin-right: auto;      
     }
 }
 
