@@ -338,10 +338,27 @@ footer {
     padding-bottom: 5rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .hero-title__main {
+    margin-bottom: 6rem;
+  }
+  .hero-title__main img {
+    width: 50.25rem;
+  }
+}
 .hero-title__sub {
   position: absolute;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 1024px) {
+  .hero-title__sub {
+    margin-bottom: 25rem;
+    margin-right: 30rem;
+  }
+  .hero-title__sub img {
+    width: 15rem;
+  }
+}
+@media screen and (max-width: 1023px) {
   .hero-title__sub {
     margin-bottom: 13rem;
     margin-right: 25rem;

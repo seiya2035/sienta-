@@ -38,9 +38,24 @@
             padding-bottom: 5rem;
         }
 
+        &__main{
+            @include pc{
+                img{
+                    width: 50.25rem;
+                }
+                margin-bottom: 6rem;
+            }
+        }
         &__sub {
             position: absolute;
-            @include tb-min {
+            @include pc {
+                img{
+                    width: 15rem;
+                }
+                margin-bottom: 25rem;
+                margin-right: 30rem;
+            }
+            @include tb {
                 margin-bottom: 13rem;
                 margin-right: 25rem;
             }
