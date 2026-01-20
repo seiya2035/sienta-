@@ -137,6 +137,7 @@ html {
 }
 @media screen and (max-width: 599px) {
   .white-road__sp {
+    overflow: hidden;
     padding-top: 42rem;
     display: block;
   }
@@ -364,6 +365,12 @@ footer {
     margin-right: 25rem;
   }
 }
+@media screen and (max-width: 600px) and (min-width: 400px) {
+  .hero-title__sub {
+    width: 9rem;
+    margin-left: -0.8rem;
+  }
+}
 @media screen and (max-width: 599px) {
   .hero-title__sub {
     margin-bottom: 10rem;
@@ -379,6 +386,11 @@ footer {
   display: flex;
   justify-content: space-between;
   z-index: 1;
+}
+@media screen and (max-width: 599px) {
+  .hero-img {
+    display: block;
+  }
 }
 .hero-img__left__pc4 {
   display: none;
@@ -487,6 +499,14 @@ footer {
 @media screen and (max-width: 599px) {
   .hero-img__sp {
     display: block;
+    /* ▼追加：画像を画面いっぱいに広げる▼ */
+    width: 100%;
+    height: 100%;
+  }
+  .hero-img__sp img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .hero-car {

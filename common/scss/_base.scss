@@ -57,6 +57,7 @@ p {
     &__sp {
         display: none;
         @include sp {
+            overflow: hidden;
             padding-top: 42rem;
             display: block;
         }
