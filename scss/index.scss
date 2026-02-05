@@ -205,31 +205,47 @@
 
 //================================================================//
 // 道路の車
+// scss/index.scss 
+
+// パス自体は見えなくて良いので設定
 #carPath {
     fill: none;
-    //  stroke: #333;
-    stroke: transparent; /* ← 透明（または opacity: 0;）にします */
-    stroke-width: 5;
+    stroke: transparent;
 }
 
 .road-car {
-    position: absolute; /* 親要素（white-road）からの距離で配置 */
-    top: 0;             /* 道路の始まりに置く */
-    left: 50%;          /* いったん真ん中に */
-    transform: translateX(-50%); 
-    width: clamp(100px, 15vw, 200px); /* 画面幅に合わせてサイズ調整 */
-    z-index: 5;
+    /* 親要素は場所を固定せず、中身の基準にします */
+    position: relative;
+    z-index: 100; /* 道路(white-road)より必ず上にくるように */
+
+    &__car {
+        /* ★重要：パス(SVG)がfixedなら、車もfixedにすると座標が合います */
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100px; /* 車の大きさを指定（デザインに合わせて調整） */
+        pointer-events: none; /* クリックを邪魔しない */
+        width: 8vw;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transform: scale(1, -1);
+        }
+        
+    }
+
     &__path {
         svg {
             position: fixed; /* 画面に固定 */
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* 中央寄せ */
-            /* ↓ 変更点：縦長なので「高さ」を基準に合わせる */
-            height: 90vh; /* 画面の高さの90%に収める */
-            width: auto; /* 幅はなりゆきで */
+            transform: translate(-50%, -50%);
+            height: 90vh;    /* 画面の高さに合わせる */
+            width: auto;
             overflow: visible;
-            z-index: 1; /* 四角より後ろに */
+            pointer-events: none;
+            z-index: -1;     /* 車よりは後ろ、でも道路よりは前 */
         }
     }
 }

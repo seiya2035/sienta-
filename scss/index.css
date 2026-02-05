@@ -63,7 +63,7 @@ html {
   background-size: cover;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   p {
     color: #23211C;
     font-family: YakuHanJP, "Zen Kaku Gothic Antique", sans-serif;
@@ -105,7 +105,7 @@ html {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .white-road__pc {
     padding-top: 54rem;
     padding-right: 7rem;
@@ -170,7 +170,7 @@ html {
   flex-direction: column;
   margin-top: 5rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .gray-road__2 {
     padding-bottom: 10rem;
   }
@@ -187,7 +187,7 @@ html {
     padding-bottom: 1.5rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .gray-road__3 {
     padding-top: 10rem;
     padding-right: 35rem;
@@ -206,7 +206,7 @@ html {
     padding-top: 1.5rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .gray-road__4__pc {
     margin-top: 10rem;
     padding-right: 20rem;
@@ -339,7 +339,7 @@ footer {
     padding-bottom: 5rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .hero-title__main {
     margin-bottom: 6rem;
   }
@@ -350,7 +350,7 @@ footer {
 .hero-title__sub {
   position: absolute;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .hero-title__sub {
     margin-bottom: 25rem;
     margin-right: 30rem;
@@ -535,35 +535,46 @@ footer {
 
 #carPath {
   fill: none;
-  stroke: transparent; /* ← 透明（または opacity: 0;）にします */
-  stroke-width: 5;
+  stroke: transparent;
 }
 
 .road-car {
-  position: absolute; /* 親要素（white-road）からの距離で配置 */
-  top: 0; /* 道路の始まりに置く */
-  left: 50%; /* いったん真ん中に */
-  transform: translateX(-50%);
-  width: clamp(100px, 15vw, 200px); /* 画面幅に合わせてサイズ調整 */
-  z-index: 5;
+  /* 親要素は場所を固定せず、中身の基準にします */
+  position: relative;
+  z-index: 100; /* 道路(white-road)より必ず上にくるように */
+}
+.road-car__car {
+  /* ★重要：パス(SVG)がfixedなら、車もfixedにすると座標が合います */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px; /* 車の大きさを指定（デザインに合わせて調整） */
+  pointer-events: none; /* クリックを邪魔しない */
+  width: 8vw;
+}
+.road-car__car img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1, -1);
 }
 .road-car__path svg {
   position: fixed; /* 画面に固定 */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* 中央寄せ */
-  /* ↓ 変更点：縦長なので「高さ」を基準に合わせる */
-  height: 90vh; /* 画面の高さの90%に収める */
-  width: auto; /* 幅はなりゆきで */
+  transform: translate(-50%, -50%);
+  height: 90vh; /* 画面の高さに合わせる */
+  width: auto;
   overflow: visible;
-  z-index: 1; /* 四角より後ろに */
+  pointer-events: none;
+  z-index: -1; /* 車よりは後ろ、でも道路よりは前 */
 }
 
 .about {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .about {
     max-width: 62.5rem;
     width: 100%;
@@ -620,7 +631,7 @@ footer {
 .about-text__main p {
   text-align: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .about-text__main p {
     padding-top: 3.5rem;
     line-height: 2.75rem;
@@ -652,7 +663,7 @@ footer {
   padding-top: 2.5rem;
   padding-bottom: 4rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .storage-container {
     height: 32rem;
     display: flex;
@@ -660,7 +671,7 @@ footer {
     align-items: flex-end;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .storage-container {
     max-width: 60rem;
     width: 100%;
@@ -681,7 +692,7 @@ footer {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .storage-container-left__title {
     margin-right: 3rem;
   }
@@ -702,7 +713,7 @@ footer {
   position: absolute;
   z-index: 1;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .storage-container-left__sub {
     margin-left: -5rem;
   }
@@ -786,7 +797,7 @@ footer {
 .storage-back__pc {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .storage-back__pc {
     display: block;
   }
@@ -813,7 +824,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .run {
     max-width: 60rem;
     width: 100%;
@@ -827,7 +838,7 @@ footer {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .run {
     display: flex;
   }
@@ -895,7 +906,7 @@ footer {
     color: #FDFFFB;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .run-right {
     position: absolute;
     left: 47%;
@@ -912,7 +923,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .indoor {
     max-width: 60rem;
     width: 100%;
@@ -936,7 +947,7 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .indoor {
     display: flex;
     align-items: flex-end;
@@ -1015,7 +1026,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .gallery {
     max-width: 60rem;
     width: 100%;
@@ -1104,7 +1115,7 @@ footer {
 .gallery-button {
   z-index: 5;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .gallery-button {
     display: flex;
     width: 21.625rem;
@@ -1180,7 +1191,7 @@ footer {
   background-color: #de8436;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .safe {
     margin-top: 10rem;
     padding-top: 25rem;
@@ -1190,7 +1201,7 @@ footer {
     background-size: cover;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .safe-top {
     max-width: 60rem;
     width: 100%;
@@ -1214,7 +1225,7 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .safe-top {
     display: flex;
     justify-content: space-between;
@@ -1253,7 +1264,7 @@ footer {
   align-items: flex-end;
   justify-content: space-between;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .safe-under__pb {
     max-width: 60rem;
     width: 100%;
