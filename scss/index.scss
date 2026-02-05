@@ -216,24 +216,54 @@
 .road-car {
     /* 親要素は場所を固定せず、中身の基準にします */
     position: relative;
-    z-index: 100; /* 道路(white-road)より必ず上にくるように */
-
-    &__car {
-        /* ★重要：パス(SVG)がfixedなら、車もfixedにすると座標が合います */
-        position: fixed; 
-        top: 0;
-        left: 0;
-        width: 100px; /* 車の大きさを指定（デザインに合わせて調整） */
-        pointer-events: none; /* クリックを邪魔しない */
+    z-index: -2; /* 道路(white-road)より必ず上にくるように */
+    // &__path{
+    //     &__pc{
+    //         display: block;
+    //         @include tb-min{
+    //             display: none;}
+    //     }
+    //     &__tb{
+    //         display: none;
+    //         @include tb {
+    //             display: block;
+    //         }
+    //     }
+    // }
+&__car {
+    /* ★重要：パス(SVG)がfixedなら、車もfixedにすると座標が合います */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    @include pc {
         width: 8vw;
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transform: scale(1, -1);
-        }
-        
     }
+    @include tb {
+        width: 16vw;
+    }
+    @include sp {
+        width: 28vw;
+    }
+    pointer-events: none; /* クリックを邪魔しない */
+
+    /* ▼修正：初期状態を透明（見えない）にする */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* ふわっと表示させる */
+
+    /* ▼修正：このクラスがつくと見えるようになる */
+    &.is-visible {
+        opacity: 1;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        // transform: scale(1, -1);
+    }
+}
+
+// ...（後略）
 
     &__path {
         svg {

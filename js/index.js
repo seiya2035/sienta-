@@ -2,44 +2,54 @@
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-// ターゲットを「.road-car__car」に変更します
-gsap.to(".road-car__car", { 
-  scrollTrigger: {
-    trigger: ".white-road", // 道路のエリアを基準にスクロールを監視
-    start: ".top center",    // 道路が画面中央に来たら開始
-    endTrigger: ".gallery-back", 
-    end: "top center", // ギャラリーセクションの「上」が「画面中央」に来たら終了
-    scrub: 5,               // スクロールに追従させる
-    markers: false           // 動きが確認できたら false に
-  },
-  y: -50,
-  ease: "power2.out", // ★緩やかに動く設定
-  motionPath: {
-    path: "#carPath",        // SVGの中のパスをなぞる
-    align: "#carPath",       // パスの上に車を乗せる
-    alignOrigin: [0.5, 0.5], // 車の中心でパスに乗るように
-    autoRotate: 90 // 前回の角度調整を忘れずに！
-  },
-  ease: "none"
+// ==========================================
+// 1. 道を走るアニメーション（位置と表示・非表示）
+// ==========================================
+gsap.to(".road-car__car", {
+    scrollTrigger: {
+        trigger: ".about",           // 開始位置
+        start: "top center",
+        
+        endTrigger: ".indoor",       // 終了位置
+        end: "top center",
+        
+        scrub: 1,                    // スクロールに連動
+        toggleClass: { targets: ".road-car__car", className: "is-visible" },
+        markers: true                // ★完成したら false にして消してください
+    },
+    motionPath: {
+        path: "#carPath",
+        align: "#carPath",
+        alignOrigin: [0.5, 0.5],
+    },
+    ease: "none"
 });
 
-// gsap.to(".road-car__car", { 
-//     scrollTrigger: {
-//       trigger: ".white-road", 
-//       start: "top center",    // 道路の上が画面中央に来たら開始
-//       endTrigger: ".gallery-back", 
-//       end: "top center", 
-//       scrub: 1,               
-//       // ★追加：表示・非表示を切り替える設定
-//       // 道路エリアにいる時だけ「is-active」というクラスを車につける
-//       toggleClass: { targets: ".road-car__car", className: "is-active" },
-//       markers: false           
-//     },
-//     motionPath: {
-//       path: "#carPath",        
-//       align: "#carPath",       
-//       alignOrigin: [0.5, 0.5], 
-//       autoRotate: 90 // 前回の角度調整を忘れずに！
-//     },
-//     ease: "none"
-//   });
+
+// ==========================================
+// 2. 回転のアニメーション（追加部分）
+// ==========================================
+
+// ① .storage に来たら 15度 に傾ける
+// （.aboutから.storageまでは何もしないので0度のままです）
+gsap.to(".road-car__car", {
+    rotation: 15,            // 15度回転
+    scrollTrigger: {
+        trigger: ".storage", // .storage が基準
+        start: "top center", // 画面中央に来たら回転開始
+        end: "center center", // .storageの真ん中あたりで傾き完了
+        scrub: 1,            // 滑らかに動かす
+    }
+});
+
+// ② .run に来たら -15度 に傾ける
+// （15度の状態から、グイッと反対の-15度まで回転します）
+gsap.to(".road-car__car", {
+    rotation: -15,           // -15度回転
+    scrollTrigger: {
+        trigger: ".run",     // .run が基準
+        start: "top center", // 画面中央に来たら回転開始
+        end: "center center", // .runの真ん中あたりで傾き完了
+        scrub: 1,            // 滑らかに動かす
+    }
+});

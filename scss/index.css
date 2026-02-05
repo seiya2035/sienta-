@@ -146,6 +146,8 @@ html {
 .gray-road {
   width: 100%;
   display: flex;
+  position: relative;
+  z-index: -3;
   justify-content: center;
 }
 .gray-road img {
@@ -541,22 +543,41 @@ footer {
 .road-car {
   /* 親要素は場所を固定せず、中身の基準にします */
   position: relative;
-  z-index: 100; /* 道路(white-road)より必ず上にくるように */
+  z-index: -2; /* 道路(white-road)より必ず上にくるように */
 }
 .road-car__car {
   /* ★重要：パス(SVG)がfixedなら、車もfixedにすると座標が合います */
   position: fixed;
   top: 0;
   left: 0;
-  width: 100px; /* 車の大きさを指定（デザインに合わせて調整） */
   pointer-events: none; /* クリックを邪魔しない */
-  width: 8vw;
+  /* ▼修正：初期状態を透明（見えない）にする */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* ふわっと表示させる */
+  /* ▼修正：このクラスがつくと見えるようになる */
+}
+@media screen and (min-width: 1025px) {
+  .road-car__car {
+    width: 8vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .road-car__car {
+    width: 16vw;
+  }
+}
+@media screen and (max-width: 599px) {
+  .road-car__car {
+    width: 28vw;
+  }
+}
+.road-car__car.is-visible {
+  opacity: 1;
 }
 .road-car__car img {
   width: 100%;
   height: auto;
   display: block;
-  transform: scale(1, -1);
 }
 .road-car__path svg {
   position: fixed; /* 画面に固定 */

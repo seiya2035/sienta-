@@ -68,6 +68,8 @@ p {
     //道路の装飾
     width: 100%;
     display: flex;
+    position: relative;
+    z-index: -3;
     justify-content: center;
     img {
         padding-top: 2.6rem;
