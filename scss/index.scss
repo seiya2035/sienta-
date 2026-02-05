@@ -213,7 +213,12 @@
 }
 
 .road-car {
-    z-index: -3;
+    position: absolute; /* 親要素（white-road）からの距離で配置 */
+    top: 0;             /* 道路の始まりに置く */
+    left: 50%;          /* いったん真ん中に */
+    transform: translateX(-50%); 
+    width: clamp(100px, 15vw, 200px); /* 画面幅に合わせてサイズ調整 */
+    z-index: 5;
     &__path {
         svg {
             position: fixed; /* 画面に固定 */
