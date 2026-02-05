@@ -533,6 +533,27 @@ footer {
   }
 }
 
+#carPath {
+  fill: none;
+  stroke: transparent; /* ← 透明（または opacity: 0;）にします */
+  stroke-width: 5;
+}
+
+.road-car {
+  z-index: -3;
+}
+.road-car__path svg {
+  position: fixed; /* 画面に固定 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 中央寄せ */
+  /* ↓ 変更点：縦長なので「高さ」を基準に合わせる */
+  height: 90vh; /* 画面の高さの90%に収める */
+  width: auto; /* 幅はなりゆきで */
+  overflow: visible;
+  z-index: 1; /* 四角より後ろに */
+}
+
 .about {
   display: flex;
   justify-content: center;

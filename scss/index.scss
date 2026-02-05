@@ -59,10 +59,9 @@
                 margin-bottom: 13rem;
                 margin-right: 25rem;
             }
-            @media screen and (max-width: 600px)and (min-width: 400px) {
+            @media screen and (max-width: 600px) and (min-width: 400px) {
                 width: 9rem;
                 margin-left: -0.8rem;
-                
             }
             @include sp {
                 margin-bottom: 10rem;
@@ -206,31 +205,29 @@
 
 //================================================================//
 // 道路の車
-// #carPath {
-//     fill: none;
-//     //  stroke: #333;
-//     stroke: transparent; /* ← 透明（または opacity: 0;）にします */
-//     stroke-width: 5;
-// }
+#carPath {
+    fill: none;
+    //  stroke: #333;
+    stroke: transparent; /* ← 透明（または opacity: 0;）にします */
+    stroke-width: 5;
+}
 
-// .road-car {
-//     z-index: -3;
-//     &__path{
-
-//             svg{
-//                 position: fixed; /* 画面に固定 */
-//                 top: 50%;
-//                 left: 50%;
-//                 transform: translate(-50%, -50%); /* 中央寄せ */
-//                 /* ↓ 変更点：縦長なので「高さ」を基準に合わせる */
-//                 height: 90vh; /* 画面の高さの90%に収める */
-//                 width: auto; /* 幅はなりゆきで */
-//                 overflow: visible;
-//                 z-index: 1; /* 四角より後ろに */
-//             }
-
-//     }
-// }
+.road-car {
+    z-index: -3;
+    &__path {
+        svg {
+            position: fixed; /* 画面に固定 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 中央寄せ */
+            /* ↓ 変更点：縦長なので「高さ」を基準に合わせる */
+            height: 90vh; /* 画面の高さの90%に収める */
+            width: auto; /* 幅はなりゆきで */
+            overflow: visible;
+            z-index: 1; /* 四角より後ろに */
+        }
+    }
+}
 // 道路の車///
 //================================================================//
 
