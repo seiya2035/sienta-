@@ -74,7 +74,7 @@ html {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   p {
     color: #23211C;
     font-family: YakuHanJP, "Zen Kaku Gothic Antique", sans-serif;
@@ -111,7 +111,7 @@ html {
     padding-right: 7rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .white-road__pc {
     display: block;
     display: none;
@@ -120,7 +120,7 @@ html {
 .white-road__tb {
   display: none;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .white-road__tb {
     padding-top: 58rem;
     padding-right: 0.7rem;
@@ -177,7 +177,7 @@ html {
     padding-bottom: 10rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .gray-road__2 {
     padding-bottom: 8rem;
     width: 4rem;
@@ -195,7 +195,7 @@ html {
     padding-right: 35rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .gray-road__3 {
     padding-right: 8rem;
     padding-top: 8rem;
@@ -214,7 +214,7 @@ html {
     padding-right: 20rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .gray-road__4__pc {
     display: none;
   }
@@ -222,7 +222,7 @@ html {
 .gray-road__4__tb {
   display: none;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .gray-road__4__tb {
     display: block;
     padding-right: -2rem;
@@ -245,7 +245,7 @@ html {
 .under-section__img__pc {
   display: block;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .under-section__img__pc {
     display: none;
   }
@@ -253,7 +253,7 @@ html {
 .under-section__img__tb {
   display: none;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .under-section__img__tb {
     display: block;
   }
@@ -331,7 +331,7 @@ footer {
   position: absolute;
   z-index: 2;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .hero-title {
     padding-bottom: 10rem;
   }
@@ -361,7 +361,7 @@ footer {
     width: 15rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .hero-title__sub {
     margin-bottom: 13rem;
     margin-right: 25rem;
@@ -402,7 +402,7 @@ footer {
     display: block;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .hero-img__left__pc4 {
     display: none;
   }
@@ -441,7 +441,7 @@ footer {
 .hero-img__left__tb {
   display: none;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .hero-img__left__tb {
     display: block;
   }
@@ -477,7 +477,7 @@ footer {
     display: block;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .hero-img__right__pc4 {
     display: none;
   }
@@ -485,7 +485,7 @@ footer {
 .hero-img__right__tb {
   display: none;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .hero-img__right__tb {
     display: block;
   }
@@ -521,7 +521,7 @@ footer {
   z-index: 5;
   margin-top: 16rem;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .hero-car {
     margin-top: 18rem;
   }
@@ -561,7 +561,7 @@ footer {
     width: 8vw;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .road-car__car {
     width: 16vw;
   }
@@ -602,7 +602,7 @@ footer {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .about {
     max-width: 37.25rem;
     width: 100%;
@@ -623,7 +623,7 @@ footer {
   display: flex;
   justify-content: center;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .about-text__title {
     width: 32rem;
   }
@@ -660,7 +660,7 @@ footer {
     letter-spacing: 0.3rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .about-text__main p {
     padding-top: 1.25rem;
     line-height: 2.2rem;
@@ -699,7 +699,7 @@ footer {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .storage-container {
     max-width: 38.92rem;
     width: 100%;
@@ -718,7 +718,7 @@ footer {
     margin-right: 3rem;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .storage-container-left__title {
     display: flex;
     justify-content: center;
@@ -749,7 +749,7 @@ footer {
 .storage-container-left__main {
   margin-top: 2.5rem;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .storage-container-left__main {
     display: flex;
     justify-content: center;
@@ -777,7 +777,7 @@ footer {
     color: #FDFFFB;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .storage-container-left__button {
     margin-left: 22%;
     display: flex;
@@ -805,7 +805,7 @@ footer {
     color: #FDFFFB;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .storage-container-right {
     margin-top: 2.5rem;
   }
@@ -826,7 +826,7 @@ footer {
 .storage-back__tb {
   display: none;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .storage-back__tb {
     display: block;
   }
@@ -852,7 +852,7 @@ footer {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .run {
     max-width: 34.6rem;
     width: 100%;
@@ -864,7 +864,7 @@ footer {
     display: flex;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .run {
     display: flex;
     flex-direction: column-reverse;
@@ -933,7 +933,7 @@ footer {
     left: 47%;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .run-right {
     margin-top: 5rem;
   }
@@ -952,7 +952,7 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .indoor {
     max-width: 34.6rem;
     width: 100%;
@@ -974,13 +974,13 @@ footer {
     align-items: flex-end;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .indoor-tb {
     display: flex;
     flex-direction: column-reverse;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .indoor-tb__2 {
     display: flex;
     flex-direction: column-reverse;
@@ -1053,7 +1053,7 @@ footer {
     color: #FDFFFB;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .indoor-right {
     margin-top: 6rem;
   }
@@ -1066,7 +1066,7 @@ footer {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .gallery {
     max-width: 34.6rem;
     width: 100%;
@@ -1123,7 +1123,7 @@ footer {
   padding-bottom: 5rem;
   display: block;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .gallery-img__pc {
     display: none;
   }
@@ -1133,7 +1133,7 @@ footer {
   padding-bottom: 5rem;
   display: none;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .gallery-img__tb {
     display: block;
   }
@@ -1179,7 +1179,7 @@ footer {
     color: #FDFFFB;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .gallery-button {
     display: flex;
     width: 21.625rem;
@@ -1241,7 +1241,7 @@ footer {
     background-size: cover;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .safe {
     margin-top: 8rem;
     padding-top: 12rem;
@@ -1262,7 +1262,7 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .safe-top {
     max-width: 34.6rem;
     width: 100%;
@@ -1287,18 +1287,41 @@ footer {
     font-weight: 500;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .safe-top {
+    margin-top: 4rem;
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
+  .safe-top__title {
+    margin-left: -8rem;
+  }
+  .safe-top p {
+    padding-top: 2rem;
+  }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 599px) {
+  .safe-top {
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .safe-top__title {
+    width: 80%;
+    margin-left: -4rem;
+  }
+  .safe-top p {
+    padding-top: 2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
   .safe-under {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -1324,6 +1347,18 @@ footer {
     mask-repeat: no-repeat;
   }
 }
+@media screen and (max-width: 1024px) {
+  .safe-under__img {
+    order: 2;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .safe-under__img img {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 1025px) {
   .safe-under__pb {
     position: relative;
@@ -1342,7 +1377,7 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 1025px) and (max-width: 1023px) {
+@media screen and (min-width: 1025px) and (max-width: 1024px) {
   .safe-under__pb {
     max-width: 34.6rem;
     width: 100%;
@@ -1356,6 +1391,92 @@ footer {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media screen and (min-width: 599px) {
+  .safe-under__pb {
+    width: 58vw;
+  }
+}
+@media screen and (min-width: 599px) and (min-width: 1025px) {
+  .safe-under__pb {
+    max-width: 60rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 1024px) {
+  .safe-under__pb {
+    max-width: 34.6rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 599px) {
+  .safe-under__pb {
+    max-width: 21.56rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 1024px) and (max-width: 1024px) {
+  .safe-under__pb {
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (min-width: 599px) {
+  .safe-under__pb__pc-car {
+    padding-top: 4rem;
+    width: 100%;
+    order: 1;
+  }
+}
+@media screen and (max-width: 599px) {
+  .safe-under__pb {
+    width: 58vw;
+  }
+}
+@media screen and (max-width: 599px) and (min-width: 1025px) {
+  .safe-under__pb {
+    max-width: 60rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 599px) and (max-width: 1024px) {
+  .safe-under__pb {
+    max-width: 34.6rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 599px) and (max-width: 599px) {
+  .safe-under__pb {
+    max-width: 21.56rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 599px) and (max-width: 1024px) and (max-width: 1024px) {
+  .safe-under__pb {
+    max-width: 75vw;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 599px) {
+  .safe-under__pb__pc-car {
+    padding-top: 2rem;
+    width: 100%;
+    order: 1;
   }
 }
 .safe-under__pb__button {
@@ -1373,7 +1494,8 @@ footer {
     border: 3px solid #23211C;
     background: #23211C;
     margin-top: 3.5rem;
-    background: #de8436;
+    background: #1a3757;
+    border: 3px solid #FDFFFB;
   }
   .safe-under__pb__button p {
     font-size: 1rem;
@@ -1381,6 +1503,11 @@ footer {
     line-height: 1.2rem;
     letter-spacing: 0.25rem;
     color: #FDFFFB;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .safe-under__pb__button {
+    order: 3;
   }
 }
 @media screen and (max-width: 599px) {
@@ -1395,6 +1522,8 @@ footer {
     border: 3px solid #23211C;
     background: #23211C;
     margin-top: 3.5rem;
+    background: #1a3757;
+    border: 3px solid #FDFFFB;
   }
   .safe-under__pb__button p {
     font-size: 0.75rem;
