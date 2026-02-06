@@ -1055,7 +1055,7 @@ footer {
 }
 @media screen and (max-width: 1023px) {
   .indoor-right {
-    margin-top: 3.5rem;
+    margin-top: 6rem;
   }
 }
 
@@ -1287,36 +1287,54 @@ footer {
     font-weight: 500;
   }
 }
-.safe-under__img {
-  position: relative;
-  z-index: 1;
-  margin-top: 8rem;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+@media screen and (max-width: 1023px) {
+  .safe-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
-.safe-under__img img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 120/21.875;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-mask-image: url(../img/safe-img-mask.png);
-  mask-image: url(../img/safe-img-mask.png);
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-.safe-under__pb {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  margin-top: -10rem;
-  align-items: flex-end;
-  justify-content: space-between;
+@media screen and (max-width: 1023px) {
+  .safe-under {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 @media screen and (min-width: 1025px) {
+  .safe-under__img {
+    position: relative;
+    z-index: 1;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .safe-under__img img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 120/21.875;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-mask-image: url(../img/safe-img-mask.png);
+    mask-image: url(../img/safe-img-mask.png);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .safe-under__pb {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    margin-top: -10rem;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1025px) and (min-width: 1025px) {
   .safe-under__pb {
     max-width: 60rem;
     width: 100%;
@@ -1324,7 +1342,7 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 1025px) and (max-width: 1023px) {
   .safe-under__pb {
     max-width: 34.6rem;
     width: 100%;
@@ -1332,7 +1350,7 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (max-width: 599px) {
+@media screen and (min-width: 1025px) and (max-width: 599px) {
   .safe-under__pb {
     max-width: 21.56rem;
     width: 100%;

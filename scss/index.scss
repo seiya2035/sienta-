@@ -604,7 +604,7 @@
     }
     &-right {
         @include tb {
-            margin-top: 3.5rem;
+            margin-top: 6rem;
         }
     }
 }
@@ -760,36 +760,55 @@
                 font-weight: 500;
             }
         }
-    }
-    &-under {
-        &__img {
-            position: relative;
-            z-index: 1;
-            margin-top: 8rem;
+        @include tb {
+            width: 100%;
             display: flex;
             justify-content: center;
-            width: 100%;
-            img {
-                display: block;
+            flex-direction: column;
+        }
+    }
+    &-under {
+        @include tb  {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__img {
+            @include pc {
+                
+                position: relative;
+                z-index: 1;
+                margin-top: 8rem;
+                display: flex;
+                justify-content: center;
                 width: 100%;
-                aspect-ratio: 120 / 21.875;
-                object-fit: cover;
-                -webkit-mask-image: url(../img/safe-img-mask.png);
-                mask-image: url(../img/safe-img-mask.png);
-                -webkit-mask-size: 100% 100%;
-                mask-size: 100% 100%;
-                -webkit-mask-repeat: no-repeat;
-                mask-repeat: no-repeat;
+                img {
+                    display: block;
+                    width: 100%;
+                    aspect-ratio: 120 / 21.875;
+                    object-fit: cover;
+                    -webkit-mask-image: url(../img/safe-img-mask.png);
+                    mask-image: url(../img/safe-img-mask.png);
+                    -webkit-mask-size: 100% 100%;
+                    mask-size: 100% 100%;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                }
+            }
+            @include tb {
+
             }
         }
         &__pb {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            @include contents;
-            margin-top: -10rem;
-            align-items: flex-end;
-            justify-content: space-between;
+            @include pc {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                @include contents;
+                margin-top: -10rem;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+
             &__button {
                 margin-bottom: 2rem;
                 @include tb-min {
