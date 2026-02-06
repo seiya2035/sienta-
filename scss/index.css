@@ -1350,13 +1350,18 @@ footer {
 @media screen and (max-width: 1024px) {
   .safe-under__img {
     order: 2;
-    margin-top: 8rem;
+    margin-top: 6rem;
     display: flex;
     justify-content: center;
     width: 100%;
   }
   .safe-under__img img {
     width: 100%;
+    height: 16rem;
+    -o-object-fit: cover;
+       object-fit: cover; /* 枠に合わせてはみ出し分をカット */
+    -o-object-position: center;
+       object-position: center; /* どこを中心に置くか（上・中央など） */
   }
 }
 @media screen and (min-width: 1025px) {
