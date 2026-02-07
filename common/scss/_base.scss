@@ -21,6 +21,18 @@ p {
         @include sp-main-text;
     }
 }
+a {
+    font-family: YakuHanJP, 'Zen Kaku Gothic Antique', sans-serif;
+    @include pc {
+        @include pc-main-text;
+    }
+    @include tb {
+        @include tb-main-text;
+    }
+    @include sp {
+        @include sp-main-text;
+    }
+}
 
 //================================================================//
 // 道路
