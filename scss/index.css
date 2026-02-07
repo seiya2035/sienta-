@@ -310,12 +310,153 @@ header {
   }
 }
 
-footer {
+.footer {
   background-color: #FDFFFB;
   width: 100%;
+  padding-top: 60px; /* 余白は適宜調整してください */
+  padding-bottom: 20px;
+  /* --- Top Section (Logos, Nav, Related, Image) --- */
+  /* Left Area */
+  /* Center Area (Related Sites/Services) */
+  /* Right Area (Image) */
+  /* --- Bottom Section (Legal & Copyright) --- */
+}
+.footer__inner {
+  width: 90%;
+  margin: 0 auto;
+}
+.footer__top {
   display: flex;
-  justify-content: center;
-  padding-bottom: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .footer__top {
+    flex-direction: column;
+  }
+}
+.footer__left-area {
+  margin-right: 40px;
+}
+.footer__logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.footer__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__nav-list .footer__nav-item {
+  margin-bottom: 10px;
+}
+.footer__nav-list .footer__nav-item a {
+  color: #23211C;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 200%; /* 1.5rem */
+  letter-spacing: 0.1125rem;
+  text-decoration: none;
+}
+.footer__center-area {
+  display: flex;
+  gap: 60px;
+  flex-grow: 1;
+}
+@media screen and (max-width: 768px) {
+  .footer__center-area {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+  }
+}
+.footer__links-group .footer__links-title {
+  color: #23211C;
+  font-size: 0.875rem;
+  font-weight: 900;
+  line-height: 200%; /* 1.75rem */
+  letter-spacing: 0.13125rem;
+  margin-bottom: 10px;
+}
+.footer__links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__links-list--mt {
+  margin-top: 20px;
+}
+.footer__links-list li a {
+  color: #23211C;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 200%; /* 1.5rem */
+  letter-spacing: 0.1125rem;
+  text-decoration: none;
+}
+.footer__right-area {
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .footer__right-area {
+    margin-left: 0;
+    margin-top: 30px;
+    width: 100%;
+    text-align: right;
+  }
+}
+.footer__right-area .footer__right-img {
+  max-width: 100%;
+  height: auto;
+}
+.footer__bottom {
+  border-top: 2px solid #23211c; /* var(--, #23211C) */
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #23211C;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 204.704%; /* 1.27938rem */
+  letter-spacing: 0.15625rem; /* 最後に指定された letter-spacing */
+}
+@media screen and (max-width: 768px) {
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+.footer__legal {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .footer__legal {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.footer__legal li a {
+  color: inherit; /* 親の $black を継承 */
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+.footer__copyright {
+  margin: 0;
 }
 
 .hero {
@@ -1251,6 +1392,16 @@ footer {
     background-size: cover;
   }
 }
+@media screen and (max-width: 599px) {
+  .safe {
+    margin-top: 8rem;
+    padding-top: 12rem;
+    padding-bottom: 7rem;
+    background-image: url(../img/under-back-blue-sp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 .safe-top p {
   color: #FDFFFB;
 }
@@ -1398,12 +1549,12 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 599px) {
+@media screen and (max-width: 1024px) {
   .safe-under__pb {
     width: 58vw;
   }
 }
-@media screen and (min-width: 599px) and (min-width: 1025px) {
+@media screen and (max-width: 1024px) and (min-width: 1025px) {
   .safe-under__pb {
     max-width: 60rem;
     width: 100%;
@@ -1411,7 +1562,7 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 599px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (max-width: 1024px) {
   .safe-under__pb {
     max-width: 34.6rem;
     width: 100%;
@@ -1419,7 +1570,7 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 599px) and (max-width: 599px) {
+@media screen and (max-width: 1024px) and (max-width: 599px) {
   .safe-under__pb {
     max-width: 21.56rem;
     width: 100%;
@@ -1427,14 +1578,14 @@ footer {
     margin-right: auto;
   }
 }
-@media screen and (min-width: 599px) and (max-width: 1024px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (max-width: 1024px) and (max-width: 1024px) {
   .safe-under__pb {
     max-width: 50vw;
     display: flex;
     flex-direction: column-reverse;
   }
 }
-@media screen and (min-width: 599px) {
+@media screen and (max-width: 1024px) {
   .safe-under__pb__pc-car {
     padding-top: 4rem;
     width: 100%;

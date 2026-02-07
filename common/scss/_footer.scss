@@ -1,10 +1,180 @@
 @use 'variables' as *;
 @use 'mixin';
 
-footer{
+.footer {
     background-color: $white;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 3rem;
+    padding-top: 60px; /* 余白は適宜調整してください */
+    padding-bottom: 20px;
+
+    &__inner {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* --- Top Section (Logos, Nav, Related, Image) --- */
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    /* Left Area */
+    &__left-area {
+        margin-right: 40px;
+    }
+
+    &__logos {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+
+        // .footer__logo-title {
+        //     // サイズ指定がないためなりゆき、必要ならwidth指定
+        // }
+        // .footer__logo-yoko {
+        //     // サイズ指定がないためなりゆき
+        // }
+    }
+
+    &__nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .footer__nav-item {
+            margin-bottom: 10px;
+
+            a {
+                color: $black;
+                font-size: 0.75rem;
+                font-weight: 700;
+                line-height: 200%; /* 1.5rem */
+                letter-spacing: 0.1125rem;
+                text-decoration: none;
+            }
+        }
+    }
+
+    /* Center Area (Related Sites/Services) */
+    &__center-area {
+        display: flex;
+        gap: 60px;
+        flex-grow: 1;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 30px;
+        }
+    }
+
+    &__links-group {
+        .footer__links-title {
+            color: $black;
+            font-size: 0.875rem;
+            font-weight: 900;
+            line-height: 200%; /* 1.75rem */
+            letter-spacing: 0.13125rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__links-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &--mt {
+            margin-top: 20px;
+        }
+
+        li {
+            a {
+                color: $black;
+                font-size: 0.75rem;
+                font-weight: 700;
+                line-height: 200%; /* 1.5rem */
+                letter-spacing: 0.1125rem;
+                text-decoration: none;
+            }
+        }
+    }
+
+    /* Right Area (Image) */
+    &__right-area {
+        margin-left: auto;
+
+        @media screen and (max-width: 768px) {
+            margin-left: 0;
+            margin-top: 30px;
+            width: 100%;
+            text-align: right;
+        }
+
+        .footer__right-img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    /* --- Bottom Section (Legal & Copyright) --- */
+    &__bottom {
+        border-top: 2px solid #23211c; /* var(--, #23211C) */
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        // 指定された共通スタイル
+        color: $black;
+        font-size: 0.625rem;
+        font-weight: 700;
+        line-height: 204.704%; /* 1.27938rem */
+        letter-spacing: 0.15625rem; /* 最後に指定された letter-spacing */
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+    }
+
+    &__legal {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        li {
+            a {
+                color: inherit; /* 親の $black を継承 */
+                text-decoration: none;
+                font-size: inherit;
+                font-weight: inherit;
+                line-height: inherit;
+                letter-spacing: inherit;
+            }
+        }
+    }
+
+    &__copyright {
+        margin: 0;
+        // フォントスタイルは親要素(.footer__bottom)から継承
+    }
 }

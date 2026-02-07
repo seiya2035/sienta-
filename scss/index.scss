@@ -747,6 +747,14 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    @include sp {
+        margin-top: 8rem;
+        padding-top: 12rem;
+        padding-bottom: 7rem;
+        background-image: url(../img/under-back-blue-sp.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     &-top {
         p {
@@ -841,7 +849,7 @@
                 align-items: flex-end;
                 justify-content: space-between;
             }
-            @include tb-min {
+            @include tb {
                 @include contents;
                 @media screen and (max-width: 1024px) and (max-width: 1024px) {
                     max-width: 50vw;
