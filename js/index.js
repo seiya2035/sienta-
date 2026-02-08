@@ -56,12 +56,14 @@ gsap.to('.road-car__car', {
 document.addEventListener('DOMContentLoaded', function () {
     // id="js-hamburger" の要素を取得
     const hamburger = document.getElementById('js-hamburger');
+    const nav = document.getElementById('js-global-nav'); // 追加
 
     // もしボタンが見つかったら、クリックイベントを追加
     if (hamburger) {
         hamburger.addEventListener('click', function () {
             // is-active クラスをつけたり消したりする
             this.classList.toggle('is-active');
+            nav.classList.toggle('is-active');
         });
     }
 });

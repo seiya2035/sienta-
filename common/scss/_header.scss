@@ -13,17 +13,16 @@ $gap: 0.5rem; // ★ユーザー様の指定値に合わせました
 
 // --- 距離の計算 ---
 // 1. Topの線 (Y=0地点) の移動距離
-$top-to-mid: calc(#{$h-top} + #{$gap});                     // 中段へ
+$top-to-mid: calc(#{$h-top} + #{$gap}); // 中段へ
 $top-to-bot: calc(#{$h-top} + #{$gap} + #{$h-mid} + #{$gap}); // 下段へ
 
 // 2. Middleの線 (Y=Top+Gap地点) の移動距離
-$mid-to-bot: calc(#{$h-mid} + #{$gap});                     // 下段へ
-$mid-to-top: calc(0px - (#{$h-top} + #{$gap}));             // 上段へ
+$mid-to-bot: calc(#{$h-mid} + #{$gap}); // 下段へ
+$mid-to-top: calc(0px - (#{$h-top} + #{$gap})); // 上段へ
 
 // 3. Bottomの線 (Y=Top+Gap+Mid+Gap地点) の移動距離
 $bot-to-top: calc(0px - (#{$h-top} + #{$gap} + #{$h-mid} + #{$gap})); // 上段へ
-$bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
-
+$bot-to-mid: calc(0px - (#{$h-mid} + #{$gap})); // 中段へ
 
 // ==================================================================
 // 2. Keyframes アニメーション定義
@@ -31,37 +30,78 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
 
 // ▼一番上の線の動き
 @keyframes cycle-top-line {
-    0% { transform: translateY(0); }
-    25% { transform: translateY($top-to-mid); }    // ゆっくり到着
-    33.33% { transform: translateY($top-to-mid); } // 停止
-    58.33% { transform: translateY($top-to-bot); } // 移動
-    66.66% { transform: translateY($top-to-bot); } // 停止
-    91.66% { transform: translateY(0); }           // 移動
-    100% { transform: translateY(0); }             // 停止
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY($top-to-mid);
+    } // ゆっくり到着
+    33.33% {
+        transform: translateY($top-to-mid);
+    } // 停止
+    58.33% {
+        transform: translateY($top-to-bot);
+    } // 移動
+    66.66% {
+        transform: translateY($top-to-bot);
+    } // 停止
+    91.66% {
+        transform: translateY(0);
+    } // 移動
+    100% {
+        transform: translateY(0);
+    } // 停止
 }
 
 // ▼真ん中の線の動き
 @keyframes cycle-middle-line {
-    0% { transform: translateY(0); }
-    25% { transform: translateY($mid-to-bot); }
-    33.33% { transform: translateY($mid-to-bot); }
-    58.33% { transform: translateY($mid-to-top); }
-    66.66% { transform: translateY($mid-to-top); }
-    91.66% { transform: translateY(0); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY($mid-to-bot);
+    }
+    33.33% {
+        transform: translateY($mid-to-bot);
+    }
+    58.33% {
+        transform: translateY($mid-to-top);
+    }
+    66.66% {
+        transform: translateY($mid-to-top);
+    }
+    91.66% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 // ▼一番下の線の動き
 @keyframes cycle-bottom-line {
-    0% { transform: translateY(0); }
-    25% { transform: translateY($bot-to-top); }
-    33.33% { transform: translateY($bot-to-top); }
-    58.33% { transform: translateY($bot-to-mid); }
-    66.66% { transform: translateY($bot-to-mid); }
-    91.66% { transform: translateY(0); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY($bot-to-top);
+    }
+    33.33% {
+        transform: translateY($bot-to-top);
+    }
+    58.33% {
+        transform: translateY($bot-to-mid);
+    }
+    66.66% {
+        transform: translateY($bot-to-mid);
+    }
+    91.66% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
-
 
 // ==================================================================
 // 3. メインスタイル
@@ -113,7 +153,7 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
     background-color: transparent;
     cursor: pointer;
     padding: 0;
-    
+
     // 指定されていたスタイル
     border-radius: 0.75rem;
     border: 3px solid $black;
@@ -136,12 +176,17 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
         border-radius: 10px;
 
         // アニメーションと変形の基点を設定
-        transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), 
-                    opacity 0.3s ease ;
+        transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease;
 
-        &--top { height: $h-top; }
-        &--middle { height: $h-mid; }
-        &--bottom { height: $h-bot; }
+        &--top {
+            height: $h-top;
+        }
+        &--middle {
+            height: $h-mid;
+        }
+        &--bottom {
+            height: $h-bot;
+        }
     }
 
     // ------------------------------------
@@ -186,7 +231,7 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
         .hamburger__line--top {
             transform: translateY($top-to-mid) rotate(45deg);
             width: 70%;
-            margin: 0 auto ;
+            margin: 0 auto;
         }
 
         // 3. 真ん中の線を消す
@@ -199,7 +244,154 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
             transform: translateY($bot-to-mid) rotate(-45deg);
             width: 70%;
             height: 4px;
-            margin: 0 auto ;
+            margin: 0 auto;
         }
     }
 }
+
+// ==================================================================
+// ナビゲーションメニュー (全画面オーバーレイ)
+.global-nav {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    pointer-events: none;
+  
+    &.is-active {
+      opacity: 1; visibility: visible; pointer-events: auto;
+    }
+  
+    // 白い箱
+    &__box {
+      position: absolute;
+      top: 2rem; left: 2rem; right: 2rem; bottom: 2rem;
+      background-color: $white;
+      border: 8px solid $black;
+      border-radius: 1.5625rem;
+      box-sizing: border-box;
+      display: flex;
+      overflow: hidden;
+    }
+  
+    // --------------------------------------------------------
+    // 左側エリア：メインメニュー
+    // --------------------------------------------------------
+    &__left {
+      width: 40%; // 幅の調整
+      height: 100%;
+      padding-left: 8rem; // 左の余白
+      margin-top: 6rem;
+      display: flex;
+      align-items: center; // 上下中央に配置
+    }
+  
+    &__main-list {
+      list-style: none;
+      li {
+        margin-bottom: 2rem;
+        a {
+          text-decoration: none;
+          display: block;
+          color: $black;
+          font-family: "Zen Kaku Gothic Antique", sans-serif;
+          font-weight: 900;
+          font-size: 2rem;
+          line-height: 1.84;
+          letter-spacing: 0.3rem;
+          text-align: justify;
+          transition: opacity 0.3s;
+          &:hover { opacity: 0.6; }
+        }
+      }
+    }
+  
+    // --------------------------------------------------------
+    // 右側エリア：画像とサブメニュー
+    // --------------------------------------------------------
+        &__right {
+            width: 60%;
+            height: 100%;
+            position: relative;
+            
+            // フレックスボックスで縦並び・中央配置にする
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; // 上下中央
+            align-items: center;     // 左右中央
+            
+            padding-bottom: 2rem; // 下の余白
+            box-sizing: border-box;
+          }
+        
+          // 1. moto-web 画像
+          &__moto {
+            // 以前の absolute 配置をやめ、流れに沿って配置
+            position: relative;
+            display: block;
+            width:  51.73925rem; // PC時のサイズ（適宜調整）
+            margin-bottom: -10rem; // 下の画像との隙間
+            z-index: 10;
+            
+            transition: transform 0.3s;
+            &:hover { transform: scale(1.05); }
+        
+            img {
+              width: 100%;
+              height: auto;
+              vertical-align: bottom;
+            }
+          }
+        
+          // 中央コンテンツラッパー
+          &__center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            z-index: 5;
+          }
+        
+          // 2. fotter-img 画像 (メインビジュアル)
+          &__visual {
+            position: relative;
+            width: 68.32288rem; // 画像の表示サイズ（適宜調整）
+            height: auto; // 高さはなりゆき
+            margin-bottom: 2rem; // サブメニューとの隙間
+        
+            img {
+              width: 100%;
+              height: auto;
+              display: block;
+            }
+          }
+        
+          // 3. サブメニュー
+          &__sub-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            text-align: right;
+            
+            li {
+              a {
+                text-decoration: none;
+                color: $black;
+                font-family: "Zen Kaku Gothic Antique", sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+                transition: opacity 0.3s;
+                white-space: nowrap;
+                &:hover { opacity: 0.6; }
+              }
+            }
+          }
+        
+          // 不要になった要素のスタイルは削除してOKですが、
+          // もし残っていても影響しない構成にしています。
+          &__tent { display: none; }
+  }
