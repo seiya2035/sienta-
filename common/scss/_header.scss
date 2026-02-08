@@ -1,44 +1,104 @@
 @use 'variables' as *;
 @use 'mixin' as *;
 
+// ==================================================================
+// 1. 変数・計算定義（最初に定義します）
+// ==================================================================
+
+// 各線の高さ（太さ）
+$h-top: 4px;
+$h-mid: 5px;
+$h-bot: 2px;
+$gap: 0.5rem; // ★ユーザー様の指定値に合わせました
+
+// --- 距離の計算 ---
+// 1. Topの線 (Y=0地点) の移動距離
+$top-to-mid: calc(#{$h-top} + #{$gap});                     // 中段へ
+$top-to-bot: calc(#{$h-top} + #{$gap} + #{$h-mid} + #{$gap}); // 下段へ
+
+// 2. Middleの線 (Y=Top+Gap地点) の移動距離
+$mid-to-bot: calc(#{$h-mid} + #{$gap});                     // 下段へ
+$mid-to-top: calc(0px - (#{$h-top} + #{$gap}));             // 上段へ
+
+// 3. Bottomの線 (Y=Top+Gap+Mid+Gap地点) の移動距離
+$bot-to-top: calc(0px - (#{$h-top} + #{$gap} + #{$h-mid} + #{$gap})); // 上段へ
+$bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
+
+
+// ==================================================================
+// 2. Keyframes アニメーション定義
+// ==================================================================
+
+// ▼一番上の線の動き
+@keyframes cycle-top-line {
+    0% { transform: translateY(0); }
+    25% { transform: translateY($top-to-mid); }    // ゆっくり到着
+    33.33% { transform: translateY($top-to-mid); } // 停止
+    58.33% { transform: translateY($top-to-bot); } // 移動
+    66.66% { transform: translateY($top-to-bot); } // 停止
+    91.66% { transform: translateY(0); }           // 移動
+    100% { transform: translateY(0); }             // 停止
+}
+
+// ▼真ん中の線の動き
+@keyframes cycle-middle-line {
+    0% { transform: translateY(0); }
+    25% { transform: translateY($mid-to-bot); }
+    33.33% { transform: translateY($mid-to-bot); }
+    58.33% { transform: translateY($mid-to-top); }
+    66.66% { transform: translateY($mid-to-top); }
+    91.66% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+// ▼一番下の線の動き
+@keyframes cycle-bottom-line {
+    0% { transform: translateY(0); }
+    25% { transform: translateY($bot-to-top); }
+    33.33% { transform: translateY($bot-to-top); }
+    58.33% { transform: translateY($bot-to-mid); }
+    66.66% { transform: translateY($bot-to-mid); }
+    91.66% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+
+// ==================================================================
+// 3. メインスタイル
+// ==================================================================
+
 .header {
-    position: fixed; // 画面に固定
+    position: fixed;
     top: 0;
-    right: 2vw; // 右寄せ（必要に応じて right: 3.5rem; など調整してください）
+    right: 2vw;
     z-index: 1000;
 
-    // ---------------------------------------------
-    // 右上の白いタグ部分（メニューとロゴの入れ物）
-    // ---------------------------------------------
+    // 右上の白いタグ部分
     &__menu-box {
-        width: 10.25rem; // 指定の幅
-        height: 15.625rem; // 指定の高さ
+        width: 10.25rem;
+        height: 15.625rem;
         background-color: $white;
 
-        // ★ここを修正しました！
-        border: 4px solid $black; // 太さを4pxに！
-        border-top: none; // 画面上端にくっつくデザインなら上線は消すのが一般的
-        border-radius: 0 0 1.25rem 1.25rem; // 下側だけ丸くする
+        border: 4px solid $black;
+        border-top: none;
+        border-radius: 0 0 1.25rem 1.25rem;
 
-        // 中身のレイアウト（縦並び・中央揃え）
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start; // 上から順に並べる
-        padding-top: 2rem; // 上の余白（ロゴの位置調整）
-        padding-bottom: 2rem; // 下の余白
-        gap: 1.5rem; // ロゴとボタンの間の余白
-        box-sizing: border-box; // borderを幅に含める
+        justify-content: flex-start;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 1.5rem;
+        box-sizing: border-box;
     }
 
     &__logo {
-        // ロゴのスタイル
         width: 100%;
         display: flex;
         justify-content: center;
-
         img {
-            width: 6rem; // ロゴサイズ（バランスを見て調整）
+            width: 6rem;
             height: auto;
         }
     }
@@ -51,11 +111,12 @@
     width: 6.25rem;
     height: 6.25rem;
     background-color: transparent;
-    border: none;
     cursor: pointer;
     padding: 0;
+    
+    // 指定されていたスタイル
     border-radius: 0.75rem;
-    border: 3px solid  $black;
+    border: 3px solid $black;
 
     display: flex;
     justify-content: center;
@@ -65,24 +126,74 @@
         width: 2.8125rem;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: $gap; // 変数を使用
     }
 
     &__line {
         display: block;
         width: 100%;
         background-color: $black;
-        border-radius: 10px; // 線の先端を丸く
+        border-radius: 10px;
 
-        // 線の太さ指定
-        &--top {
-            height: 4px;
+        // アニメーションと変形の基点を設定
+        transition: transform 0.3s ease, opacity 0.3s ease; 
+
+        &--top { height: $h-top; }
+        &--middle { height: $h-mid; }
+        &--bottom { height: $h-bot; }
+    }
+
+    // ------------------------------------
+    // ホバー時のアニメーション
+    // ------------------------------------
+    &:hover {
+        .hamburger__line {
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
-        &--middle {
-            height: 5px;
+
+        .hamburger__line--top {
+            animation-name: cycle-top-line;
+            animation-delay: 0s;
         }
-        &--bottom {
-            height: 2px;
+        .hamburger__line--middle {
+            animation-name: cycle-middle-line;
+            animation-delay: 0s;
+        }
+        .hamburger__line--bottom {
+            animation-name: cycle-bottom-line;
+            animation-delay: 0s;
+        }
+    }
+
+    // ------------------------------------
+    // ★ここを追加！ アクティブ（クリック）時のスタイル： ×印にする
+    // ------------------------------------
+    &.is-active {
+        // 1. ホバーアニメーションを強制停止
+        // ホバーしても回らなくなります
+        .hamburger__line {
+            animation: none !important;
+        }
+        // ホバー時のスタイルが残らないようにリセット（必要に応じて）
+        &:hover .hamburger__line {
+            animation: none !important;
+        }
+
+        // 2. 上の線を「計算した中央位置」まで下ろして 45度回転
+        .hamburger__line--top {
+            transform: translateY($top-to-mid) rotate(45deg);
+        }
+
+        // 3. 真ん中の線を消す
+        .hamburger__line--middle {
+            opacity: 0;
+        }
+
+        // 4. 下の線を「計算した中央位置」まで上げて -45度回転
+        .hamburger__line--bottom {
+            transform: translateY($bot-to-mid) rotate(-45deg);
         }
     }
 }

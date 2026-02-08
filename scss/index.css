@@ -309,6 +309,75 @@ a {
   }
 }
 
+@keyframes cycle-top-line {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(calc(4px + 0.5rem));
+  }
+  33.33% {
+    transform: translateY(calc(4px + 0.5rem));
+  }
+  58.33% {
+    transform: translateY(calc(4px + 0.5rem + 5px + 0.5rem));
+  }
+  66.66% {
+    transform: translateY(calc(4px + 0.5rem + 5px + 0.5rem));
+  }
+  91.66% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes cycle-middle-line {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(calc(5px + 0.5rem));
+  }
+  33.33% {
+    transform: translateY(calc(5px + 0.5rem));
+  }
+  58.33% {
+    transform: translateY(calc(0px - (4px + 0.5rem)));
+  }
+  66.66% {
+    transform: translateY(calc(0px - (4px + 0.5rem)));
+  }
+  91.66% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes cycle-bottom-line {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(calc(0px - (4px + 0.5rem + 5px + 0.5rem)));
+  }
+  33.33% {
+    transform: translateY(calc(0px - (4px + 0.5rem + 5px + 0.5rem)));
+  }
+  58.33% {
+    transform: translateY(calc(0px - (5px + 0.5rem)));
+  }
+  66.66% {
+    transform: translateY(calc(0px - (5px + 0.5rem)));
+  }
+  91.66% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -345,7 +414,6 @@ a {
   width: 6.25rem;
   height: 6.25rem;
   background-color: transparent;
-  border: none;
   cursor: pointer;
   padding: 0;
   border-radius: 0.75rem;
@@ -365,6 +433,7 @@ a {
   width: 100%;
   background-color: #23211C;
   border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .hamburger__line--top {
   height: 4px;
@@ -374,6 +443,38 @@ a {
 }
 .hamburger__line--bottom {
   height: 2px;
+}
+.hamburger:hover .hamburger__line {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hamburger:hover .hamburger__line--top {
+  animation-name: cycle-top-line;
+  animation-delay: 0s;
+}
+.hamburger:hover .hamburger__line--middle {
+  animation-name: cycle-middle-line;
+  animation-delay: 0s;
+}
+.hamburger:hover .hamburger__line--bottom {
+  animation-name: cycle-bottom-line;
+  animation-delay: 0s;
+}
+.hamburger.is-active .hamburger__line {
+  animation: none !important;
+}
+.hamburger.is-active:hover .hamburger__line {
+  animation: none !important;
+}
+.hamburger.is-active .hamburger__line--top {
+  transform: translateY(calc(4px + 0.5rem)) rotate(45deg);
+}
+.hamburger.is-active .hamburger__line--middle {
+  opacity: 0;
+}
+.hamburger.is-active .hamburger__line--bottom {
+  transform: translateY(calc(0px - (5px + 0.5rem))) rotate(-45deg);
 }
 
 .footer {
@@ -1208,6 +1309,13 @@ a {
   .indoor {
     display: flex;
     align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .indoor-tb {
+    display: flex;
+    margin-top: 5rem;
+    gap: 2.1rem;
   }
 }
 @media screen and (max-width: 1024px) {

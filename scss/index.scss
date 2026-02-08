@@ -559,6 +559,11 @@
     }
 
     &-tb {
+        @include pc {
+            display: flex;
+            margin-top: 5rem;
+            gap: 2.1rem;
+        }
         @include tb {
             display: flex;
             flex-direction: column-reverse;
