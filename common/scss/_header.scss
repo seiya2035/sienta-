@@ -2,24 +2,28 @@
 @use 'mixin' as *;
 
 header {
-    position: absolute; 
-    top: 0;             
-    left: 0;            
-    width: 100%;            
-    z-index: 9999999;   
-    position: fixed;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+    position: fixed;
 }
-.logo{
+.logo {
     background-color: $white;
+
+    border-radius: 0 0 1.25rem 0;
+    border-right: 4px solid #23211c;
+    border-bottom: 4px solid #23211c;
     border-bottom-right-radius: 20px;
     @include flex-center;
-    img{
+    img {
         height: auto;
     }
     @include tb-min {
         width: 10.25rem;
         height: 8.25rem;
-        img{
+        img {
             width: 6rem;
         }
     }
@@ -27,7 +31,7 @@ header {
     @include sp {
         width: 7.4rem;
         height: 5.7rem;
-        img{
+        img {
             width: 4.8rem;
         }
     }
