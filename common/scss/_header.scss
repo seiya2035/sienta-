@@ -1,38 +1,88 @@
 @use 'variables' as *;
 @use 'mixin' as *;
 
-header {
-    position: absolute;
+.header {
+    position: fixed; // 画面に固定
     top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999999;
-    position: fixed;
-}
-.logo {
-    background-color: $white;
+    right: 2vw; // 右寄せ（必要に応じて right: 3.5rem; など調整してください）
+    z-index: 1000;
 
-    border-radius: 0 0 1.25rem 0;
-    border-right: 4px solid #23211c;
-    border-bottom: 4px solid #23211c;
-    border-bottom-right-radius: 20px;
-    @include flex-center;
-    img {
-        height: auto;
+    // ---------------------------------------------
+    // 右上の白いタグ部分（メニューとロゴの入れ物）
+    // ---------------------------------------------
+    &__menu-box {
+        width: 10.25rem; // 指定の幅
+        height: 15.625rem; // 指定の高さ
+        background-color: $white;
+
+        // ★ここを修正しました！
+        border: 4px solid $black; // 太さを4pxに！
+        border-top: none; // 画面上端にくっつくデザインなら上線は消すのが一般的
+        border-radius: 0 0 1.25rem 1.25rem; // 下側だけ丸くする
+
+        // 中身のレイアウト（縦並び・中央揃え）
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; // 上から順に並べる
+        padding-top: 2rem; // 上の余白（ロゴの位置調整）
+        padding-bottom: 2rem; // 下の余白
+        gap: 1.5rem; // ロゴとボタンの間の余白
+        box-sizing: border-box; // borderを幅に含める
     }
-    @include tb-min {
-        width: 10.25rem;
-        height: 8.25rem;
+
+    &__logo {
+        // ロゴのスタイル
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
         img {
-            width: 6rem;
+            width: 6rem; // ロゴサイズ（バランスを見て調整）
+            height: auto;
         }
     }
+}
 
-    @include sp {
-        width: 7.4rem;
-        height: 5.7rem;
-        img {
-            width: 4.8rem;
+// ---------------------------------------------
+// ハンバーガーボタン
+// ---------------------------------------------
+.hamburger {
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 0.75rem;
+    border: 3px solid  $black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__lines {
+        width: 2.8125rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__line {
+        display: block;
+        width: 100%;
+        background-color: $black;
+        border-radius: 10px; // 線の先端を丸く
+
+        // 線の太さ指定
+        &--top {
+            height: 4px;
+        }
+        &--middle {
+            height: 5px;
+        }
+        &--bottom {
+            height: 2px;
         }
     }
 }
