@@ -136,7 +136,8 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
         border-radius: 10px;
 
         // アニメーションと変形の基点を設定
-        transition: transform 0.3s ease, opacity 0.3s ease; 
+        transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), 
+                    opacity 0.3s ease ;
 
         &--top { height: $h-top; }
         &--middle { height: $h-mid; }
@@ -148,7 +149,7 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
     // ------------------------------------
     &:hover {
         .hamburger__line {
-            animation-duration: 3s;
+            animation-duration: 2.8s;
             animation-iteration-count: infinite;
             animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -184,6 +185,8 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
         // 2. 上の線を「計算した中央位置」まで下ろして 45度回転
         .hamburger__line--top {
             transform: translateY($top-to-mid) rotate(45deg);
+            width: 70%;
+            margin: 0 auto ;
         }
 
         // 3. 真ん中の線を消す
@@ -194,6 +197,9 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap}));             // 中段へ
         // 4. 下の線を「計算した中央位置」まで上げて -45度回転
         .hamburger__line--bottom {
             transform: translateY($bot-to-mid) rotate(-45deg);
+            width: 70%;
+            height: 4px;
+            margin: 0 auto ;
         }
     }
 }
