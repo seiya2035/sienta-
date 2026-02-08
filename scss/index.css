@@ -408,12 +408,12 @@ header {
   }
 }
 .footer__nav-list {
+  margin-top: 5rem;
   display: flex; /* 横並び */
   flex-wrap: wrap;
   gap: 0.5rem 1.5rem; /* 上下20px, 左右30pxの余白 */
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 .footer__nav-list .footer__nav-item a {
   color: #23211C;
