@@ -1,7 +1,9 @@
 @use 'variables' as *;
 // ブレイクポイントを指定====================
 $pc1840: 1840px;
+$pc1550: 1550px;
 $pc1440: 1440px;
+$pc1300: 1300px;
 $pc1140: 1140px;
 
 $pc: 1025px;
@@ -16,6 +18,16 @@ $sp: 599px;
 
 @mixin pc1440 {
     @media screen and (max-width: ($pc1440)) {
+        @content;
+    }
+}
+@mixin pc1300 {
+    @media screen and (max-width: ($pc1300)) {
+        @content;
+    }
+}
+@mixin pc1550 {
+    @media screen and (max-width: ($pc1550)) {
         @content;
     }
 }

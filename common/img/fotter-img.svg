@@ -1,15 +1,15 @@
-<svg width="1094" height="568" viewBox="0 0 1094 568" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="969" height="568" viewBox="0 0 969 568" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g filter="url(#filter0_d_1598_929)">
-<rect x="82" y="117" width="950" height="407" fill="url(#pattern0_1598_929)" shape-rendering="crispEdges"/>
-<rect x="86" y="121" width="942" height="399" stroke="#FDFFFB" stroke-width="8" shape-rendering="crispEdges"/>
+<rect x="86" y="117" width="821" height="407" fill="url(#pattern0_1598_929)" shape-rendering="crispEdges"/>
+<rect x="90" y="121" width="813" height="399" stroke="#FDFFFB" stroke-width="8" shape-rendering="crispEdges"/>
 </g>
-<rect x="917.108" width="148.231" height="128.672" transform="rotate(30.3979 917.108 0)" fill="url(#pattern1_1598_929)"/>
-<rect x="971" y="117" width="122.166" height="137.89" fill="url(#pattern2_1598_929)"/>
+<rect x="792.108" width="148.231" height="128.672" transform="rotate(30.3979 792.108 0)" fill="url(#pattern1_1598_929)"/>
+<rect x="846" y="117" width="122.166" height="137.89" fill="url(#pattern2_1598_929)"/>
 <rect y="358" width="114.561" height="119.701" fill="url(#pattern3_1598_929)"/>
 <rect x="114.334" y="470.727" width="122.427" height="106.273" transform="rotate(-30.6496 114.334 470.727)" fill="url(#pattern4_1598_929)"/>
 <rect x="30.2642" y="454.399" width="113.213" height="113.213" fill="url(#pattern5_1598_929)"/>
 <defs>
-<filter id="filter0_d_1598_929" x="78" y="117" width="958" height="415" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_1598_929" x="82" y="117" width="829" height="415" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
@@ -20,7 +20,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1598_929" result="shape"/>
 </filter>
 <pattern id="pattern0_1598_929" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1598_929" transform="matrix(0.000390625 0 0 0.000911778 0 -0.277747)"/>
+<use xlink:href="#image0_1598_929" transform="matrix(0.000390625 0 0 0.000787968 0 -0.172137)"/>
 </pattern>
 <pattern id="pattern1_1598_929" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image1_1598_929" transform="matrix(0.0017757 0 0 0.00204561 -1.03521 -1.872)"/>
