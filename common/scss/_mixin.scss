@@ -16,6 +16,12 @@ $sp: 599px;
     }
 }
 
+@include pc1840-min{
+    @media screen and (min-width: ($pc1840)) {
+        @content;
+    }
+}
+
 @mixin pc1440 {
     @media screen and (max-width: ($pc1440)) {
         @content;

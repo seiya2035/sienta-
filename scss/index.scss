@@ -194,16 +194,21 @@
 
         // 中にある「配置用の枠（div）」すべてに適用
         // ※ &__left__1 などを個別に書くのが大変な場合、このようにまとめて指定できます
-        div[class*='__'] {
-            // ② 枠のアニメーション：親が小さい分、自分を大きくしてサイズを保つ（カウンター）
-            // ※以前の transform: translate(-50%, -50%); はこのアニメーションの中に含めます
-            // animation: keep-size 3s ease-out forwards;
-        }
+        // div[class*='__'] {
+        //     // ② 枠のアニメーション：親が小さい分、自分を大きくしてサイズを保つ（カウンター）
+        //     // ※以前の transform: translate(-50%, -50%); はこのアニメーションの中に含めます
+        //     // animation: keep-size 3s ease-out forwards;
+        // }
         img {
             max-width: none; // 「親が0だから自分も0」という制限を解除
             width: auto; // 画像本来の大きさで表示
             transform: translate(-50%, -50%);
             // animation: swing-wobble 3s ease-in-out forwards;
+            @include pc1840-min {
+                img {
+                    width: 400%;
+                }
+            }
         }
         &__left {
             &__1 {
@@ -217,7 +222,7 @@
                 z-index: 12;
                 margin-left: -38vw;
                 margin-top: -15vh;
-                img{
+                img {
                     width: 120%;
                 }
             }
@@ -236,35 +241,33 @@
         }
 
         &__center {
-                position: absolute;
-                z-index: 15;
-                margin-top: -38vh;
-            
+            position: absolute;
+            z-index: 15;
+            margin-top: -38vh;
         }
         &__right {
             &__6 {
                 position: absolute;
                 z-index: 11;
-                margin-left: 25vw;
+                margin-right: -25vw;
                 margin-top: -36vh;
-                
             }
             &__7 {
                 position: absolute;
                 z-index: 10;
-                margin-left: 38vw;
+                margin-right: -38vw;
                 margin-top: -15vh;
             }
             &__8 {
                 position: absolute;
                 z-index: 11;
-                margin-left: 35vw;
+                margin-right: -35vw;
                 margin-top: 7vh;
             }
             &__9 {
                 position: absolute;
                 z-index: 10;
-                margin-left: 32vw;
+                margin-right: -32vw;
                 margin-top: 30vh;
             }
         }
@@ -272,61 +275,61 @@
         // アニメーションの定義（キーフレーム）
         // --------------------------------------------------
 
-        // ① 広がる動き（親）
-        @keyframes spread-out {
-            0% {
-                transform: scale(0.4); // 最初は40%の距離に集まっている
-            }
-            100% {
-                transform: scale(1); // 本来の位置（100%）まで広がる
-            }
-        }
+        //         // 0.4(開始) → 0.6(1回目) → 0.8(2回目) → 1.0(完成)
+        // @keyframes step-spread {
+        //     // ▼ スタート（小さくまとまっている）
+        //     0%   { transform: scale(0.4); }
+        //     10%  { transform: scale(0.4); } // タメを作る
 
-        // ② サイズを維持する動き（枠）
-        // 親が0.4倍なら、子は2.5倍（1÷0.4）にすれば、見た目の大きさは変わりません
-        @keyframes keep-size {
-            0% {
-                // 親が小さいので、自分を大きく(2.5倍)して打ち消す
-                transform: translate(-50%, -50%) scale(2.5);
-            }
-            100% {
-                // 親が1倍に戻るので、自分も1倍に戻る
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
+        //     // ▼ 1段階目へ移動（キュッと動く）
+        //     15%  { transform: scale(0.6); }
+        //     40%  { transform: scale(0.6); } // しばらく停止（ポーズ）
 
-        // ③ 3回ゆらゆらする動き（画像）
-        @keyframes swing-wobble {
-            0% {
-                transform: rotate(0deg);
-            }
+        //     // ▼ 2段階目へ移動
+        //     45%  { transform: scale(0.8); }
+        //     70%  { transform: scale(0.8); } // しばらく停止
 
-            // 1回目の揺れ
-            15% {
-                transform: rotate(15deg);
-            }
-            30% {
-                transform: rotate(0deg);
-            }
+        //     // ▼ 最後、定位置へ移動
+        //     75%  { transform: scale(1.0); }
+        //     100% { transform: scale(1.0); } // 完了！
+        // }
 
-            // 2回目の揺れ（逆方向に）
-            45% {
-                transform: rotate(-15deg);
-            }
-            60% {
-                transform: rotate(0deg);
-            }
+        // // ② サイズ維持（枠）
+        // // 親のscaleの「逆数」を指定して、画像の大きさを一定に保ちます
+        // // 0.4の逆数=2.5, 0.6の逆数=1.66, 0.8の逆数=1.25
+        // @keyframes keep-size-step {
+        //     // ▼ スタート
+        //     0%   { transform: translate(-50%, -50%) scale(2.5); }
+        //     10%  { transform: translate(-50%, -50%) scale(2.5); }
 
-            // 3回目の揺れ
-            75% {
-                transform: rotate(10deg);
-            }
+        //     // ▼ 1段階目
+        //     15%  { transform: translate(-50%, -50%) scale(1.666); }
+        //     40%  { transform: translate(-50%, -50%) scale(1.666); }
 
-            // ゴール
-            100% {
-                transform: rotate(0deg);
-            }
-        }
+        //     // ▼ 2段階目
+        //     45%  { transform: translate(-50%, -50%) scale(1.25); }
+        //     70%  { transform: translate(-50%, -50%) scale(1.25); }
+
+        //     // ▼ 完了
+        //     75%  { transform: translate(-50%, -50%) scale(1.0); }
+        //     100% { transform: translate(-50%, -50%) scale(1.0); }
+        // }
+
+        // // ③ 角度の変化（画像）
+        // // 止まっている間にポーズを決めて、動く瞬間に次のポーズへ
+        // @keyframes step-rotate {
+        //     // ▼ 最初：右に傾く
+        //     0%, 10% { transform: rotate(15deg); }
+
+        //     // ▼ 1段階目：逆に左へ傾く
+        //     15%, 40% { transform: rotate(-15deg); }
+
+        //     // ▼ 2段階目：また右へ（少し浅めに）
+        //     45%, 70% { transform: rotate(10deg); }
+
+        //     // ▼ 最後：ピタッと正面に戻る
+        //     75%, 100% { transform: rotate(0deg); }
+        // }
     }
 
     &-car {
