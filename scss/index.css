@@ -887,136 +887,46 @@ a {
   }
 }
 .hero-img {
+  min-width: 100%;
+  z-index: 10;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: space-between;
-  z-index: 1;
 }
-@media screen and (max-width: 599px) {
-  .hero-img {
-    display: block;
-  }
+.hero-img__left__1 {
+  position: absolute;
+  z-index: 11;
 }
-.hero-img__left__pc4 {
-  display: none;
+.hero-img__left__2 {
+  position: absolute;
+  z-index: 12;
 }
-@media screen and (max-width: 1140px) {
-  .hero-img__left__pc4 {
-    display: block;
-  }
+.hero-img__left__3 {
+  position: absolute;
+  z-index: 11;
 }
-@media screen and (max-width: 1024px) {
-  .hero-img__left__pc4 {
-    display: none;
-  }
+.hero-img__left__4 {
+  position: absolute;
+  z-index: 10;
 }
-.hero-img__left__pc3 {
-  display: none;
+.hero-img__left__5 {
+  position: absolute;
 }
-@media screen and (max-width: 1440px) {
-  .hero-img__left__pc3 {
-    display: block;
-  }
+.hero-img__left__6 {
+  position: absolute;
+  z-index: 11;
 }
-@media screen and (max-width: 1140px) {
-  .hero-img__left__pc3 {
-    display: none;
-  }
+.hero-img__left__7 {
+  position: absolute;
+  z-index: 10;
 }
-.hero-img__left__pc2 {
-  display: none;
+.hero-img__left__8 {
+  position: absolute;
+  z-index: 11;
 }
-@media screen and (max-width: 1840px) {
-  .hero-img__left__pc2 {
-    display: block;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .hero-img__left__pc2 {
-    display: none;
-  }
-}
-@media screen and (max-width: 1840px) {
-  .hero-img__left__pc {
-    display: none;
-  }
-}
-.hero-img__left__tb {
-  display: none;
-}
-@media screen and (max-width: 1024px) {
-  .hero-img__left__tb {
-    display: block;
-  }
-}
-@media screen and (max-width: 599px) {
-  .hero-img__left__tb {
-    display: none;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .hero-img__right__pc {
-    display: none;
-  }
-}
-.hero-img__right__pc3 {
-  display: none;
-}
-@media screen and (max-width: 1440px) {
-  .hero-img__right__pc3 {
-    display: block;
-  }
-}
-@media screen and (max-width: 1140px) {
-  .hero-img__right__pc3 {
-    display: none;
-  }
-}
-.hero-img__right__pc4 {
-  display: none;
-}
-@media screen and (max-width: 1140px) {
-  .hero-img__right__pc4 {
-    display: block;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .hero-img__right__pc4 {
-    display: none;
-  }
-}
-.hero-img__right__tb {
-  display: none;
-}
-@media screen and (max-width: 1024px) {
-  .hero-img__right__tb {
-    display: block;
-  }
-}
-@media screen and (max-width: 599px) {
-  .hero-img__right__tb {
-    display: none;
-  }
-}
-.hero-img__sp {
-  display: none;
-}
-@media screen and (max-width: 599px) {
-  .hero-img__sp {
-    display: block;
-    /* ▼追加：画像を画面いっぱいに広げる▼ */
-    width: 100%;
-    height: 100%;
-  }
-  .hero-img__sp img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
+.hero-img__left__9 {
+  position: absolute;
+  z-index: 10;
 }
 .hero-car {
   position: absolute;
