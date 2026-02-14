@@ -887,46 +887,112 @@ a {
   }
 }
 .hero-img {
-  min-width: 100%;
-  z-index: 10;
   position: absolute;
-  display: flex;
-  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  z-index: 10;
+}
+.hero-img img {
+  max-width: none;
+  width: auto;
+  transform: translate(-50%, -50%);
 }
 .hero-img__left__1 {
   position: absolute;
   z-index: 11;
+  margin-left: -32vw;
+  margin-top: -36vh;
 }
 .hero-img__left__2 {
   position: absolute;
   z-index: 12;
+  margin-left: -38vw;
+  margin-top: -15vh;
+}
+.hero-img__left__2 img {
+  width: 120%;
 }
 .hero-img__left__3 {
   position: absolute;
   z-index: 11;
+  margin-left: -37vw;
+  margin-top: 6vh;
 }
 .hero-img__left__4 {
   position: absolute;
   z-index: 10;
+  margin-left: -32vw;
+  margin-top: 30vh;
 }
-.hero-img__left__5 {
+.hero-img__center {
   position: absolute;
+  z-index: 15;
+  margin-top: -38vh;
 }
-.hero-img__left__6 {
-  position: absolute;
-  z-index: 11;
-}
-.hero-img__left__7 {
-  position: absolute;
-  z-index: 10;
-}
-.hero-img__left__8 {
+.hero-img__right__6 {
   position: absolute;
   z-index: 11;
+  margin-left: 25vw;
+  margin-top: -36vh;
 }
-.hero-img__left__9 {
+.hero-img__right__7 {
   position: absolute;
   z-index: 10;
+  margin-left: 38vw;
+  margin-top: -15vh;
+}
+.hero-img__right__8 {
+  position: absolute;
+  z-index: 11;
+  margin-left: 35vw;
+  margin-top: 7vh;
+}
+.hero-img__right__9 {
+  position: absolute;
+  z-index: 10;
+  margin-left: 32vw;
+  margin-top: 30vh;
+}
+@keyframes spread-out {
+  0% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes keep-size {
+  0% {
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes swing-wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(15deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 .hero-car {
   position: absolute;

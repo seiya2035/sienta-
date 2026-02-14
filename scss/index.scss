@@ -180,50 +180,152 @@
     // }
 
     //修正後のhero-img
-    &-img{
-        min-width: 100%;
-        z-index: 10;
+    &-img {
+        // ...これまでの設定（基準点）...
         position: absolute;
-        display: flex;
-        justify-content: space-between;
-        &__left{
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        z-index: 10;
 
-            &__1{
+        // ① 親のアニメーション：全体を「40%の広がり」から「100%の広がり」へ
+        // animation: spread-out 3s ease-out forwards;
+
+        // 中にある「配置用の枠（div）」すべてに適用
+        // ※ &__left__1 などを個別に書くのが大変な場合、このようにまとめて指定できます
+        div[class*='__'] {
+            // ② 枠のアニメーション：親が小さい分、自分を大きくしてサイズを保つ（カウンター）
+            // ※以前の transform: translate(-50%, -50%); はこのアニメーションの中に含めます
+            // animation: keep-size 3s ease-out forwards;
+        }
+        img {
+            max-width: none; // 「親が0だから自分も0」という制限を解除
+            width: auto; // 画像本来の大きさで表示
+            transform: translate(-50%, -50%);
+            // animation: swing-wobble 3s ease-in-out forwards;
+        }
+        &__left {
+            &__1 {
                 position: absolute;
                 z-index: 11;
+                margin-left: -32vw;
+                margin-top: -36vh;
             }
-            &__2{
+            &__2 {
                 position: absolute;
                 z-index: 12;
+                margin-left: -38vw;
+                margin-top: -15vh;
+                img{
+                    width: 120%;
+                }
             }
-            &__3{
+            &__3 {
                 position: absolute;
                 z-index: 11;
+                margin-left: -37vw;
+                margin-top: 6vh;
             }
-            &__4{
+            &__4 {
                 position: absolute;
                 z-index: 10;
+                margin-left: -32vw;
+                margin-top: 30vh;
             }
-            &__5{
+        }
+
+        &__center {
                 position: absolute;
-            }
-            &__6{
-                position: absolute;
-                z-index: 11;
-            }
-            &__7{
-                position: absolute;
-                z-index: 10;
-            }
-            &__8{
-                position: absolute;
-                z-index: 11;
-            }
-            &__9{
-                position: absolute;
-                z-index: 10;
-            }
+                z-index: 15;
+                margin-top: -38vh;
             
+        }
+        &__right {
+            &__6 {
+                position: absolute;
+                z-index: 11;
+                margin-left: 25vw;
+                margin-top: -36vh;
+                
+            }
+            &__7 {
+                position: absolute;
+                z-index: 10;
+                margin-left: 38vw;
+                margin-top: -15vh;
+            }
+            &__8 {
+                position: absolute;
+                z-index: 11;
+                margin-left: 35vw;
+                margin-top: 7vh;
+            }
+            &__9 {
+                position: absolute;
+                z-index: 10;
+                margin-left: 32vw;
+                margin-top: 30vh;
+            }
+        }
+        // --------------------------------------------------
+        // アニメーションの定義（キーフレーム）
+        // --------------------------------------------------
+
+        // ① 広がる動き（親）
+        @keyframes spread-out {
+            0% {
+                transform: scale(0.4); // 最初は40%の距離に集まっている
+            }
+            100% {
+                transform: scale(1); // 本来の位置（100%）まで広がる
+            }
+        }
+
+        // ② サイズを維持する動き（枠）
+        // 親が0.4倍なら、子は2.5倍（1÷0.4）にすれば、見た目の大きさは変わりません
+        @keyframes keep-size {
+            0% {
+                // 親が小さいので、自分を大きく(2.5倍)して打ち消す
+                transform: translate(-50%, -50%) scale(2.5);
+            }
+            100% {
+                // 親が1倍に戻るので、自分も1倍に戻る
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        // ③ 3回ゆらゆらする動き（画像）
+        @keyframes swing-wobble {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            // 1回目の揺れ
+            15% {
+                transform: rotate(15deg);
+            }
+            30% {
+                transform: rotate(0deg);
+            }
+
+            // 2回目の揺れ（逆方向に）
+            45% {
+                transform: rotate(-15deg);
+            }
+            60% {
+                transform: rotate(0deg);
+            }
+
+            // 3回目の揺れ
+            75% {
+                transform: rotate(10deg);
+            }
+
+            // ゴール
+            100% {
+                transform: rotate(0deg);
+            }
         }
     }
 
