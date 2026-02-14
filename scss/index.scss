@@ -90,6 +90,11 @@
             display: flex;
             justify-content: center;
         }
+        &__right{
+            @include sp {
+                display: none;
+            }
+        }
         // @include sp {
         //     display: block;
         // }

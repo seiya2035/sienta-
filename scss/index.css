@@ -904,6 +904,11 @@ a {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 599px) {
+  .hero-img__right {
+    display: none;
+  }
+}
 .hero-img__sp {
   display: none;
 }
