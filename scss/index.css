@@ -214,8 +214,9 @@ a {
 }
 @media screen and (min-width: 1025px) {
   .gray-road__4__pc {
-    margin-top: 10rem;
-    padding-right: 20rem;
+    margin-top: 15rem;
+    padding-right: 40rem;
+    transform: rotate(20deg);
   }
 }
 @media screen and (max-width: 1024px) {
@@ -923,11 +924,12 @@ a {
   }
   .hero-img__left__2 {
     position: absolute;
-    margin-top: 16vh;
+    margin-top: 15vh;
+    margin-left: -30vw;
   }
   .hero-img__left__3 {
-    position: absolute;
-    margin-top: 28vh;
+    margin-top: 35vh;
+    width: 80%;
   }
 }
 .hero-img__sp {
@@ -1277,6 +1279,9 @@ a {
 @media screen and (max-width: 599px) {
   .storage-back__sp {
     display: block;
+  }
+  .storage-back__sp img {
+    overflow: hidden;
   }
 }
 

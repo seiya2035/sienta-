@@ -109,11 +109,16 @@
                 }
                 &__2{
                     position: absolute;
-                    margin-top: 16vh;
+                    margin-top: 15vh;
+                    margin-left: -30vw;
                 }
                 &__3{
-                    position: absolute;
-                    margin-top: 28vh;
+                    // overflow: hidden;
+                    // display: none;
+                    // position: absolute;
+                    margin-top: 35vh;
+                    // margin-right: -20vw;
+                    width: 80%;
                 }
             }
         }
@@ -716,6 +721,10 @@
         display: none;
         @include sp {
             display: block;
+            img{
+                
+                overflow: hidden;
+            }
         }
     }
 }
