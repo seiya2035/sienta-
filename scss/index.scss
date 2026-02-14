@@ -89,10 +89,32 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            @include sp {
+                display: none;
+            }
         }
         &__right{
             @include sp {
                 display: none;
+            }
+        }
+        &__left{
+
+            @include sp{
+                &__4{
+                    display: none;
+                }
+                &__1{
+                    position: absolute;
+                }
+                &__2{
+                    position: absolute;
+                    margin-top: 16vh;
+                }
+                &__3{
+                    position: absolute;
+                    margin-top: 28vh;
+                }
             }
         }
         // @include sp {

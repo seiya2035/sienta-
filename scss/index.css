@@ -905,8 +905,29 @@ a {
   justify-content: center;
 }
 @media screen and (max-width: 599px) {
+  .hero-img__center {
+    display: none;
+  }
+}
+@media screen and (max-width: 599px) {
   .hero-img__right {
     display: none;
+  }
+}
+@media screen and (max-width: 599px) {
+  .hero-img__left__4 {
+    display: none;
+  }
+  .hero-img__left__1 {
+    position: absolute;
+  }
+  .hero-img__left__2 {
+    position: absolute;
+    margin-top: 16vh;
+  }
+  .hero-img__left__3 {
+    position: absolute;
+    margin-top: 28vh;
   }
 }
 .hero-img__sp {
