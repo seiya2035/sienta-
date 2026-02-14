@@ -828,6 +828,7 @@ a {
 .hero {
   position: relative;
   height: 100vh;
+  max-width: 100%;
 }
 .hero-title {
   width: 100%;
@@ -888,72 +889,36 @@ a {
 }
 .hero-img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  z-index: 10;
-}
-.hero-img img {
-  max-width: none;
-  width: auto;
-  transform: translate(-50%, -50%);
-}
-.hero-img__left__1 {
-  position: absolute;
-  z-index: 11;
-  margin-left: -32vw;
-  margin-top: -36vh;
-}
-.hero-img__left__2 {
-  position: absolute;
-  z-index: 12;
-  margin-left: -38vw;
-  margin-top: -15vh;
-}
-.hero-img__left__2 img {
-  width: 120%;
-}
-.hero-img__left__3 {
-  position: absolute;
-  z-index: 11;
-  margin-left: -37vw;
-  margin-top: 6vh;
-}
-.hero-img__left__4 {
-  position: absolute;
-  z-index: 10;
-  margin-left: -32vw;
-  margin-top: 30vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
 }
 .hero-img__center {
   position: absolute;
-  z-index: 15;
-  margin-top: -38vh;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.hero-img__right__6 {
-  position: absolute;
-  z-index: 11;
-  margin-left: 25vw;
-  margin-top: -36vh;
+.hero-img__sp {
+  display: none;
 }
-.hero-img__right__7 {
-  position: absolute;
-  z-index: 10;
-  margin-left: 38vw;
-  margin-top: -15vh;
-}
-.hero-img__right__8 {
-  position: absolute;
-  z-index: 11;
-  margin-left: 35vw;
-  margin-top: 7vh;
-}
-.hero-img__right__9 {
-  position: absolute;
-  z-index: 10;
-  margin-left: 32vw;
-  margin-top: 30vh;
+@media screen and (max-width: 599px) {
+  .hero-img__sp {
+    display: block;
+    /* ▼追加：画像を画面いっぱいに広げる▼ */
+    width: 100%;
+    height: 100%;
+  }
+  .hero-img__sp img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .hero-car {
   position: absolute;
@@ -962,7 +927,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5;
+  z-index: 15;
   margin-top: 16rem;
 }
 @media screen and (max-width: 1024px) {

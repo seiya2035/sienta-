@@ -16,11 +16,11 @@ $sp: 599px;
     }
 }
 
-@include pc1840-min{
-    @media screen and (min-width: ($pc1840)) {
-        @content;
-    }
-}
+// @include pc1840-min {
+//     @media screen and (min-width: ($pc1840)) {
+//         @content;
+//     }
+// }
 
 @mixin pc1440 {
     @media screen and (max-width: ($pc1440)) {
@@ -166,28 +166,27 @@ $sp: 599px;
         //pcのコンテンツ幅
         max-width: 60rem;
         width: 100%;
-        margin-left: auto;       
-        margin-right: auto;      
+        margin-left: auto;
+        margin-right: auto;
     }
     @include tb {
         //tbのコンテンツ幅
         max-width: 34.6rem;
         width: 100%;
-        margin-left: auto;       
-        margin-right: auto;      
+        margin-left: auto;
+        margin-right: auto;
     }
     @include sp {
         //spのコンテンツ幅
         max-width: 21.56rem;
         width: 100%;
-        margin-left: auto;       
-        margin-right: auto;      
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 // それぞれの画面幅による表示非表示
 @mixin display {
-
     &__pc {
         display: block;
         @include tb {

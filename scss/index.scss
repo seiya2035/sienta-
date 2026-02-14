@@ -23,6 +23,8 @@
 .hero {
     position: relative;
     height: 100vh;
+    // overflow: hidden;
+    max-width: 100%;
     &-title {
         //シエンタでやってみない？
         width: 100%;
@@ -69,268 +71,323 @@
         }
     }
 
-    //修正前のhero-img
-    // &-img {
-    //     //ヒーローエリアの写真
-    //     position: absolute;
-
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100vh;
-    //     display: flex;
-    //     justify-content: space-between;
-    //     z-index: 1;
-    //     @include sp {
-    //         display: block;
-    //     }
-    //     &__left {
-    //         //ヒーローエリアの写真 左
-    //         &__pc4 {
-    //             display: none;
-    //             @include pc1140 {
-    //                 display: block;
-    //             }
-    //             @include tb {
-    //                 display: none;
-    //             }
-    //         }
-    //         &__pc3 {
-    //             display: none;
-    //             @include pc1440 {
-    //                 display: block;
-    //             }
-    //             @include pc1140 {
-    //                 display: none;
-    //             }
-    //         }
-    //         &__pc2 {
-    //             display: none;
-    //             @include pc1840 {
-    //                 display: block;
-    //             }
-    //             @include pc1440 {
-    //                 display: none;
-    //             }
-    //         }
-    //         &__pc {
-    //             @include pc1840 {
-    //                 display: none;
-    //             }
-    //         }
-    //         &__tb {
-    //             display: none;
-    //             @include tb {
-    //                 display: block;
-    //             }
-    //             @include sp {
-    //                 display: none;
-    //             }
-    //         }
-    //     }
-    //     &__right {
-    //         //ヒーローエリアの写真 右
-    //         &__pc {
-    //             @include pc1440 {
-    //                 display: none;
-    //             }
-    //         }
-    //         &__pc3 {
-    //             display: none;
-    //             @include pc1440 {
-    //                 display: block;
-    //             }
-    //             @include pc1140 {
-    //                 display: none;
-    //             }
-    //         }
-    //         &__pc4 {
-    //             display: none;
-    //             @include pc1140 {
-    //                 display: block;
-    //             }
-    //             @include tb {
-    //                 display: none;
-    //             }
-    //         }
-    //         &__tb {
-    //             display: none;
-    //             @include tb {
-    //                 display: block;
-    //             }
-    //             @include sp {
-    //                 display: none;
-    //             }
-    //         }
-    //     }
-    //     &__sp {
-    //         display: none;
-    //         @include sp {
-    //             display: block;
-    //             /* ▼追加：画像を画面いっぱいに広げる▼ */
-    //             width: 100%;
-    //             height: 100%; // 必要に応じて高さも指定
-
-    //             img {
-    //                 width: 100%;
-    //                 object-fit: cover; // 画面サイズに合わせて画像をトリミングして埋める
-    //             }
-    //         }
-    //     }
-    // }
-
-    //修正後のhero-img
+    // 修正前のhero-img
     &-img {
-        // ...これまでの設定（基準点）...
+        //ヒーローエリアの写真
         position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        z-index: 10;
 
-        // ① 親のアニメーション：全体を「40%の広がり」から「100%の広がり」へ
-        // animation: spread-out 3s ease-out forwards;
-
-        // 中にある「配置用の枠（div）」すべてに適用
-        // ※ &__left__1 などを個別に書くのが大変な場合、このようにまとめて指定できます
-        // div[class*='__'] {
-        //     // ② 枠のアニメーション：親が小さい分、自分を大きくしてサイズを保つ（カウンター）
-        //     // ※以前の transform: translate(-50%, -50%); はこのアニメーションの中に含めます
-        //     // animation: keep-size 3s ease-out forwards;
-        // }
-        img {
-            max-width: none; // 「親が0だから自分も0」という制限を解除
-            width: auto; // 画像本来の大きさで表示
-            transform: translate(-50%, -50%);
-            // animation: swing-wobble 3s ease-in-out forwards;
-            @include pc1840-min {
-                img {
-                    width: 400%;
-                }
-            }
-        }
-        &__left {
-            &__1 {
-                position: absolute;
-                z-index: 11;
-                margin-left: -32vw;
-                margin-top: -36vh;
-            }
-            &__2 {
-                position: absolute;
-                z-index: 12;
-                margin-left: -38vw;
-                margin-top: -15vh;
-                img {
-                    width: 120%;
-                }
-            }
-            &__3 {
-                position: absolute;
-                z-index: 11;
-                margin-left: -37vw;
-                margin-top: 6vh;
-            }
-            &__4 {
-                position: absolute;
-                z-index: 10;
-                margin-left: -32vw;
-                margin-top: 30vh;
-            }
-        }
-
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
         &__center {
             position: absolute;
-            z-index: 15;
-            margin-top: -38vh;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
-        &__right {
-            &__6 {
-                position: absolute;
-                z-index: 11;
-                margin-right: -25vw;
-                margin-top: -36vh;
-            }
-            &__7 {
-                position: absolute;
-                z-index: 10;
-                margin-right: -38vw;
-                margin-top: -15vh;
-            }
-            &__8 {
-                position: absolute;
-                z-index: 11;
-                margin-right: -35vw;
-                margin-top: 7vh;
-            }
-            &__9 {
-                position: absolute;
-                z-index: 10;
-                margin-right: -32vw;
-                margin-top: 30vh;
+        // @include sp {
+        //     display: block;
+        // }
+        // &__left {
+        //     //ヒーローエリアの写真 左
+        //     &__pc4 {
+        //         display: none;
+        //         @include pc1140 {
+        //             display: block;
+        //         }
+        //         @include tb {
+        //             display: none;
+        //         }
+        //     }
+        //     &__pc3 {
+        //         display: none;
+        //         @include pc1440 {
+        //             display: block;
+        //         }
+        //         @include pc1140 {
+        //             display: none;
+        //         }
+        //     }
+        //     &__pc2 {
+        //         display: none;
+        //         @include pc1840 {
+        //             display: block;
+        //         }
+        //         @include pc1440 {
+        //             display: none;
+        //         }
+        //     }
+        //     &__pc {
+        //         @include pc1840 {
+        //             display: none;
+        //         }
+        //     }
+        //     &__tb {
+        //         display: none;
+        //         @include tb {
+        //             display: block;
+        //         }
+        //         @include sp {
+        //             display: none;
+        //         }
+        //     }
+        // }
+        // &__right {
+        //     //ヒーローエリアの写真 右
+        //     &__pc {
+        //         @include pc1440 {
+        //             display: none;
+        //         }
+        //     }
+        //     &__pc3 {
+        //         display: none;
+        //         @include pc1440 {
+        //             display: block;
+        //         }
+        //         @include pc1140 {
+        //             display: none;
+        //         }
+        //     }
+        //     &__pc4 {
+        //         display: none;
+        //         @include pc1140 {
+        //             display: block;
+        //         }
+        //         @include tb {
+        //             display: none;
+        //         }
+        //     }
+        //     &__tb {
+        //         display: none;
+        //         @include tb {
+        //             display: block;
+        //         }
+        //         @include sp {
+        //             display: none;
+        //         }
+        //     }
+        // }
+        &__sp {
+            display: none;
+            @include sp {
+                display: block;
+                /* ▼追加：画像を画面いっぱいに広げる▼ */
+                width: 100%;
+                height: 100%; // 必要に応じて高さも指定
+
+                img {
+                    width: 100%;
+                    object-fit: cover; // 画面サイズに合わせて画像をトリミングして埋める
+                }
             }
         }
-        // --------------------------------------------------
-        // アニメーションの定義（キーフレーム）
-        // --------------------------------------------------
-
-        //         // 0.4(開始) → 0.6(1回目) → 0.8(2回目) → 1.0(完成)
-        // @keyframes step-spread {
-        //     // ▼ スタート（小さくまとまっている）
-        //     0%   { transform: scale(0.4); }
-        //     10%  { transform: scale(0.4); } // タメを作る
-
-        //     // ▼ 1段階目へ移動（キュッと動く）
-        //     15%  { transform: scale(0.6); }
-        //     40%  { transform: scale(0.6); } // しばらく停止（ポーズ）
-
-        //     // ▼ 2段階目へ移動
-        //     45%  { transform: scale(0.8); }
-        //     70%  { transform: scale(0.8); } // しばらく停止
-
-        //     // ▼ 最後、定位置へ移動
-        //     75%  { transform: scale(1.0); }
-        //     100% { transform: scale(1.0); } // 完了！
-        // }
-
-        // // ② サイズ維持（枠）
-        // // 親のscaleの「逆数」を指定して、画像の大きさを一定に保ちます
-        // // 0.4の逆数=2.5, 0.6の逆数=1.66, 0.8の逆数=1.25
-        // @keyframes keep-size-step {
-        //     // ▼ スタート
-        //     0%   { transform: translate(-50%, -50%) scale(2.5); }
-        //     10%  { transform: translate(-50%, -50%) scale(2.5); }
-
-        //     // ▼ 1段階目
-        //     15%  { transform: translate(-50%, -50%) scale(1.666); }
-        //     40%  { transform: translate(-50%, -50%) scale(1.666); }
-
-        //     // ▼ 2段階目
-        //     45%  { transform: translate(-50%, -50%) scale(1.25); }
-        //     70%  { transform: translate(-50%, -50%) scale(1.25); }
-
-        //     // ▼ 完了
-        //     75%  { transform: translate(-50%, -50%) scale(1.0); }
-        //     100% { transform: translate(-50%, -50%) scale(1.0); }
-        // }
-
-        // // ③ 角度の変化（画像）
-        // // 止まっている間にポーズを決めて、動く瞬間に次のポーズへ
-        // @keyframes step-rotate {
-        //     // ▼ 最初：右に傾く
-        //     0%, 10% { transform: rotate(15deg); }
-
-        //     // ▼ 1段階目：逆に左へ傾く
-        //     15%, 40% { transform: rotate(-15deg); }
-
-        //     // ▼ 2段階目：また右へ（少し浅めに）
-        //     45%, 70% { transform: rotate(10deg); }
-
-        //     // ▼ 最後：ピタッと正面に戻る
-        //     75%, 100% { transform: rotate(0deg); }
-        // }
     }
+
+    //修正後のhero-img
+    //     &-img {
+    //         // ...これまでの設定（基準点）...
+    //         position: absolute;
+    //         top: 50%;
+    //         left: 50%;
+    //         width: 0;
+    //         height: 0;
+    //         z-index: 10;
+
+    //         // ① 親のアニメーション：全体を「40%の広がり」から「100%の広がり」へ
+    //         // animation: spread-out 3s ease-out forwards;
+
+    //         // 中にある「配置用の枠（div）」すべてに適用
+    //         // ※ &__left__1 などを個別に書くのが大変な場合、このようにまとめて指定できます
+    //         // div[class*='__'] {
+    //         //     // ② 枠のアニメーション：親が小さい分、自分を大きくしてサイズを保つ（カウンター）
+    //         //     // ※以前の transform: translate(-50%, -50%); はこのアニメーションの中に含めます
+    //         //     // animation: keep-size 3s ease-out forwards;
+    //         // }
+    //         img {
+    //             max-width: none; // 「親が0だから自分も0」という制限を解除
+    //             width: auto; // 画像本来の大きさで表示
+    //             transform: translate(-50%, -50%);
+    //             // animation: swing-wobble 3s ease-in-out forwards;
+    //         }
+    //         &__left {
+    //             @media screen and (min-width: (1900px)) {
+    //                 img{
+    //                     width: 130%;
+    //                 }
+
+    //             }
+    //             &__1 {
+    //                 position: absolute;
+    //                 z-index: 11;
+    //                 margin-left: -32vw;
+    //                 margin-top: -36vh;
+    //                 img{
+    //                     @include pc1440 {
+    //                         width: 80%;
+    //                     }
+    //                 }
+
+    //             }
+    //             &__2 {
+    //                 position: absolute;
+    //                 z-index: 12;
+    //                 margin-left: -38vw;
+    //                 margin-top: -15vh;
+    //                 img{
+    //                     @include pc1440 {
+    //                         width: 80%;
+    //                     }
+    //                 }
+    //             }
+    //             &__3 {
+    //                 position: absolute;
+    //                 z-index: 11;
+    //                 margin-left: -37vw;
+    //                 margin-top: 6vh;
+    //                 img{
+    //                     @include pc1440 {
+    //                         width: 80%;
+    //                     }
+    //                 }
+    //             }
+    //             &__4 {
+    //                 position: absolute;
+    //                 z-index: 10;
+    //                 margin-left: -32vw;
+    //                 margin-top: 30vh;
+    //                 img{
+    //                     @include pc1440 {
+    //                         width: 80%;
+    //                     }
+    //                 }
+    //             }
+    //         }
+
+    //         &__center {
+    //                 position: absolute;
+    //                 z-index: 15;
+    //                 margin-top: -38vh;
+    //                 img{
+    //                     @include pc1440 {
+    //                         transform: translate(-50%, -50%) scale(0.8);
+    //                     }
+    //                 }
+
+    //         }
+    //         &__right {
+
+    //             &__6 {
+    //                 position: absolute;
+    //                 z-index: 11;
+    //                 margin-left: 25vw;
+    //                 margin-top: -36vh;
+    //                 img{
+    //                     @include pc1440 {
+    //                         transform: translate(-50%, -50%) scale(0.8);
+    //                     }
+    //                 }
+
+    //             }
+    //             &__7 {
+    //                 position: absolute;
+    //                 z-index: 10;
+    //                 margin-left: 38vw;
+    //                 margin-top: -15vh;
+    //                 img{
+    //                     @include pc1440 {
+    //                         transform: translate(-50%, -50%) scale(0.8);
+    //                     }
+    //                 }
+    //             }
+    //             &__8 {
+    //                 position: absolute;
+    //                 z-index: 11;
+    //                 margin-left: 35vw;
+    //                 margin-top: 7vh;
+    //                 img{
+    //                     @include pc1440 {
+    //                         transform: translate(-50%, -50%) scale(0.8);
+    //                     }
+    //                 }
+    //             }
+    //             &__9 {
+    //                 position: absolute;
+    //                 z-index: 10;
+    //                 margin-left: 32vw;
+    //                 margin-top: 30vh;
+    //                 img{
+    //                     @include pc1440 {
+    //                         transform: translate(-50%, -50%) scale(0.8);
+    //                     }
+    //                 }
+    //             }
+
+    //         }
+    //         // --------------------------------------------------
+    //         // アニメーションの定義（キーフレーム）
+    //         // --------------------------------------------------
+
+    // //         // 0.4(開始) → 0.6(1回目) → 0.8(2回目) → 1.0(完成)
+    // // @keyframes step-spread {
+    // //     // ▼ スタート（小さくまとまっている）
+    // //     0%   { transform: scale(0.4); }
+    // //     10%  { transform: scale(0.4); } // タメを作る
+
+    // //     // ▼ 1段階目へ移動（キュッと動く）
+    // //     15%  { transform: scale(0.6); }
+    // //     40%  { transform: scale(0.6); } // しばらく停止（ポーズ）
+
+    // //     // ▼ 2段階目へ移動
+    // //     45%  { transform: scale(0.8); }
+    // //     70%  { transform: scale(0.8); } // しばらく停止
+
+    // //     // ▼ 最後、定位置へ移動
+    // //     75%  { transform: scale(1.0); }
+    // //     100% { transform: scale(1.0); } // 完了！
+    // // }
+
+    // // // ② サイズ維持（枠）
+    // // // 親のscaleの「逆数」を指定して、画像の大きさを一定に保ちます
+    // // // 0.4の逆数=2.5, 0.6の逆数=1.66, 0.8の逆数=1.25
+    // // @keyframes keep-size-step {
+    // //     // ▼ スタート
+    // //     0%   { transform: translate(-50%, -50%) scale(2.5); }
+    // //     10%  { transform: translate(-50%, -50%) scale(2.5); }
+
+    // //     // ▼ 1段階目
+    // //     15%  { transform: translate(-50%, -50%) scale(1.666); }
+    // //     40%  { transform: translate(-50%, -50%) scale(1.666); }
+
+    // //     // ▼ 2段階目
+    // //     45%  { transform: translate(-50%, -50%) scale(1.25); }
+    // //     70%  { transform: translate(-50%, -50%) scale(1.25); }
+
+    // //     // ▼ 完了
+    // //     75%  { transform: translate(-50%, -50%) scale(1.0); }
+    // //     100% { transform: translate(-50%, -50%) scale(1.0); }
+    // // }
+
+    // // // ③ 角度の変化（画像）
+    // // // 止まっている間にポーズを決めて、動く瞬間に次のポーズへ
+    // // @keyframes step-rotate {
+    // //     // ▼ 最初：右に傾く
+    // //     0%, 10% { transform: rotate(15deg); }
+
+    // //     // ▼ 1段階目：逆に左へ傾く
+    // //     15%, 40% { transform: rotate(-15deg); }
+
+    // //     // ▼ 2段階目：また右へ（少し浅めに）
+    // //     45%, 70% { transform: rotate(10deg); }
+
+    // //     // ▼ 最後：ピタッと正面に戻る
+    // //     75%, 100% { transform: rotate(0deg); }
+    // // }
+    //     }
 
     &-car {
         //ヒーローエリアの車
@@ -338,7 +395,7 @@
         width: 100%;
         height: 100vh;
         @include flex-center; //中央揃え
-        z-index: 5;
+        z-index: 15;
         margin-top: 16rem;
         @include tb {
             margin-top: 18rem;
