@@ -67,3 +67,34 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+// ==========================================
+// 3. ヒーローエリアの画像をカクカク動かすアニメーション
+// ==========================================
+
+// 対象：左側の4枚、中央、右側の4枚 の外側のdivをまとめて取得
+const heroFloatingImages = document.querySelectorAll('.hero-img__left > div, .hero-img__center, .hero-img__right > div');
+
+heroFloatingImages.forEach((element) => {
+    // 一枚ごとにランダムな設定を作る
+    const randomRotation = Math.random() * 10 + 5; // 5度〜15度の間でランダムな角度
+    const randomDuration = Math.random() * 1.5 + 1.5; // 1.5秒〜3秒の間でランダムな時間
+    const randomDelay = Math.random() * 2; // 開始タイミングをバラバラにする
+
+    // アニメーション実行
+    gsap.to(element, {
+        rotation: randomRotation, // ランダムな角度まで回転
+        duration: randomDuration, // ランダムな時間
+        
+        // ★ここが「カクカク」のポイント
+        // "steps(3)" は「3コマで動く」という意味です。
+        // 数字を小さくするとよりカクカクし、大きくすると滑らかになります。
+        ease: "steps(3)", 
+        
+        repeat: -1, // 無限に繰り返す
+        yoyo: true, // 行ったり来たりする（元の角度に戻る）
+        delay: randomDelay, // 開始時間をずらす
+        transformOrigin: "center center" // その場で（中心を軸に）回転
+    });
+});

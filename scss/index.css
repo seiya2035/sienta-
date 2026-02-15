@@ -910,6 +910,9 @@ a {
     display: none;
   }
 }
+.hero-img__right__6 {
+  margin-left: -12vw;
+}
 @media screen and (max-width: 599px) {
   .hero-img__right {
     display: none;
@@ -920,12 +923,20 @@ a {
     margin-top: 15vh;
   }
 }
+.hero-img__left {
+  position: relative;
+  height: 100%;
+}
+.hero-img__left img {
+  overflow: hidden;
+}
 @media screen and (max-width: 599px) {
   .hero-img__left__4 {
     display: none;
   }
   .hero-img__left__1 {
     position: absolute;
+    margin-right: -12vw;
   }
   .hero-img__left__2 {
     position: absolute;
@@ -968,6 +979,59 @@ a {
   z-index: 15;
   margin-top: 16rem;
 }
+.hero-car__body {
+  position: relative;
+  z-index: 10;
+}
+.hero-car__tire--left, .hero-car__tire--right {
+  position: absolute;
+  z-index: 11;
+  width: 5%;
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: tire-spin 3s linear infinite reverse;
+}
+.hero-car__tire--left::before, .hero-car__tire--left::after, .hero-car__tire--right::before, .hero-car__tire--right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.hero-car__tire--left::before, .hero-car__tire--right::before {
+  animation: tire-spin 5s linear infinite reverse;
+}
+.hero-car__tire--left::after, .hero-car__tire--right::after {
+  animation: tire-spin 4s linear infinite;
+}
+.hero-car__tire--left {
+  top: 54.5%;
+  left: 36%;
+  background-image: url(../img/tire-inside-left.svg);
+}
+.hero-car__tire--left::before {
+  background-image: url(../img/tire-center-left.svg);
+}
+.hero-car__tire--left::after {
+  background-image: url(../img/tire-outside-left.svg);
+}
+.hero-car__tire--right {
+  top: 54.5%;
+  left: 60%;
+  background-image: url(../img/tire-inside-right.svg);
+}
+.hero-car__tire--right::before {
+  background-image: url(../img/tire-center-right.svg);
+}
+.hero-car__tire--right::after {
+  background-image: url(../img/tire-outside-right.svg);
+}
 @media screen and (max-width: 1024px) {
   .hero-car {
     margin-top: 18rem;
@@ -979,6 +1043,14 @@ a {
   }
   .hero-car img {
     width: 21.5rem;
+  }
+}
+@keyframes tire-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -1039,6 +1111,8 @@ a {
 }
 
 .about {
+  align-items: center;
+  background-color: #FDFFFB;
   display: flex;
   justify-content: center;
 }
@@ -1047,6 +1121,7 @@ a {
     max-width: 62.5rem;
     width: 100%;
     margin: 0 auto;
+    height: 40rem;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1054,6 +1129,7 @@ a {
     max-width: 37.25rem;
     width: 100%;
     margin: 0 auto;
+    height: 25rem;
   }
 }
 @media screen and (max-width: 599px) {

@@ -94,6 +94,9 @@
             }
         }
         &__right {
+            &__6 {
+                margin-left: -12vw;
+            }
             @include sp {
                 display: none;
             }
@@ -104,12 +107,19 @@
             }
         }
         &__left {
+            position: relative;
+            height: 100%;
+            img{
+
+                overflow: hidden;
+            }
             @include sp {
                 &__4 {
                     display: none;
                 }
                 &__1 {
                     position: absolute;
+                    margin-right: -12vw;
                 }
                 &__2 {
                     position: absolute;
@@ -229,210 +239,90 @@
         }
     }
 
-    //修正後のhero-img
-    //     &-img {
-    //         // ...これまでの設定（基準点）...
-    //         position: absolute;
-    //         top: 50%;
-    //         left: 50%;
-    //         width: 0;
-    //         height: 0;
-    //         z-index: 10;
-
-    //         // ① 親のアニメーション：全体を「40%の広がり」から「100%の広がり」へ
-    //         // animation: spread-out 3s ease-out forwards;
-
-    //         // 中にある「配置用の枠（div）」すべてに適用
-    //         // ※ &__left__1 などを個別に書くのが大変な場合、このようにまとめて指定できます
-    //         // div[class*='__'] {
-    //         //     // ② 枠のアニメーション：親が小さい分、自分を大きくしてサイズを保つ（カウンター）
-    //         //     // ※以前の transform: translate(-50%, -50%); はこのアニメーションの中に含めます
-    //         //     // animation: keep-size 3s ease-out forwards;
-    //         // }
-    //         img {
-    //             max-width: none; // 「親が0だから自分も0」という制限を解除
-    //             width: auto; // 画像本来の大きさで表示
-    //             transform: translate(-50%, -50%);
-    //             // animation: swing-wobble 3s ease-in-out forwards;
-    //         }
-    //         &__left {
-    //             @media screen and (min-width: (1900px)) {
-    //                 img{
-    //                     width: 130%;
-    //                 }
-
-    //             }
-    //             &__1 {
-    //                 position: absolute;
-    //                 z-index: 11;
-    //                 margin-left: -32vw;
-    //                 margin-top: -36vh;
-    //                 img{
-    //                     @include pc1440 {
-    //                         width: 80%;
-    //                     }
-    //                 }
-
-    //             }
-    //             &__2 {
-    //                 position: absolute;
-    //                 z-index: 12;
-    //                 margin-left: -38vw;
-    //                 margin-top: -15vh;
-    //                 img{
-    //                     @include pc1440 {
-    //                         width: 80%;
-    //                     }
-    //                 }
-    //             }
-    //             &__3 {
-    //                 position: absolute;
-    //                 z-index: 11;
-    //                 margin-left: -37vw;
-    //                 margin-top: 6vh;
-    //                 img{
-    //                     @include pc1440 {
-    //                         width: 80%;
-    //                     }
-    //                 }
-    //             }
-    //             &__4 {
-    //                 position: absolute;
-    //                 z-index: 10;
-    //                 margin-left: -32vw;
-    //                 margin-top: 30vh;
-    //                 img{
-    //                     @include pc1440 {
-    //                         width: 80%;
-    //                     }
-    //                 }
-    //             }
-    //         }
-
-    //         &__center {
-    //                 position: absolute;
-    //                 z-index: 15;
-    //                 margin-top: -38vh;
-    //                 img{
-    //                     @include pc1440 {
-    //                         transform: translate(-50%, -50%) scale(0.8);
-    //                     }
-    //                 }
-
-    //         }
-    //         &__right {
-
-    //             &__6 {
-    //                 position: absolute;
-    //                 z-index: 11;
-    //                 margin-left: 25vw;
-    //                 margin-top: -36vh;
-    //                 img{
-    //                     @include pc1440 {
-    //                         transform: translate(-50%, -50%) scale(0.8);
-    //                     }
-    //                 }
-
-    //             }
-    //             &__7 {
-    //                 position: absolute;
-    //                 z-index: 10;
-    //                 margin-left: 38vw;
-    //                 margin-top: -15vh;
-    //                 img{
-    //                     @include pc1440 {
-    //                         transform: translate(-50%, -50%) scale(0.8);
-    //                     }
-    //                 }
-    //             }
-    //             &__8 {
-    //                 position: absolute;
-    //                 z-index: 11;
-    //                 margin-left: 35vw;
-    //                 margin-top: 7vh;
-    //                 img{
-    //                     @include pc1440 {
-    //                         transform: translate(-50%, -50%) scale(0.8);
-    //                     }
-    //                 }
-    //             }
-    //             &__9 {
-    //                 position: absolute;
-    //                 z-index: 10;
-    //                 margin-left: 32vw;
-    //                 margin-top: 30vh;
-    //                 img{
-    //                     @include pc1440 {
-    //                         transform: translate(-50%, -50%) scale(0.8);
-    //                     }
-    //                 }
-    //             }
-
-    //         }
-    //         // --------------------------------------------------
-    //         // アニメーションの定義（キーフレーム）
-    //         // --------------------------------------------------
-
-    // //         // 0.4(開始) → 0.6(1回目) → 0.8(2回目) → 1.0(完成)
-    // // @keyframes step-spread {
-    // //     // ▼ スタート（小さくまとまっている）
-    // //     0%   { transform: scale(0.4); }
-    // //     10%  { transform: scale(0.4); } // タメを作る
-
-    // //     // ▼ 1段階目へ移動（キュッと動く）
-    // //     15%  { transform: scale(0.6); }
-    // //     40%  { transform: scale(0.6); } // しばらく停止（ポーズ）
-
-    // //     // ▼ 2段階目へ移動
-    // //     45%  { transform: scale(0.8); }
-    // //     70%  { transform: scale(0.8); } // しばらく停止
-
-    // //     // ▼ 最後、定位置へ移動
-    // //     75%  { transform: scale(1.0); }
-    // //     100% { transform: scale(1.0); } // 完了！
-    // // }
-
-    // // // ② サイズ維持（枠）
-    // // // 親のscaleの「逆数」を指定して、画像の大きさを一定に保ちます
-    // // // 0.4の逆数=2.5, 0.6の逆数=1.66, 0.8の逆数=1.25
-    // // @keyframes keep-size-step {
-    // //     // ▼ スタート
-    // //     0%   { transform: translate(-50%, -50%) scale(2.5); }
-    // //     10%  { transform: translate(-50%, -50%) scale(2.5); }
-
-    // //     // ▼ 1段階目
-    // //     15%  { transform: translate(-50%, -50%) scale(1.666); }
-    // //     40%  { transform: translate(-50%, -50%) scale(1.666); }
-
-    // //     // ▼ 2段階目
-    // //     45%  { transform: translate(-50%, -50%) scale(1.25); }
-    // //     70%  { transform: translate(-50%, -50%) scale(1.25); }
-
-    // //     // ▼ 完了
-    // //     75%  { transform: translate(-50%, -50%) scale(1.0); }
-    // //     100% { transform: translate(-50%, -50%) scale(1.0); }
-    // // }
-
-    // // // ③ 角度の変化（画像）
-    // // // 止まっている間にポーズを決めて、動く瞬間に次のポーズへ
-    // // @keyframes step-rotate {
-    // //     // ▼ 最初：右に傾く
-    // //     0%, 10% { transform: rotate(15deg); }
-
-    // //     // ▼ 1段階目：逆に左へ傾く
-    // //     15%, 40% { transform: rotate(-15deg); }
-
-    // //     // ▼ 2段階目：また右へ（少し浅めに）
-    // //     45%, 70% { transform: rotate(10deg); }
-
-    // //     // ▼ 最後：ピタッと正面に戻る
-    // //     75%, 100% { transform: rotate(0deg); }
-    // // }
-    //     }
-
     &-car {
         //ヒーローエリアの車
         position: absolute;
+        //車体画像
+        &__body {
+            position: relative;
+            z-index: 10;
+            // width: 100%;
+        }
+        // ==============================================
+        // ① 共通設定（カンマでつないで両方に効かせる）
+        // ==============================================
+        &__tire--left,
+        &__tire--right {
+            position: absolute;
+            z-index: 11;
+            width: 5%; // タイヤサイズ
+            aspect-ratio: 1 / 1;
+
+            // 1層目（自分自身）の設定
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            // アニメーション（共通）
+            animation: tire-spin 3s linear infinite reverse;
+
+            // 2層目・3層目（擬似要素）の共通設定
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            // 2層目（Center）独自の動き
+            &::before {
+                animation: tire-spin 5s linear infinite reverse;
+            }
+
+            // 3層目（Outside）独自の動き
+            &::after {
+                animation: tire-spin 4s linear infinite;
+            }
+        }
+
+        // ==============================================
+        // ② 個別設定（位置と画像だけ指定）
+        // ==============================================
+
+        // ▼ 左タイヤ（前輪）
+        &__tire--left {
+            top: 54.5%;
+            left: 36%; // 位置
+            background-image: url(../img/tire-inside-left.svg);
+            
+
+            &::before {
+                background-image: url(../img/tire-center-left.svg);
+            }
+            &::after {
+                background-image: url(../img/tire-outside-left.svg);
+            }
+        }
+
+        // ▼ 右タイヤ（後輪）
+        &__tire--right {
+            top: 54.5%;
+            left: 60%; // 位置
+            background-image: url(../img/tire-inside-right.svg);
+
+            &::before {
+                background-image: url(../img/tire-center-right.svg);
+            }
+            &::after {
+                background-image: url(../img/tire-outside-right.svg);
+            }
+        }
         width: 100%;
         height: 100vh;
         @include flex-center; //中央揃え
@@ -447,6 +337,15 @@
             }
 
             margin-top: 13rem;
+        }
+    }
+    // 回転アニメーション定義（そのまま）
+    @keyframes tire-spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
         }
     }
 }
@@ -536,17 +435,22 @@
 //================================================================//
 // アバウト
 .about {
+    align-items: center;
+    background-color: $white;
     @include pc {
         //pcのコンテンツ幅
         max-width: 62.5rem;
         width: 100%;
         margin: 0 auto;
+        height: 40rem;
+
     }
     @include tb {
         //tbのコンテンツ幅
         max-width: 37.25rem;
         width: 100%;
         margin: 0 auto;
+        height: 25rem;
     }
 
     @include sp {
@@ -607,6 +511,7 @@
         }
     }
 }
+
 // アバウト///
 //================================================================//
 
