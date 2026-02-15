@@ -93,32 +93,41 @@
                 display: none;
             }
         }
-        &__right{
+        &__right {
             @include sp {
                 display: none;
             }
+            @include tb {
+                &__9 {
+                    margin-top: 15vh;
+                }
+            }
         }
-        &__left{
-
-            @include sp{
-                &__4{
+        &__left {
+            @include sp {
+                &__4 {
                     display: none;
                 }
-                &__1{
+                &__1 {
                     position: absolute;
                 }
-                &__2{
+                &__2 {
                     position: absolute;
                     margin-top: 15vh;
                     margin-left: -30vw;
                 }
-                &__3{
+                &__3 {
                     // overflow: hidden;
                     // display: none;
                     // position: absolute;
                     margin-top: 35vh;
                     // margin-right: -20vw;
                     width: 80%;
+                }
+            }
+            @include tb {
+                &__4 {
+                    margin-top: 80vh;
                 }
             }
         }
@@ -721,8 +730,7 @@
         display: none;
         @include sp {
             display: block;
-            img{
-                
+            img {
                 overflow: hidden;
             }
         }

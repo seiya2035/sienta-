@@ -915,6 +915,11 @@ a {
     display: none;
   }
 }
+@media screen and (max-width: 1024px) {
+  .hero-img__right__9 {
+    margin-top: 15vh;
+  }
+}
 @media screen and (max-width: 599px) {
   .hero-img__left__4 {
     display: none;
@@ -930,6 +935,11 @@ a {
   .hero-img__left__3 {
     margin-top: 35vh;
     width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero-img__left__4 {
+    margin-top: 80vh;
   }
 }
 .hero-img__sp {
