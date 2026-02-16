@@ -158,6 +158,10 @@ a {
   padding-top: 2.6rem;
   padding-bottom: 2.6rem;
 }
+.gray-road__asirai img {
+  overflow: hidden;
+  position: absolute;
+}
 @media screen and (min-width: 599px) {
   .gray-road__1 {
     margin-top: -5rem;
@@ -175,6 +179,7 @@ a {
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
+  position: absolute;
 }
 @media screen and (min-width: 1025px) {
   .gray-road__2 {

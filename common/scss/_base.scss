@@ -87,6 +87,12 @@ a {
         padding-top: 2.6rem;
         padding-bottom: 2.6rem;
     }
+    &__asirai{
+        img {
+            overflow: hidden;
+            position: absolute;
+        }
+    }
 
     &__1 {
         @include tb-min {
@@ -104,6 +110,7 @@ a {
         display: flex;
         flex-direction: column;
         margin-top: 5rem;
+        position: absolute;
 
         @include pc {
             padding-bottom: 10rem;
