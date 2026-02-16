@@ -244,6 +244,16 @@ a {
   position: absolute;
   z-index: -1;
 }
+@media screen and (max-width: 1024px) {
+  .under-section__img {
+    margin-top: -12rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .under-section__img {
+    margin-top: -8rem;
+  }
+}
 .under-section__img img {
   width: 100vw;
 }

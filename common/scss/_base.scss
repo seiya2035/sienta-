@@ -140,7 +140,7 @@ a {
             @include pc {
                 margin-top: 15rem;
                 padding-right: 40rem;
-                
+
                 transform: rotate(20deg);
             }
             @include tb {
@@ -171,6 +171,13 @@ a {
     &__img {
         position: absolute;
         z-index: -1;
+        @include tb {
+            margin-top: -12rem;
+        }
+        @include sp {
+            margin-top: -8rem;
+        }
+
         img {
             width: 100vw;
         }
@@ -197,5 +204,3 @@ a {
 // }
 // 下3セクションの背景(オレンジと青)///
 //================================================================//
-
-
