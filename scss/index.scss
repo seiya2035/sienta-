@@ -94,8 +94,20 @@
             }
         }
         &__right {
+            position: relative;
+            height: 100%;
+            img {
+                overflow: hidden;
+            }
             &__6 {
                 margin-left: -12vw;
+            }
+            &_7 {
+                // overflow: hidden;
+                position: absolute;
+            }
+            &__8 {
+                // overflow: hidden;
             }
             @include sp {
                 display: none;
@@ -109,8 +121,7 @@
         &__left {
             position: relative;
             height: 100%;
-            img{
-
+            img {
                 overflow: hidden;
             }
             @include sp {
@@ -120,19 +131,25 @@
                 &__1 {
                     position: absolute;
                     margin-right: -12vw;
+                    width: 100%;
                 }
-                &__2 {
-                    position: absolute;
-                    margin-top: 15vh;
-                    margin-left: -30vw;
-                }
-                &__3 {
-                    // overflow: hidden;
-                    // display: none;
-                    // position: absolute;
-                    margin-top: 35vh;
-                    // margin-right: -20vw;
-                    width: 80%;
+                &__12 {
+                    margin-top: 20vh;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    &__2 {
+                        position: absolute;
+                        margin-top: 15vh;
+                        margin-left: -30vw;
+                    }
+                    &__3 {
+                        // overflow: hidden;
+                        // display: none;
+                        // position: absolute;
+                        margin-top: 45vh;
+                        // margin-right: -20vw;
+                        width: 80%;
+                    }
                 }
             }
             @include tb {
@@ -255,7 +272,10 @@
         &__tire--right {
             position: absolute;
             z-index: 11;
-            width: 5%; // タイヤサイズ
+            width: 6rem; // タイヤサイズ
+            @include sp {
+                width: 3rem;
+            }
             aspect-ratio: 1 / 1;
 
             // 1層目（自分自身）の設定
@@ -297,10 +317,15 @@
 
         // ▼ 左タイヤ（前輪）
         &__tire--left {
-            top: 54.5%;
-            left: 36%; // 位置
+            // top: 54.5%;
+            // left: 36%; // 位置
+            margin-top: 11.5rem;
+            margin-right: 27.5rem;
+            @include sp {
+                margin-right: 14rem;
+                margin-top: 6rem;
+            }
             background-image: url(../img/tire-inside-left.svg);
-            
 
             &::before {
                 background-image: url(../img/tire-center-left.svg);
@@ -312,8 +337,14 @@
 
         // ▼ 右タイヤ（後輪）
         &__tire--right {
-            top: 54.5%;
-            left: 60%; // 位置
+            // top: 54.5%;
+            // left: 60%; // 位置
+            margin-top: 11.5rem;
+            margin-left: 29.5rem;
+            @include sp {
+                margin-left: 15rem;
+                margin-top: 6rem;
+            }
             background-image: url(../img/tire-inside-right.svg);
 
             &::before {
@@ -434,16 +465,24 @@
 
 //================================================================//
 // アバウト
+.about-box {
+    // background-image: url(../img/asirai-sankaku.svg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // width: 100%;
+    // position: absolute;
+    // z-index: 15;
+}
 .about {
     align-items: center;
     background-color: $white;
+
     @include pc {
         //pcのコンテンツ幅
         max-width: 62.5rem;
         width: 100%;
         margin: 0 auto;
         height: 40rem;
-
     }
     @include tb {
         //tbのコンテンツ幅
@@ -667,6 +706,15 @@
         flex-direction: column-reverse;
     }
     &-left {
+        background-color: $white;
+        align-content: center;
+        @include pc {
+            height: 40rem;
+            width: 30rem;
+        }
+        @include tb {
+            padding-top: 10rem;
+        }
         @include sp {
             //spのコンテンツ幅
             max-width: 21.56rem;
