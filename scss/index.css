@@ -147,6 +147,27 @@ a {
   }
 }
 
+.asirai {
+  position: absolute;
+  overflow: hidden;
+  animation-name: zoomInAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 1024px) {
+  .asirai {
+    display: none;
+  }
+}
+@keyframes zoomInAnime {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .gray-road {
   width: 100%;
   display: flex;
@@ -157,10 +178,6 @@ a {
 .gray-road img {
   padding-top: 2.6rem;
   padding-bottom: 2.6rem;
-}
-.gray-road__asirai img {
-  overflow: hidden;
-  position: absolute;
 }
 @media screen and (min-width: 599px) {
   .gray-road__1 {
@@ -179,7 +196,6 @@ a {
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
-  position: absolute;
 }
 @media screen and (min-width: 1025px) {
   .gray-road__2 {
@@ -1164,6 +1180,7 @@ a {
 .about {
   align-items: center;
   background-color: #FDFFFB;
+  position: relative;
   display: flex;
   justify-content: center;
 }

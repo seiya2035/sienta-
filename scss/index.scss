@@ -472,6 +472,7 @@
 .about {
     align-items: center;
     background-color: $white;
+    position: relative;
 
     @include pc {
         //pcのコンテンツ幅

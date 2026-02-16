@@ -98,3 +98,7 @@ heroFloatingImages.forEach((element) => {
         transformOrigin: "center center" // その場で（中心を軸に）回転
     });
 });
+
+$(window).scroll(function (){
+    fadeAnime();/* アニメーション用の関数を呼ぶ*/
+  });// ここまで画面をスクロールをしたら動かしたい場合の記述

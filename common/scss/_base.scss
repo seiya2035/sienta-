@@ -75,7 +75,27 @@ a {
         }
     }
 }
+.asirai {
+    position: absolute;
+    overflow: hidden;
+    @include tb {
+        display: none;
+    }
+    
+    animation-name: zoomInAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 
+    @keyframes zoomInAnime {
+        from {
+            transform: scale(0.6);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+}
 .gray-road {
     //道路の装飾
     width: 100%;
@@ -86,12 +106,6 @@ a {
     img {
         padding-top: 2.6rem;
         padding-bottom: 2.6rem;
-    }
-    &__asirai{
-        img {
-            overflow: hidden;
-            position: absolute;
-        }
     }
 
     &__1 {
@@ -110,7 +124,6 @@ a {
         display: flex;
         flex-direction: column;
         margin-top: 5rem;
-        position: absolute;
 
         @include pc {
             padding-bottom: 10rem;
