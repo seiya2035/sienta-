@@ -106,20 +106,20 @@ $(window).scroll(function () {
 const popTargets = document.querySelectorAll('.pop-in');
 
 const popOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.2
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2,
 };
 
 const popObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
-    }
-  });
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        }
+    });
 }, popOptions);
 
-popTargets.forEach(target => {
-  popObserver.observe(target);
+popTargets.forEach((target) => {
+    popObserver.observe(target);
 });
