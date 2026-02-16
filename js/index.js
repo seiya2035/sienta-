@@ -68,13 +68,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
 // ==========================================
 // 3. ヒーローエリアの画像をカクカク動かすアニメーション
 // ==========================================
 
 // 対象：左側の4枚、中央、右側の4枚 の外側のdivをまとめて取得
-const heroFloatingImages = document.querySelectorAll('.hero-img__left > div, .hero-img__center, .hero-img__right > div');
+const heroFloatingImages = document.querySelectorAll(
+    '.hero-img__left > div, .hero-img__center, .hero-img__right > div'
+);
 
 heroFloatingImages.forEach((element) => {
     // 一枚ごとにランダムな設定を作る
@@ -86,19 +87,39 @@ heroFloatingImages.forEach((element) => {
     gsap.to(element, {
         rotation: randomRotation, // ランダムな角度まで回転
         duration: randomDuration, // ランダムな時間
-        
+
         // ★ここが「カクカク」のポイント
         // "steps(3)" は「3コマで動く」という意味です。
         // 数字を小さくするとよりカクカクし、大きくすると滑らかになります。
-        ease: "steps(3)", 
-        
+        ease: 'steps(3)',
+
         repeat: -1, // 無限に繰り返す
         yoyo: true, // 行ったり来たりする（元の角度に戻る）
         delay: randomDelay, // 開始時間をずらす
-        transformOrigin: "center center" // その場で（中心を軸に）回転
+        transformOrigin: 'center center', // その場で（中心を軸に）回転
     });
 });
 
-$(window).scroll(function (){
-    fadeAnime();/* アニメーション用の関数を呼ぶ*/
-  });// ここまで画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+    fadeAnime(); /* アニメーション用の関数を呼ぶ*/
+}); // ここまで画面をスクロールをしたら動かしたい場合の記述
+const popTargets = document.querySelectorAll('.pop-in');
+
+const popOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.2
+};
+
+const popObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, popOptions);
+
+popTargets.forEach(target => {
+  popObserver.observe(target);
+});
