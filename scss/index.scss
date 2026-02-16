@@ -21,6 +21,9 @@
 //ファーストビュー
 
 .hero {
+    background-image: url(../img/asirai-sankaku.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     height: 100vh;
     // overflow: hidden;
@@ -465,14 +468,7 @@
 
 //================================================================//
 // アバウト
-.about-box {
-    // background-image: url(../img/asirai-sankaku.svg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // width: 100%;
-    // position: absolute;
-    // z-index: 15;
-}
+
 .about {
     align-items: center;
     background-color: $white;

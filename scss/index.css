@@ -837,6 +837,9 @@ a {
 }
 
 .hero {
+  background-image: url(../img/asirai-sankaku.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   height: 100vh;
   max-width: 100%;
