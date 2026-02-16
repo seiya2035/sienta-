@@ -79,21 +79,21 @@ a {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  
+}
+
 /* 表示前の状態：透明で、サイズを小さくしておく */
 .pop-in {
     opacity: 0;
     transform: scale(0.5);
     /* cubic-bezier で弾むような動き（バウンス）をつけます */
     transition: opacity 0.4s ease-out, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-  
-  /* 画面内に入った時の状態 */
-  .pop-in.is-visible {
+}
+
+/* 画面内に入った時の状態 */
+.pop-in.is-visible {
     opacity: 1;
     transform: scale(1);
-  }
+}
 .asirai {
     position: absolute;
     overflow: hidden;

@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // 対象：左側の4枚、中央、右側の4枚 の外側のdivをまとめて取得
 const heroFloatingImages = document.querySelectorAll(
-    '.hero-img__left > div, .hero-img__center, .hero-img__right > div'
+    '.hero-img__left > div, .hero-img__center, .hero-img__right > div, .safe-under__pb__pc-car'
 );
 
 heroFloatingImages.forEach((element) => {

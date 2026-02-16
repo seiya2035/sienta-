@@ -287,7 +287,7 @@
             background-position: center;
 
             // アニメーション（共通）
-            animation: tire-spin 3s linear infinite reverse;
+            animation: tire-spin 1.2s linear infinite reverse;
 
             // 2層目・3層目（擬似要素）の共通設定
             &::before,

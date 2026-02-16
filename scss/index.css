@@ -1061,7 +1061,7 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  animation: tire-spin 3s linear infinite reverse;
+  animation: tire-spin 1.2s linear infinite reverse;
 }
 @media screen and (max-width: 599px) {
   .hero-car__tire--left, .hero-car__tire--right {
