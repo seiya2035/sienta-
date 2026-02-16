@@ -15,7 +15,7 @@ gsap.to('.road-car__car', {
 
         scrub: 1, // スクロールに連動
         toggleClass: { targets: '.road-car__car', className: 'is-visible' },
-        markers: true, // ★完成したら false にして消してください
+        // markers: true, // ★完成したら false にして消してください
     },
     motionPath: {
         path: '#carPath',
