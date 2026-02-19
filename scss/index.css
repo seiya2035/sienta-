@@ -109,6 +109,18 @@ a {
   justify-content: center;
   align-items: center;
 }
+.white-road__pc2400 {
+  padding-top: 65rem;
+  margin-left: -10rem;
+}
+@media screen and (min-width: 2400px) {
+  .white-road__pc {
+    display: none;
+  }
+}
+.white-road__pc {
+  margin-top: 8rem;
+}
 @media screen and (min-width: 1025px) {
   .white-road__pc {
     padding-top: 54rem;
@@ -170,14 +182,16 @@ a {
 .asirai {
   position: absolute;
   overflow: hidden;
-  animation-name: zoomInAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
 }
 @media screen and (max-width: 1024px) {
   .asirai {
     display: none;
   }
+}
+.asirai {
+  animation-name: zoomInAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 @keyframes zoomInAnime {
   from {
@@ -340,17 +354,6 @@ a {
   width: 10.25rem;
   height: 15.625rem;
   background-color: #FDFFFB;
-  border: 4px solid #23211C;
-  border-top: none;
-  border-radius: 0 0 1.25rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  gap: 1.5rem;
-  box-sizing: border-box;
 }
 @media screen and (max-width: 599px) {
   .header__menu-box {
@@ -363,6 +366,19 @@ a {
     border: 6px solid #23211C;
     border-top: 0px;
   }
+}
+.header__menu-box {
+  border: 4px solid #23211C;
+  border-top: none;
+  border-radius: 0 0 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 1.5rem;
+  box-sizing: border-box;
 }
 .header__logo {
   width: 100%;
@@ -386,11 +402,6 @@ a {
   background-color: transparent;
   cursor: pointer;
   padding: 0;
-  border-radius: 0.75rem;
-  border: 3px solid #23211C;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 @media screen and (max-width: 599px) {
   .hamburger {
@@ -404,6 +415,13 @@ a {
   .hamburger {
     border: none;
   }
+}
+.hamburger {
+  border-radius: 0.75rem;
+  border: 3px solid #23211C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hamburger__lines {
   width: 2.8125rem;
@@ -520,8 +538,6 @@ a {
   padding-left: 4rem;
   padding-right: 4rem;
   margin-top: 12rem;
-  display: flex;
-  align-items: center;
 }
 @media screen and (min-width: 1025px) {
   .global-nav__left {
@@ -543,6 +559,10 @@ a {
     margin-top: 7rem;
     padding: 1rem;
   }
+}
+.global-nav__left {
+  display: flex;
+  align-items: center;
 }
 .global-nav__main-list {
   list-style: none;
@@ -602,17 +622,19 @@ a {
 }
 .global-nav__right {
   position: relative;
+}
+@media screen and (max-width: 1140px) {
+  .global-nav__right {
+    width: 100%;
+  }
+}
+.global-nav__right {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   padding-bottom: 2rem;
   box-sizing: border-box;
-}
-@media screen and (max-width: 1140px) {
-  .global-nav__right {
-    width: 100%;
-  }
 }
 .global-nav__moto {
   position: relative;
@@ -646,10 +668,6 @@ a {
   margin-left: -5rem;
   margin-top: -2rem;
 }
-.global-nav__visual {
-  width: 94%;
-  height: auto;
-}
 @media screen and (max-width: 1140px) {
   .global-nav__visual__pc {
     display: none;
@@ -663,8 +681,14 @@ a {
     display: block;
   }
 }
+.global-nav__visual {
+  width: 94%;
+}
 .global-nav__visual img {
   margin-left: 1.2rem;
+}
+.global-nav__visual {
+  height: auto;
 }
 .global-nav__visual img {
   width: 100%;
@@ -683,14 +707,16 @@ a {
   font-family: "Zen Kaku Gothic Antique", sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  letter-spacing: 0.1rem;
-  transition: opacity 0.3s;
-  white-space: nowrap;
 }
 @media screen and (max-width: 1440px) {
   .global-nav__sub-list a {
     font-size: 0.8rem;
   }
+}
+.global-nav__sub-list a {
+  letter-spacing: 0.1rem;
+  transition: opacity 0.3s;
+  white-space: nowrap;
 }
 .global-nav__sub-list a:hover {
   opacity: 0.6;
@@ -704,19 +730,13 @@ a {
   width: 100%;
   padding-top: 60px;
   padding-bottom: 20px;
-  /* --- Top Section --- */
-  /* 左側のコンテンツ全体（ロゴ・ナビ・リンク） */
-  /* 1. Logos */
-  /* 1. Logos */
-  /* 2. Nav List (ナビゲーション) */
-  /* 3. Center Area (関連サイト・関連サービス) */
-  /* ★関連サービスのリストを横並びにするラッパー */
-  /* --- Right Area (Image) --- */
-  /* --- Bottom Section (Legal & Copyright) --- */
 }
 .footer__inner {
   width: 90%;
   margin: 0 auto;
+}
+.footer {
+  /* --- Top Section --- */
 }
 .footer__top {
   display: flex;
@@ -731,6 +751,9 @@ a {
     align-items: flex-start;
   }
 }
+.footer {
+  /* 左側のコンテンツ全体（ロゴ・ナビ・リンク） */
+}
 .footer__content-left {
   display: flex;
   flex-direction: column; /* 縦積み */
@@ -744,13 +767,16 @@ a {
     margin-right: 0;
   }
 }
+.footer {
+  /* 1. Logos */
+  /* 1. Logos */
+}
 .footer__logos {
   display: flex;
   align-items: center;
   gap: 20px;
   /* ▼▼▼ 追加・修正部分 ▼▼▼ */
   /* スマホ（SP）のときに縦並びにして、左揃えにする */
-  /* ▲▲▲ 追加・修正部分 ▲▲▲ */
 }
 @media screen and (max-width: 599px) {
   .footer__logos {
@@ -758,6 +784,12 @@ a {
     align-items: flex-start; /* 左揃え */
     gap: 15px; /* ロゴ同士の上下の余白 */
   }
+}
+.footer__logos {
+  /* ▲▲▲ 追加・修正部分 ▲▲▲ */
+}
+.footer {
+  /* 2. Nav List (ナビゲーション) */
 }
 .footer__nav-list {
   margin-top: 3rem;
@@ -775,6 +807,9 @@ a {
   letter-spacing: 0.1125rem;
   text-decoration: none;
   white-space: nowrap;
+}
+.footer {
+  /* 3. Center Area (関連サイト・関連サービス) */
 }
 .footer__center-area {
   display: flex; /* 関連サイトと関連サービスを横並び */
@@ -794,6 +829,9 @@ a {
   line-height: 200%;
   letter-spacing: 0.13125rem;
   margin-bottom: 10px;
+}
+.footer {
+  /* ★関連サービスのリストを横並びにするラッパー */
 }
 .footer__service-lists {
   display: flex;
@@ -819,6 +857,9 @@ a {
   text-decoration: none;
   display: block;
 }
+.footer {
+  /* --- Right Area (Image) --- */
+}
 .footer__right-area {
   flex-shrink: 0;
 }
@@ -833,6 +874,9 @@ a {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+}
+.footer {
+  /* --- Bottom Section (Legal & Copyright) --- */
 }
 .footer__bottom {
   border-top: 2px solid #23211c;
@@ -905,23 +949,23 @@ a {
   }
 }
 @media screen and (min-width: 1025px) {
-  .hero-title__main {
-    margin-bottom: 6rem;
-  }
   .hero-title__main img {
     width: 50.25rem;
+  }
+  .hero-title__main {
+    margin-bottom: 6rem;
   }
 }
 .hero-title__sub {
   position: absolute;
 }
 @media screen and (min-width: 1025px) {
+  .hero-title__sub img {
+    width: 15rem;
+  }
   .hero-title__sub {
     margin-bottom: 25rem;
     margin-right: 30rem;
-  }
-  .hero-title__sub img {
-    width: 15rem;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -964,15 +1008,31 @@ a {
     display: none;
   }
 }
+@media screen and (min-width: 2400px) {
+  .hero-img__center img {
+    width: 30rem;
+    margin-top: -5rem;
+  }
+}
 .hero-img__right {
   position: relative;
   height: 100%;
+}
+@media screen and (min-width: 2400px) {
+  .hero-img__right img {
+    width: 40rem;
+  }
 }
 .hero-img__right img {
   overflow: hidden;
 }
 .hero-img__right__6 {
   margin-left: -12vw;
+}
+@media screen and (min-width: 2400px) {
+  .hero-img__right__6 {
+    margin-left: -8vw;
+  }
 }
 .hero-img__right_7 {
   position: absolute;
@@ -990,6 +1050,11 @@ a {
 .hero-img__left {
   position: relative;
   height: 100%;
+}
+@media screen and (min-width: 2400px) {
+  .hero-img__left img {
+    width: 40rem;
+  }
 }
 .hero-img__left img {
   overflow: hidden;
@@ -1041,13 +1106,6 @@ a {
 }
 .hero-car {
   position: absolute;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 15;
-  margin-top: 16rem;
 }
 .hero-car__body {
   position: relative;
@@ -1057,16 +1115,18 @@ a {
   position: absolute;
   z-index: 11;
   width: 6rem;
-  aspect-ratio: 1/1;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  animation: tire-spin 1.2s linear infinite reverse;
 }
 @media screen and (max-width: 599px) {
   .hero-car__tire--left, .hero-car__tire--right {
     width: 3rem;
   }
+}
+.hero-car__tire--left, .hero-car__tire--right {
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: tire-spin 1.2s linear infinite reverse;
 }
 .hero-car__tire--left::before, .hero-car__tire--left::after, .hero-car__tire--right::before, .hero-car__tire--right::after {
   content: "";
@@ -1088,13 +1148,15 @@ a {
 .hero-car__tire--left {
   margin-top: 11.5rem;
   margin-right: 27.5rem;
-  background-image: url(../img/tire-inside-left.svg);
 }
 @media screen and (max-width: 599px) {
   .hero-car__tire--left {
     margin-right: 14rem;
     margin-top: 6rem;
   }
+}
+.hero-car__tire--left {
+  background-image: url(../img/tire-inside-left.svg);
 }
 .hero-car__tire--left::before {
   background-image: url(../img/tire-center-left.svg);
@@ -1105,7 +1167,6 @@ a {
 .hero-car__tire--right {
   margin-top: 11.5rem;
   margin-left: 29.5rem;
-  background-image: url(../img/tire-inside-right.svg);
 }
 @media screen and (max-width: 599px) {
   .hero-car__tire--right {
@@ -1113,11 +1174,23 @@ a {
     margin-top: 6rem;
   }
 }
+.hero-car__tire--right {
+  background-image: url(../img/tire-inside-right.svg);
+}
 .hero-car__tire--right::before {
   background-image: url(../img/tire-center-right.svg);
 }
 .hero-car__tire--right::after {
   background-image: url(../img/tire-outside-right.svg);
+}
+.hero-car {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+  margin-top: 16rem;
 }
 @media screen and (max-width: 1024px) {
   .hero-car {
@@ -1125,11 +1198,11 @@ a {
   }
 }
 @media screen and (max-width: 599px) {
-  .hero-car {
-    margin-top: 13rem;
-  }
   .hero-car img {
     width: 21.5rem;
+  }
+  .hero-car {
+    margin-top: 13rem;
   }
 }
 @keyframes tire-spin {
@@ -1156,11 +1229,6 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none; /* クリックを邪魔しない */
-  /* ▼修正：初期状態を透明（見えない）にする */
-  opacity: 0;
-  transition: opacity 0.3s ease; /* ふわっと表示させる */
-  /* ▼修正：このクラスがつくと見えるようになる */
 }
 @media screen and (min-width: 1025px) {
   .road-car__car {
@@ -1176,6 +1244,13 @@ a {
   .road-car__car {
     width: 28vw;
   }
+}
+.road-car__car {
+  pointer-events: none; /* クリックを邪魔しない */
+  /* ▼修正：初期状態を透明（見えない）にする */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* ふわっと表示させる */
+  /* ▼修正：このクラスがつくと見えるようになる */
 }
 .road-car__car.is-visible {
   opacity: 1;
@@ -1201,8 +1276,6 @@ a {
   align-items: center;
   background-color: #FDFFFB;
   position: relative;
-  display: flex;
-  justify-content: center;
 }
 @media screen and (min-width: 1025px) {
   .about {
@@ -1226,6 +1299,10 @@ a {
     width: 100%;
     margin: 0 auto;
   }
+}
+.about {
+  display: flex;
+  justify-content: center;
 }
 .about-text {
   flex-direction: column;
@@ -1291,10 +1368,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-.storage-container {
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
-}
 @media screen and (min-width: 1025px) {
   .storage-container {
     height: 32rem;
@@ -1302,6 +1375,10 @@ a {
     justify-content: space-between;
     align-items: flex-end;
   }
+}
+.storage-container {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
 }
 @media screen and (min-width: 1025px) {
   .storage-container {
@@ -1573,6 +1650,14 @@ a {
   }
 }
 
+@media screen and (min-width: 2400px) {
+  .indoor {
+    max-width: 90rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (min-width: 1025px) {
   .indoor {
     max-width: 60rem;
@@ -1714,9 +1799,6 @@ a {
   display: flex;
   justify-content: center;
 }
-.gallery-title__line {
-  position: absolute;
-}
 @media screen and (min-width: 599px) {
   .gallery-title__line__pc {
     display: block;
@@ -1739,6 +1821,9 @@ a {
     margin-right: 19rem;
     margin-top: -3.5rem;
   }
+}
+.gallery-title__line {
+  position: absolute;
 }
 @media screen and (max-width: 599px) {
   .gallery-title {
@@ -1803,9 +1888,6 @@ a {
     border: 3px solid #23211C;
     background: #23211C;
     margin-top: 3.5rem;
-    max-width: 60rem;
-    width: 100%;
-    margin: 0 auto;
   }
   .gallery-button p {
     font-size: 1rem;
@@ -1813,6 +1895,11 @@ a {
     line-height: 1.2rem;
     letter-spacing: 0.25rem;
     color: #FDFFFB;
+  }
+  .gallery-button {
+    max-width: 60rem;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1827,9 +1914,6 @@ a {
     border: 3px solid #23211C;
     background: #23211C;
     margin-top: 3.5rem;
-    max-width: 34.6rem;
-    width: 100%;
-    margin: 0 auto;
   }
   .gallery-button p {
     font-size: 1rem;
@@ -1837,6 +1921,11 @@ a {
     line-height: 1.2rem;
     letter-spacing: 0.25rem;
     color: #FDFFFB;
+  }
+  .gallery-button {
+    max-width: 34.6rem;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 599px) {
@@ -1851,8 +1940,6 @@ a {
     border: 3px solid #23211C;
     background: #23211C;
     margin-top: 3.5rem;
-    max-width: 21.56rem;
-    width: 100%;
   }
   .gallery-button p {
     font-size: 0.75rem;
@@ -1860,6 +1947,10 @@ a {
     line-height: 0.9rem;
     letter-spacing: 0.1875rem;
     color: #FDFFFB;
+  }
+  .gallery-button {
+    max-width: 21.56rem;
+    width: 100%;
   }
 }
 
@@ -1900,6 +1991,14 @@ a {
 .safe-top p {
   color: #FDFFFB;
 }
+@media screen and (min-width: 2400px) {
+  .safe-top {
+    max-width: 90rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (min-width: 1025px) {
   .safe-top {
     max-width: 60rem;
@@ -1939,10 +2038,12 @@ a {
     width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
   }
   .safe-top__title {
     margin-left: -8rem;
+  }
+  .safe-top {
+    flex-direction: column;
   }
   .safe-top p {
     padding-top: 2rem;
@@ -1954,11 +2055,13 @@ a {
     width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
   }
   .safe-top__title {
     width: 80%;
     margin-left: -4rem;
+  }
+  .safe-top {
+    flex-direction: column;
   }
   .safe-top p {
     padding-top: 2rem;
@@ -2020,6 +2123,14 @@ a {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 1025px) and (min-width: 2400px) {
+  .safe-under__pb {
+    max-width: 90rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (min-width: 1025px) and (min-width: 1025px) {
   .safe-under__pb {
     max-width: 60rem;
@@ -2047,6 +2158,14 @@ a {
 @media screen and (max-width: 1024px) {
   .safe-under__pb {
     width: 58vw;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 2400px) {
+  .safe-under__pb {
+    max-width: 90rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 1025px) {
@@ -2090,6 +2209,14 @@ a {
 @media screen and (max-width: 599px) {
   .safe-under__pb {
     width: 58vw;
+  }
+}
+@media screen and (max-width: 599px) and (min-width: 2400px) {
+  .safe-under__pb {
+    max-width: 90rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 599px) and (min-width: 1025px) {
@@ -2145,8 +2272,6 @@ a {
     border: 3px solid #23211C;
     background: #23211C;
     margin-top: 3.5rem;
-    background: #1a3757;
-    border: 3px solid #FDFFFB;
   }
   .safe-under__pb__button p {
     font-size: 1rem;
@@ -2154,6 +2279,10 @@ a {
     line-height: 1.2rem;
     letter-spacing: 0.25rem;
     color: #FDFFFB;
+  }
+  .safe-under__pb__button {
+    background: #1a3757;
+    border: 3px solid #FDFFFB;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -2173,8 +2302,6 @@ a {
     border: 3px solid #23211C;
     background: #23211C;
     margin-top: 3.5rem;
-    background: #1a3757;
-    border: 3px solid #FDFFFB;
   }
   .safe-under__pb__button p {
     font-size: 0.75rem;
@@ -2182,5 +2309,9 @@ a {
     line-height: 0.9rem;
     letter-spacing: 0.1875rem;
     color: #FDFFFB;
+  }
+  .safe-under__pb__button {
+    background: #1a3757;
+    border: 3px solid #FDFFFB;
   }
 }/*# sourceMappingURL=index.css.map */

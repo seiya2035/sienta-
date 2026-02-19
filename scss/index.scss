@@ -76,9 +76,9 @@
 
     // 修正前のhero-img
     &-img {
+
         //ヒーローエリアの写真
         position: absolute;
-
         top: 0;
         left: 0;
         width: 100%;
@@ -95,16 +95,34 @@
             @include sp {
                 display: none;
             }
+            @include pc2400{
+            img{
+                width: 30rem;
+                margin-top: -5rem;
+                // width: 110%;
+            }
+            }
         }
         &__right {
             position: relative;
             height: 100%;
+            @include pc2400{
+                img{
+                    width: 40rem;
+                    // width: 110%;
+                }
+                }
             img {
                 overflow: hidden;
+
             }
             &__6 {
                 margin-left: -12vw;
+                @include pc2400 {
+                    margin-left: -8vw;
+                }
             }
+
             &_7 {
                 // overflow: hidden;
                 position: absolute;
@@ -124,6 +142,12 @@
         &__left {
             position: relative;
             height: 100%;
+            @include pc2400{
+                img{
+                    width: 40rem;
+                    // width: 110%;
+                }
+                }
             img {
                 overflow: hidden;
             }
@@ -160,6 +184,7 @@
                     margin-top: 80vh;
                 }
             }
+            
         }
         // @include sp {
         //     display: block;
@@ -474,6 +499,7 @@
     background-color: $white;
     position: relative;
 
+
     @include pc {
         //pcのコンテンツ幅
         max-width: 62.5rem;
@@ -481,6 +507,9 @@
         margin: 0 auto;
         height: 40rem;
     }
+    // @include pc2400 {
+    //     max-width: 80rem;
+    // }
     @include tb {
         //tbのコンテンツ幅
         max-width: 37.25rem;

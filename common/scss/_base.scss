@@ -43,8 +43,20 @@ a {
     position: absolute;
     z-index: -3;
     width: 100%;
+
     @include flex-center;
+    &__pc2400 {
+        padding-top: 65rem;
+        margin-left: -10rem;
+    }
+    @include pc2400 {
+    }
     &__pc {
+        @include pc2400 {
+            display: none;
+        }
+        margin-top: 8rem;
+
         @include pc {
             padding-top: 54rem;
             padding-right: 7rem;
