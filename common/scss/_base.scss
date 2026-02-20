@@ -46,6 +46,7 @@ a {
 
     @include flex-center;
     &__pc2400 {
+        display: none;
         padding-top: 65rem;
         margin-left: -10rem;
     }
