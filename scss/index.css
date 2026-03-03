@@ -124,7 +124,7 @@ a {
 }
 @media screen and (min-width: 1025px) {
   .white-road__pc {
-    padding-top: 54rem;
+    padding-top: 48rem;
     padding-right: 7rem;
   }
 }
@@ -1275,7 +1275,6 @@ a {
 
 .about {
   align-items: center;
-  background-color: #FDFFFB;
   position: relative;
 }
 @media screen and (min-width: 1025px) {
