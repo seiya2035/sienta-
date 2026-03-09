@@ -121,8 +121,8 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap})); // 中段へ
         height: 15.625rem;
         background-color: $white;
         @include sp {
-            width: 5rem;
-            height: 8rem;
+            width: 7rem;
+            height: 10rem;
         }
         @include tb-min {
             border: 6px solid $black;
@@ -138,6 +138,9 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap})); // 中段へ
         justify-content: flex-start;
         padding-top: 2rem;
         padding-bottom: 2rem;
+        @include sp {
+            padding-bottom: 0;
+        }
         gap: 1.5rem;
         box-sizing: border-box;
     }
@@ -168,8 +171,8 @@ $bot-to-mid: calc(0px - (#{$h-mid} + #{$gap})); // 中段へ
     padding: 0;
     @include sp {
         border: none;
-        width: 3rem;
-        height: 3rem;
+        width: 5rem;
+        height: 4rem;
         margin-top: -0.5rem;
     }
     @include tb-min {

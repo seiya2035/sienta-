@@ -54,7 +54,7 @@ a {
     }
     &__pc {
         @include pc2400 {
-            display: none;
+            // display: none;
         }
         margin-top: 8rem;
 
