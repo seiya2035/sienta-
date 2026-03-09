@@ -531,7 +531,7 @@ a {
 }
 @media screen and (max-width: 599px) {
   .global-nav__box {
-    left: 30%;
+    left: 10%;
     top: 3rem;
     border: 4px solid #23211C;
     bottom: 8rem;
